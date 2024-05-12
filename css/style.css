@@ -1,0 +1,113 @@
+body{
+  width:90%;
+  margin: auto;
+  font-family: helvetica;
+}
+h2{
+  text-align: center;
+  font-size: 2em;
+}
+h3{
+  text-align: center;
+}
+h4{
+  text-align: center;
+}
+h5{
+  color: rgb(50,100,50);
+  text-align: center;
+}
+li{
+  text-align: center;
+  list-style: none;
+  line-height: 1.7em;
+}
+nav {
+  display: flex;
+  padding: 7px;
+  justify-content: flex-end;
+  box-shadow: 0px 4px 10px;
+  border-radius: 5px;
+}
+
+nav a {
+  padding: 7px;
+  width: 10%;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  font-size: .8em;
+}
+/* add mediaquery^^^ */
+
+#nameplate{
+  height: 800px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#nameplate > h1{
+  font-size: 5em;
+  text-align:center;
+  margin-top: auto;
+}
+#nameplate > h3{
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: auto;
+}
+
+#resume > p{
+  text-indent: 2em;
+  line-height: 1.7em;
+}
+
+#resume > ul{
+  line-height: 2em;
+}
+
+#resume > table{
+  width: 100%;
+  line-height: 2em;
+  margin: auto;
+}
+#resume th{
+  text-align: center;
+  width: 50%;
+}
+#resume > td{
+  text-align: center;
+  margin: auto;
+}
+
+#projects{
+  text-align: center;
+}
+#projects > p{
+  line-height: 1.7em;
+  text-align: center;
+}
+#projects > ul{
+  line-height: 1.5em;
+}
+#projects > a{
+  text-decoration: none;
+  color:white;
+  background-color: rgb(50,100,50);
+  padding: 10px;
+  border-radius: 5px;
+}
+#projects > a:hover{
+  text-decoration: none;
+  color:white;
+  background-color: rgb(70,120,70);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#about{
+  line-height: 1.7em;
+  text-align: center;
+}
+
+footer {
+  height:600px;
+}
