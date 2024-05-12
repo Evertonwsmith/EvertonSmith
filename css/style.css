@@ -3,6 +3,10 @@ body{
   margin: auto;
   font-family: helvetica;
 }
+p{
+  width: 90%;
+  margin: auto;
+}
 h2{
   text-align: center;
   font-size: 2em;
@@ -19,7 +23,6 @@ h5{
 }
 li{
   text-align: center;
-  list-style: none;
   line-height: 1.7em;
 }
 nav {
@@ -31,11 +34,17 @@ nav {
 }
 
 nav a {
-  padding: 7px;
+  text-align: center;
+  padding: 10px;
   width: 10%;
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
   font-size: .8em;
+}
+nav a:hover{
+  color: white;
+  background-color: rgb(70,120,70);
+  border-radius: 5px;
 }
 /* add mediaquery^^^ */
 
@@ -62,6 +71,9 @@ nav a {
 
 #resume > ul{
   line-height: 2em;
+}
+#resume li{
+  text-align: left;
 }
 
 #resume > table{
