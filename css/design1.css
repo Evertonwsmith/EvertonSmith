@@ -88,7 +88,7 @@ img#product1{
 #productInfo3{
   margin-top: 200px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 5%;
 }
 footer {
