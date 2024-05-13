@@ -5,7 +5,6 @@ body{
   background-image: linear-gradient(to bottom, rgba(77,180,67, 0.3),rgba(0, 0, 0, 0));
 }
 p{
-  width: 90%;
   margin: auto;
 }
 h2{
@@ -151,10 +150,54 @@ nav a:hover{
   padding: 20px;
   border-radius: 5px;
 }
-
+#everton1{
+  box-shadow: 1px 1px 10px;
+  object-fit: cover;
+  width: 40vw;
+  height: 20vw;
+}
+#everton2{
+  box-shadow: 1px 1px 10px;
+  object-fit: cover;
+  width: 20vw;
+  height: 30vw;
+  padding-left: 15vw;
+}
+#everton3{
+  box-shadow: 1px 1px 10px;
+  object-fit: cover;
+  width: 40vw;
+  height: 50vw;
+}
 #about{
+  justify-content: center;
+  margin: auto;
   line-height: 1.7em;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  font-size: 2vw;
+}
+#about1{
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  border-radius: 50px;
+  padding: 25px;
+  width: 1fr;
+  text-align: right;
+}
+#about2{
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  border-radius: 50px;
+
+  padding: 25px;
+  width: 1fr;
+}
+#about3{
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  border-radius: 50px;
+  text-align: right;
+  padding: 25px;
+  width: 1fr;
 }
 
 footer {
