@@ -81,6 +81,9 @@ nav a:hover{
   text-align: center;
   margin-bottom: auto;
 }
+#resumetitle{
+  text-align: center;
+}
 #resume{
   background-color: white;
   border-radius: 50px;
