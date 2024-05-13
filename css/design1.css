@@ -12,7 +12,7 @@ nav{
 body{
   width: 85%;
   margin: auto;
-  background-image: linear-gradient(to bottom, black 0%, black 40%, rgb(25, 25, 25) 50%, black 60%, black 100%);
+  background-image: linear-gradient(to bottom, black 0%, black 30%, rgb(25, 25, 25) 40%, black 60%, rgb(25, 25, 25) 80%, black 100%);
   color: rgb(200, 200, 200);
   font-family: helvetica;
 }
@@ -42,26 +42,17 @@ img#product1{
   top:10%;
 }
 #p1txt2{
+  /* color:rgba(0,0,0,1); */
   top:30%;
+  /* text-shadow:
+        -1px -1px 0 white,
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white; */
 }
 #p1txt3{
   top:50%;
 }
-@media screen and (max-width: 768px) {
-  .overlaytxt{
-    font-size: 4em;
-    font-weight: bold;
-  }
-}
-
-/* Media query for larger screens */
-@media screen and (min-width: 1200px) {
-  .overlaytxt{
-    font-size: 13em;
-    font-weight: bold;
-  }
-}
-
 #productInfo1{
   text-align: center;
   font-size: 2em;
@@ -76,13 +67,15 @@ img#product1{
   width: 100%;
 }
 #productInfo2{
+  line-height: 2;
+  letter-spacing: 5px;
   margin-top: 200px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5%;
 }
 #info2{
-  font-size: 4em;
+  font-size: 2em;
 }
 
 #productInfo3{
@@ -90,6 +83,24 @@ img#product1{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 5%;
+}
+#productInfo3 h3{
+  font-size: 3em;
+}
+#productInfo3 h5{
+  font-size: 1em;
+}
+#productInfo3 a{
+  text-decoration: none;
+  color:white;
+  padding:10px;
+}
+#productInfo3 a:hover{
+  padding:10px;
+  border-radius: 5px;
+  background-color: rgb(50, 50, 50);
+  text-decoration: none;
+  color:white;
 }
 footer {
   margin-top: 200px;
@@ -101,4 +112,27 @@ footer {
 footer div h4{
   margin:0;
   padding:0;
+}
+footer div h4{
+  font-weight: lighter;
+}
+@media screen and (max-width: 768px) {
+  .overlaytxt{
+    font-size: 4em;
+    font-weight: bold;
+  }
+  #info2{
+    font-size: 1em
+  }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1200px) {
+  .overlaytxt{
+    font-size: 13em;
+    font-weight: bold;
+  }
+  #info2{
+    font-size: 4em
+  }
 }

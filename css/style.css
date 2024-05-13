@@ -9,21 +9,20 @@ p{
   margin: auto;
 }
 h2{
-  text-align: center;
   font-size: 2em;
   font-weight: lighter;
 }
 h3{
-  text-align: center;  font-weight: lighter;
+  font-weight: lighter;
 
 }
 h4{
-  text-align: center;  font-weight: lighter;
+  font-weight: lighter;
 
 }
 h5{
   color: rgb(50,100,50);
-  text-align: center;  font-weight: lighter;
+  font-weight: lighter;
 
 }
 li{
@@ -83,17 +82,18 @@ nav a:hover{
   margin-bottom: auto;
 }
 #resume{
-  border: 1px black;
+  background-color: white;
+  border-radius: 50px;
+  padding: 20px;
+  margin-top: 50px;
 }
 #resume > p{
-  text-indent: 2em;
+  text-indent: 1em;
   line-height: 1.7em;
-  width: 60%;
 }
 
 #resume > ul{
   line-height: 2em;
-  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -107,7 +107,7 @@ nav a:hover{
   margin: auto;
 }
 #resume th{
-  text-align: center;
+  text-align: left;
   width: 50%;
   font-weight:600;
 
@@ -116,7 +116,12 @@ nav a:hover{
   text-align: center;
   margin: auto;
 }
-
+#resume h2,
+#resume h3,
+#resume h4,
+#resume h5{
+  margin:1vw;
+}
 #projects{
   text-align: center;
 }
@@ -133,6 +138,8 @@ nav a:hover{
   background-color: rgb(50,100,50);
   padding: 10px;
   border-radius: 5px;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 #projects > a:hover{
   text-decoration: none;
