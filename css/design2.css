@@ -47,3 +47,14 @@ body, html {
   background-color: black;
   margin:auto;
 }
+.third{
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+}
+.card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.card div{
+  width: 400px;
+}

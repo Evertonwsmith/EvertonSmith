@@ -5,6 +5,10 @@ nav div{
   align-items: center;
   align-content: center;
 }
+.navi:hover{
+  background-color: rgb(200,200,200);
+  color:black;
+}
 nav{
   display:grid;
   grid-template-columns: auto auto auto auto auto;
@@ -35,7 +39,7 @@ img#product1{
   left: 10%;
 }
 .overlaytxt{
-  font-size: 9em;
+  font-size: 12vw;
   font-weight: bold;
 }
 #p1txt1{
@@ -55,7 +59,7 @@ img#product1{
 }
 #productInfo1{
   text-align: center;
-  font-size: 2em;
+  font-size: 3vw;
   width: 70%;
   margin-top: 200px;
   margin-left:auto;
@@ -75,7 +79,7 @@ img#product1{
   column-gap: 5%;
 }
 #info2{
-  font-size: 2em;
+  font-size: 3vw;
 }
 
 #productInfo3{
@@ -85,10 +89,10 @@ img#product1{
   column-gap: 5%;
 }
 #productInfo3 h3{
-  font-size: 3em;
+  font-size: 4vw;
 }
 #productInfo3 h5{
-  font-size: 1em;
+  font-size: 2vw;
 }
 #productInfo3 a{
   text-decoration: none;
@@ -117,10 +121,10 @@ footer div h4{
   font-weight: lighter;
 }
 @media screen and (max-width: 768px) {
-  .overlaytxt{
+  /* .overlaytxt{
     font-size: 4em;
     font-weight: bold;
-  }
+  } */
   #info2{
     font-size: 1em
   }
@@ -128,10 +132,10 @@ footer div h4{
 
 /* Media query for larger screens */
 @media screen and (min-width: 1200px) {
-  .overlaytxt{
+  /* .overlaytxt{
     font-size: 13em;
     font-weight: bold;
-  }
+  } */
   #info2{
     font-size: 4em
   }
