@@ -1,30 +1,31 @@
-body{
-  width:90%;
+body {
+  width: 90%;
   margin: auto;
   font-family: helvetica;
-  background-image: linear-gradient(to bottom, rgba(77,180,67, 0.3),rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(77, 180, 67, 0.3),
+    rgba(0, 0, 0, 0)
+  );
 }
-p{
+p {
   margin: auto;
 }
-h2{
+h2 {
   font-size: 2em;
   font-weight: lighter;
 }
-h3{
+h3 {
   font-weight: lighter;
-
 }
-h4{
+h4 {
   font-weight: lighter;
-
 }
-h5{
-  color: rgb(50,100,50);
+h5 {
+  color: rgb(50, 100, 50);
   font-weight: lighter;
-
 }
-li{
+li {
   text-align: center;
   line-height: 1.7em;
 }
@@ -44,7 +45,7 @@ nav {
   margin-right: auto;
   height: 800px;
   width: 800px; */
-  /* background-color: rgba(30,60,10,.4);
+/* background-color: rgba(30,60,10,.4);
   background-image: linear-gradient(to bottom right, rgba(30,120,30,.5) 0%,rgba(30,120,30,.1) 15%,rgba(30,60,10,0) 100%);
 } */
 nav a {
@@ -53,98 +54,97 @@ nav a {
   width: 10%;
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
-  font-size: .8em;
+  font-size: 0.8em;
 }
-nav a:hover{
+nav a:hover {
   color: white;
-  background-color: rgb(70,120,70);
+  background-color: rgb(70, 120, 70);
   border-radius: 5px;
 }
 /* add mediaquery^^^ */
 
-#nameplate{
+#nameplate {
   height: 800px;
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
-#nameplate > h1{
+#nameplate > h1 {
   font-size: 5em;
-  text-align:center;
+  text-align: center;
   margin-top: auto;
   text-transform: uppercase;
   font-weight: lighter;
-
 }
-#nameplate > h3{
+#nameplate > h3 {
   font-size: 3em;
   text-align: center;
   margin-bottom: auto;
 }
-#resumetitle{
+#resumetitle {
   text-align: center;
 }
-#resume{
+#resume {
   background-color: white;
   border-radius: 50px;
   padding: 40px;
   margin-top: 50px;
 }
-#resume > p{
+#resume > p {
   text-indent: 1em;
   line-height: 1.7em;
 }
 
-#resume > ul{
+#resume > ul {
   line-height: 2em;
   margin-left: auto;
   margin-right: auto;
 }
-#resume li{
+#resume li {
   text-align: left;
 }
 
-#resume > table{
+#resume > table {
   width: 100%;
   line-height: 2em;
   margin: auto;
 }
-#resume th{
+#resume th {
   text-align: left;
   width: 50%;
-  font-weight:600;
-
+  font-weight: 600;
 }
-#resume > td{
+#resume > td {
   text-align: center;
   margin: auto;
 }
 #resume h2,
 #resume h3,
 #resume h4,
-#resume h5{
-  margin:1vw;
+#resume h5 {
+  margin: 1vw;
 }
-#projects{
+#projects {
   text-align: center;
 }
-#projects > p{
+#projects > p {
   line-height: 1.7em;
   text-align: center;
 }
-#projects > ul{
+#projects > ul {
   line-height: 1.5em;
 }
-#d1,#d2{
+#d1,
+#d2 {
   align-content: center;
   justify-content: center;
   align-items: center;
   margin: auto;
 }
 
-#projects > a{
+#projects > a {
   text-decoration: none;
-  color:white;
-  background-color: rgb(50,100,50);
+  color: white;
+  background-color: rgb(50, 100, 50);
   padding: 10px;
   border-radius: 5px;
   margin-left: 5vw;
@@ -152,35 +152,35 @@ nav a:hover{
 }
 
 #d1 > a:hover,
-#projects > a:hover{
+#projects > a:hover {
   text-decoration: none;
-  color:white;
-  background-color: rgb(70,120,70);
+  color: white;
+  background-color: rgb(70, 120, 70);
   padding: 20px;
   border-radius: 5px;
 }
-#everton1{
+#everton1 {
   box-shadow: 1px 1px 10px;
   object-fit: cover;
   width: 400px;
   height: 300px;
   margin-left: 7vw;
 }
-#everton2{
+#everton2 {
   box-shadow: 1px 1px 10px;
   object-fit: cover;
   width: 400px;
   height: 500px;
   margin-left: 7vw;
 }
-#everton3{
+#everton3 {
   box-shadow: 1px 1px 10px;
   object-fit: cover;
   width: 400px;
   height: 300px;
   margin-left: 7vw;
 }
-#about{
+#about {
   justify-content: center;
   margin: auto;
   line-height: 1.7em;
@@ -190,23 +190,35 @@ nav a:hover{
   column-gap: 2vw;
   padding: 10px;
 }
-#about1{
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+#about1 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0)
+  );
   border-radius: 50px;
   padding: 25px;
   width: 1fr;
   text-align: right;
   height: auto;
 }
-#about2{
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+#about2 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0)
+  );
   border-radius: 50px;
 
   padding: 25px;
   width: 1fr;
 }
-#about3{
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+#about3 {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0)
+  );
   border-radius: 50px;
   text-align: right;
   padding: 25px;
@@ -214,26 +226,26 @@ nav a:hover{
 }
 
 footer {
-  height:600px;
+  height: 600px;
 }
 
 @media screen and (max-width: 900px) {
-  #about{
+  #about {
     grid-template-columns: 1fr;
     justify-content: center;
   }
   #everton1,
   #everton2,
-  #everton3{
+  #everton3 {
     margin: auto;
   }
-  #about1{
+  #about1 {
     text-align: left;
   }
-  #about2{
+  #about2 {
     grid-row: 3/4;
   }
-  #about3{
+  #about3 {
     text-align: left;
   }
 }

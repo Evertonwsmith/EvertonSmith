@@ -1,60 +1,60 @@
-body, html {
-  font-family:helvetica;
-    margin: 0;
-    padding: 0;
+body,
+html {
+  font-family: helvetica;
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
-#hero img{
-  width:100%;
+#hero img {
+  width: 100%;
   margin: auto;
   object-fit: cover;
   /* position: relative; */
-
 }
-.herotxt{
+.herotxt {
   font-size: 15vw;
   position: absolute;
-  top:0;
+  top: 0;
   left: 10px;
   font-weight: bold;
-  color:black;
+  color: black;
 }
-#herotxt2{
+#herotxt2 {
   top: 15vw;
 }
-#herotxt3{
+#herotxt3 {
   top: 30vw;
 }
-#herotxt4{
+#herotxt4 {
   font-size: 3vw;
-  color: rgb(180,150,150);
-  left:70%;
-  top:35vw;
+  color: rgb(180, 150, 150);
+  left: 70%;
+  top: 35vw;
 }
-.second{
+.second {
   /* word-spacing: 12vw; */
   display: grid;
-  grid-template-columns: repeat(9,1fr);
+  grid-template-columns: repeat(9, 1fr);
   text-align: center;
   font-family: Didot, serif;
   text-transform: uppercase;
   font-size: 1.5vw;
   padding: 5vw;
 }
-.line{
+.line {
   width: 3vw;
-  height: .2vw;
+  height: 0.2vw;
   background-color: black;
-  margin:auto;
+  margin: auto;
 }
-.third{
+.third {
   /* display: grid;
   grid-template-columns: 1fr 1fr; */
 }
-.card{
+.card {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.card div{
+.card div {
   width: 400px;
 }
