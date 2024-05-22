@@ -1,10 +1,13 @@
 //player creator
 var player;
+var obstacle1;
+var item1;
 
 //Start function
 function startGame() {
     gameArea.start();
     player = new component(30, 30, 'white', 400, 300);
+    obstacle1 = new component(30, 30, 'red', 500, 500);
 }
 
 document.body.style.width = '90vw';
@@ -13,6 +16,8 @@ document.body.style.margin = 'auto';
 document.body.style.display = 'flex';
 document.body.style.justifyContent = 'center';
 
+
+//Component setup
 function component(width, height, color, x, y) {
     this.width = width;
     this.height = height;
@@ -30,48 +35,64 @@ function component(width, height, color, x, y) {
         this.x += this.speedX;
         this.y += this.speedY;
     }
+
+    this.crashWith = function (otherObject) {
+        var myLeft = this.x;
+        var myRight = this.x + (this.width);
+        var myTop = this.y;
+        var myBot = this.y + (this.height);
+        var otherLeft = otherObject.x;
+        var otherRight = otherObject.x + (otherObject.width);
+        var otherTop = otherObject.y;
+        var otherBot = otherObject.y + (otherObject.height);
+        var crash = true;
+        if ((myBot < otherTop) || (myTop > otherBot) || (myRight < otherLeft) || (myLeft > otherRight)) {
+            crash = false;
+        }
+        return crash;
+    }
 }
 
 //Motion Functions
-function up(){
+function up() {
     player.speedY = -5;
 }
-function down(){
+function down() {
     player.speedY = 5;
 }
-function left(){
+function left() {
     player.speedX = -5;
 }
-function right(){
+function right() {
     player.speedX = 5;
 }
 
-function stop(){
+function stop() {
     player.speedX = 0;
     player.speedY = 0;
 }
 
 //Key listeners
-function handleKeyDown(event){
-    switch(event.key){
+function handleKeyDown(event) {
+    switch (event.key) {
         case 'w':
             up();
-        break;
+            break;
         case 'a':
             left();
-        break;
+            break;
         case 's':
             down();
-        break;
+            break;
         case 'd':
             right();
-        break;
+            break;
         case 'e':
             //implement action button
-        break;
+            break;
     }
 }
-function handleKeyUp(event){
+function handleKeyUp(event) {
     stop();
 }
 window.addEventListener('keydown', handleKeyDown);
@@ -92,11 +113,21 @@ var gameArea = {
     },
     clear: function () {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    },
+    stop: function () {
+        document.body.style.backgroundColor = 'red';
+        clearInterval(this.interval);
     }
 }
 
 function updateGameArea() {
+
+    if (player.crashWith(obstacle1)) {
+        gameArea.stop();
+    }
+
     gameArea.clear();
+    obstacle1.update();
     player.newPos();
     player.update();
 }
