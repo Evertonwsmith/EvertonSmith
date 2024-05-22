@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "z:\\WebProjects\\EvertonSmithWebsite\\EvertonSmith\\index.html"
+            "file": "c:\\Users\\bubba\\Desktop\\HTMLCSSpages\\EvertonSmithWebsite\\EvertonSmith\\index.html"
         }
     ]
 }
