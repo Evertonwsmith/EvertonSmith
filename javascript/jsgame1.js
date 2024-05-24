@@ -11,6 +11,7 @@ var downAllowed = true;
 var leftAllowed = true;
 var rightAllowed = true;
 var borders = [];
+var interactiveComps = [];
 var wallColor = 'rgb(37, 28, 135)';
 var tableColor = 'rgb(171, 135, 89)';
 var doorColor = 'rgb(74, 74, 74)';
@@ -18,7 +19,12 @@ var interiorWallColor = 'black';
 var bookshelfColor = 'rgb(125, 72, 44)';
 var couchColor = 'rgb(117, 35, 35)';
 var available = [];
-var item1 = "Text Item";
+var item1 = "Key 1";
+var item2 = "Key 2";
+var item3 = "Key 3";
+var item4 = "Key 4";
+var item5 = "Key 5";
+var inventory = [];
 
 //Start function
 function startGame() {
@@ -31,29 +37,31 @@ function startGame() {
     wallTRInterior = new wallComponent(200, 20, interiorWallColor, 450, 150);
     wallBLInterior = new wallComponent(250, 20, interiorWallColor, 150, 450);
     wallBRInterior = new wallComponent(120, 20, interiorWallColor, 550, 450);
-    table = new wallComponent(50,100,tableColor,550,250);
-    table2 = new wallComponent(30,80,tableColor,200,0);
-    table3 = new wallComponent(30,80,tableColor,200,200);
+    table = new interactiveComponent(50, 100, tableColor, 550, 250, [item5]);
+    table2 = new wallComponent(30, 80, tableColor, 200, 0);
+    table3 = new wallComponent(30, 80, tableColor, 200, 200);
 
-    bookshelf1 = new interactiveComponent(25,150,bookshelfColor,125,200,[item1]);
-    bookshelf2 = new wallComponent(25,150,bookshelfColor,670,200);
-    bookshelf3 = new wallComponent(50,100,bookshelfColor,750,0);
-    bookshelf3 = new wallComponent(50,100,bookshelfColor,750,450);
+    bookshelf1 = new interactiveComponent(25, 150, bookshelfColor, 125, 200, [item1]);
+    bookshelf2 = new interactiveComponent(25, 150, bookshelfColor, 670, 200, [item2]);
+    bookshelf3 = new interactiveComponent(50, 100, bookshelfColor, 750, 0, [item3]);
+    bookshelf3 = new interactiveComponent(50, 100, bookshelfColor, 750, 450, [item4]);
 
     borderTop = new wallComponent(800, 10, wallColor, 0, 0);
     borderBottom = new wallComponent(800, 10, wallColor, 0, 590);
     borderRight = new wallComponent(10, 600, wallColor, 790, 0);
     borderLeft = new wallComponent(10, 600, wallColor, 0, 0);
-    couch = new wallComponent(150,50,couchColor,200,400);
-    comp1 = new wallComponent(25,25,tableColor,600,50);
-    comp2 = new wallComponent(25,25,tableColor,600,10);
-    comp3 = new wallComponent(25,25,tableColor,565,10);
-    comp4 = new wallComponent(25,25,tableColor,565,50);
+    couch = new wallComponent(150, 50, couchColor, 200, 400);
+    comp1 = new wallComponent(25, 25, tableColor, 600, 50);
+    comp2 = new wallComponent(25, 25, tableColor, 600, 10);
+    comp3 = new wallComponent(25, 25, tableColor, 565, 10);
+    comp4 = new wallComponent(25, 25, tableColor, 565, 50);
 
-    door1 = new wallComponent(25,100,doorColor,0,150);
-    door2 = new wallComponent(25,100,doorColor,0,350);
-    door3 = new wallComponent(250,20,doorColor,250,0);
-    door4 = new wallComponent(250,20,doorColor,500,580);
+    door1 = new wallComponent(25, 100, doorColor, 0, 150);
+    door2 = new wallComponent(25, 100, doorColor, 0, 350);
+    door3 = new wallComponent(250, 20, doorColor, 250, 0);
+    door4 = new wallComponent(250, 20, doorColor, 500, 580);
+
+    inventoryScreen = new screenComponent(800, 100, 'black', 0, 600);
 
 }
 
@@ -62,6 +70,50 @@ document.body.style.height = '90vh';
 document.body.style.margin = 'auto';
 document.body.style.display = 'flex';
 document.body.style.justifyContent = 'center';
+
+// Screen Component
+function screenComponent(width, height, color, x, y) {
+    this.width = width;
+    this.height = height;
+    this.backgroundColor = color;
+    this.x = x;
+    this.y = y;
+    this.content = inventory; // Pass the content as a parameter
+
+    this.update = function () {
+        const ctx = gameArea.context;
+        ctx.fillStyle = this.backgroundColor;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.font = '10px Arial';
+        ctx.fillStyle = 'white';
+        ctx.fillText('W A S D, E = pickup', this.x+600,this.y+50);
+        ctx.fillText('Find 5 Keys :)', this.x+600,this.y+70);
+        if (inventory.length !== 0) {
+            this.drawText();
+        }
+    }
+
+    // Method to draw text
+    this.drawText = function () {
+        const ctx = gameArea.context;
+        ctx.font = '10px Arial';
+        ctx.fillStyle = 'white';
+        let textY = this.y + 30; // Initial Y position for text
+        let textX = this.x + 50;
+        // console.log(this.content[0]);
+        for (let i = 0; i < this.content.length; i++) {
+            ctx.fillText(this.content[i], textX + 10, textY);
+            textY += 30; // Move down for the next line of text
+
+            if ((i + 1) % 3 === 0) {
+                textX += 100;
+                textY -= 90; // Reset Y position for the new column
+            }
+
+        }
+    }
+}
+
 
 //Wall Component setup
 function wallComponent(width, height, color, x, y) {
@@ -116,7 +168,7 @@ function interactiveComponent(width, height, color, x, y, items) {
     this.x = x;
     this.y = y;
     this.items = items;
-    borders.push(this);
+    interactiveComps.push(this);
     this.update = function () {
         ctx = gameArea.context;
         ctx.fillStyle = color;
@@ -133,7 +185,7 @@ function interactiveComponent(width, height, color, x, y, items) {
         var plyrBot = plyr.y + (plyr.height);
         var touching = true;
         if (botWall >= plyrTop && topWall < plyrTop && leftWall < plyrRight && rightWall > plyrLeft) {
-           available = this.items;
+            available = this.items;
         }
         else if (topWall <= plyrBot && botWall > plyrBot && leftWall < plyrRight && rightWall > plyrLeft) {
             available = this.items;
@@ -144,17 +196,22 @@ function interactiveComponent(width, height, color, x, y, items) {
         else if (leftWall <= plyrRight && rightWall > plyrRight && topWall < plyrBot && botWall > plyrTop) {
             available = this.items;
         }
-        else {
-            available=[];
-        }
+        // else {
+        //     available = [];
+        // }
         //add the rest of the logi
         return touching;
     }
 }
 
-function action(){
-    for(let v of available){
-        console.log(v);
+function action() {
+    for (let v of available) {
+        if (inventory.length < 12 && !inventory.includes(v)) {
+
+            inventory.push(v);
+
+            console.log(v);
+        }
     }
 
 }
@@ -254,7 +311,7 @@ var gameArea = {
     canvas: document.createElement('canvas'),
     start: function () {
         this.canvas.width = 800;
-        this.canvas.height = 600;
+        this.canvas.height = 700;
         this.canvas.style.backgroundColor = 'rgb(178, 171, 245)';
         this.canvas.style.margin = 'auto';
         this.context = this.canvas.getContext("2d");
@@ -270,10 +327,21 @@ var gameArea = {
     }
 }
 
+function winCondition(c) {
+    console.log(c.length);
+    if (c.length === 5) {
+        stop();
+        var thing = new screenComponent(400,400,'green',0,0);
+        thing.update();
+    }
+}
+
 function updateGameArea() {
 
     gameArea.clear();
     checkCollisions();
+    inventoryScreen.update();
+    winCondition(inventory);
 
     player.newPos();
     player.update();
@@ -291,6 +359,16 @@ function checkCollisions() {
 
     for (let bord of borders) {
         bord.update(player);
+    }
+    var lrn = false;
+    for (let frek of interactiveComps) {
+        frek.update();
+        if (frek.isTouching(player)) {
+            lrn = true;
+        }
+    }
+    if (!lrn) {
+        available = [];
     }
 
 }
