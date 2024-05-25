@@ -248,4 +248,7 @@ footer {
   #about3 {
     text-align: left;
   }
+  .projects a{
+    display: block;
+  }
 }
