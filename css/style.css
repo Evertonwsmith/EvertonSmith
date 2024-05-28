@@ -229,6 +229,31 @@ footer {
   height: 600px;
 }
 
+.workexamples{
+  width: 100%;
+  column-width: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, .1);
+}
+.workexamplecard{
+  justify-content: center;
+  align-content: space-around;
+  display: flex;
+  flex-direction: column;
+}
+.workcardimg{
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+}
+.workexamples > a{
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+  display: block; /* Make the link take up the entire grid cell */
+}
 @media screen and (max-width: 900px) {
   #about {
     grid-template-columns: 1fr;

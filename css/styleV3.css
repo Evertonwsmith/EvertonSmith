@@ -1,0 +1,107 @@
+body {
+  background-color: black;
+  font-family: "Rubik Mono One", monospace;
+}
+
+/* NAVIGATOR BAR AND ITEMS */
+nav {
+  border-bottom: 2px solid white; /* Change the color and thickness as needed */
+
+  display: flex;
+  height: 40px;
+}
+
+nav > a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-content: center;
+}
+nav > a:hover {
+  /* border-radius: 5px; */
+  background-color: grey;
+}
+
+/* HERO NAME LOGO AREA */
+.heroOne {
+  align-content: end;
+  height: 400px;
+  color: white;
+  font-weight: 400;
+  font-size: 4vw;
+  text-align: center;
+}
+.heroOne h1 {
+  margin-bottom: 0;
+}
+.heroOne p {
+  padding: 0;
+  margin: 0;
+  font-size: 3vw;
+}
+
+.aniLine {
+  padding: 0;
+  height: 2px;
+  width: 5%;
+  background-color: rgb(10, 150, 40);
+  animation: lineAni 6s ease-in-out 0s infinite alternate;
+}
+
+/* DATA BOX */
+#dataTitle {
+  color: white;
+  padding: 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.workexamplecard img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes lineAni {
+  0% {
+    width: 5%;
+    margin-left: 45%;
+  }
+  25% {
+    margin-left: 0%;
+    width: 100%;
+  }
+  50% {
+    margin-left: 95%;
+    width: 5%;
+  }
+  75% {
+    margin-left: 0%;
+    width: 5%;
+  }
+  100% {
+    width: 5%;
+    margin-left: 45%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .heroOne {
+    height: auto;
+  }
+  nav {
+    flex-direction: column;
+    height: auto;
+
+    align-items: center;
+  }
+  nav > img {
+    width: 20vw;
+  }
+  nav > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

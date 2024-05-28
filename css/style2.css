@@ -1,0 +1,367 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-size: 4vw; */
+  background-image: linear-gradient( rgba(150,210,200,.4) 0%,rgba(10,210,200,.4) 100%);
+  min-height: 1000px;
+}
+.first {
+
+  height: 600px;
+  align-content: center;
+}
+.title{
+    text-align: center;
+}
+.name{
+    text-align: center;
+    padding: 20px;
+    font-size: 6vw;
+}
+.firstDecoration{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 10vw;
+    height: 10vw;
+    background-color: rgba(10,110,100,.4);
+    border-radius: 100%;
+    animation: firstDecAni 7s linear 0s infinite forwards;
+}
+.secondDecoration{
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    width: 10vw;
+    height: 10vw;
+    background-color: rgba(10,210,200,.4);
+    border-radius: 100%;
+    animation: secondDecAni 7s linear 0s infinite forwards;
+}
+.thirdDecoration{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    width: 10vw;
+    height: 10vw;
+    background-color: rgba(150,210,200,.4);
+    border-radius: 100%;
+    animation: thirdDecAni 7s linear 0s infinite forwards;
+}
+@keyframes firstDecAni {
+    0%{
+        top: 30%;
+        left: 30%;
+    }
+    25%{
+        top: 20%;
+        left: 10%;
+    }
+    50%{
+        top: 30%;
+        left: 30%;
+    }
+    75%{
+        top: 40%;
+        left: 50%;
+    }
+    100%{
+        top: 30%;
+        left: 30%;
+    }
+    
+}
+@keyframes secondDecAni {
+    0%{
+        top: 30%;
+        left: 60%;
+    }
+    25%{
+        top: 40%;
+        left: 40%;
+    }
+    50%{
+        top: 30%;
+        left: 30%;
+    }
+    75%{
+        top: 50%;
+    left: 50%;
+    }
+    100%{
+        top: 30%;
+    left: 60%;
+    }
+    
+}
+@keyframes thirdDecAni {
+    0%{
+        top: 20%;
+        left: 45%;
+    }
+    25%{
+        top: 20%;
+        left: 60%;
+    }
+    50%{
+        top: 20%;
+        left: 30%;
+    }
+    75%{
+        top: 30%;
+        left: 45%;
+    }
+    100%{
+        top: 20%;
+        left: 45%;
+    }
+    
+}
+
+
+
+
+p {
+    margin: auto;
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: lighter;
+  }
+  h3 {
+    font-weight: lighter;
+  }
+  h4 {
+    font-weight: lighter;
+  }
+  h5 {
+    color: rgb(50, 100, 50);
+    font-weight: lighter;
+  }
+  li {
+    text-align: center;
+    line-height: 1.7em;
+  }
+  nav {
+    display: flex;
+    padding: 7px;
+    justify-content: flex-end;
+    /* box-shadow: 0px 4px 10px; */
+    border-radius: 5px;
+    /* position: fixed; */
+  }
+  /* #testColor{
+    position: absolute;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 800px;
+    width: 800px; */
+  /* background-color: rgba(30,60,10,.4);
+    background-image: linear-gradient(to bottom right, rgba(30,120,30,.5) 0%,rgba(30,120,30,.1) 15%,rgba(30,60,10,0) 100%);
+  } */
+  nav a {
+    text-align: center;
+    padding: 10px;
+    width: 10%;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    font-size: 0.8em;
+  }
+  nav a:hover {
+    color: white;
+    background-color: rgba(10,210,200,.4);
+    border-radius: 5px;
+  }
+  /* add mediaquery^^^ */
+  
+  #nameplate {
+    height: 800px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  #nameplate > h1 {
+    font-size: 5em;
+    text-align: center;
+    margin-top: auto;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+  #nameplate > h3 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: auto;
+  }
+  #resumetitle {
+    text-align: center;
+  }
+  #resume {
+    background-color: white;
+    border-radius: 50px;
+    padding: 40px;
+    margin-top: 50px;
+  }
+  #resume > p {
+    text-indent: 1em;
+    line-height: 1.7em;
+  }
+  
+  #resume > ul {
+    line-height: 2em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #resume li {
+    text-align: left;
+  }
+  
+  #resume > table {
+    width: 100%;
+    line-height: 2em;
+    margin: auto;
+  }
+  #resume th {
+    text-align: left;
+    width: 50%;
+    font-weight: 600;
+  }
+  #resume > td {
+    text-align: center;
+    margin: auto;
+  }
+  #resume h2,
+  #resume h3,
+  #resume h4,
+  #resume h5 {
+    margin: 1vw;
+  }
+  #projects {
+    text-align: center;
+  }
+  #projects > p {
+    line-height: 1.7em;
+    text-align: center;
+  }
+  #projects > ul {
+    line-height: 1.5em;
+  }
+  #d1,
+  #d2 {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  
+  #projects > a {
+    text-decoration: none;
+    color: black;
+    background-color: rgba(10,210,200,.4);
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  
+  #d1 > a:hover,
+  #projects > a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(70, 120, 70);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  #everton1 {
+    box-shadow: 1px 1px 10px;
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+    margin-left: 7vw;
+  }
+  #everton2 {
+    box-shadow: 1px 1px 10px;
+    object-fit: cover;
+    width: 400px;
+    height: 500px;
+    margin-left: 7vw;
+  }
+  #everton3 {
+    box-shadow: 1px 1px 10px;
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+    margin-left: 7vw;
+  }
+  #about {
+    justify-content: center;
+    margin: auto;
+    line-height: 1.7em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3vw;
+    column-gap: 2vw;
+    padding: 10px;
+  }
+  #about1 {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0)
+    );
+    border-radius: 50px;
+    padding: 25px;
+    width: 1fr;
+    text-align: right;
+    height: auto;
+  }
+  #about2 {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0)
+    );
+    border-radius: 50px;
+  
+    padding: 25px;
+    width: 1fr;
+  }
+  #about3 {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0)
+    );
+    border-radius: 50px;
+    text-align: right;
+    padding: 25px;
+    width: 1fr;
+  }
+  
+  footer {
+    height: 600px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    #about {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+    #everton1,
+    #everton2,
+    #everton3 {
+      margin: auto;
+    }
+    #about1 {
+      text-align: left;
+    }
+    #about2 {
+      grid-row: 3/4;
+    }
+    #about3 {
+      text-align: left;
+    }
+    .projects a{
+      display: block;
+    }
+  }
+  
