@@ -1,9 +1,11 @@
+let sections = [];
 function workData() {
   const box = document.getElementById("data");
   let title = document.getElementById("dataTitle");
   title.innerHTML = "Work and Past Projects";
   let wrap = document.getElementById("dataArea");
   wrap.style.display = "flex";
+  wrap.style.flexDirection = "row";
   wrap.style.justifyContent = "space-evenly";
   Array.from(wrap.childNodes).forEach((x) => wrap.removeChild(x));
   genWorkData(wrap);
@@ -15,8 +17,85 @@ function expData() {
   title.innerHTML = "Professional Experience";
   let wrap = document.getElementById("dataArea");
   wrap.style.display = "flex";
+  wrap.style.flexDirection = "column";
   Array.from(wrap.childNodes).forEach((x) => wrap.removeChild(x));
   getExpData(wrap);
+}
+function makeSection(title, text, sec) {
+  let section = document.createElement("div");
+  let titl = document.createElement("h2");
+  let txt = document.createElement("p");
+  let txt2;
+
+  section.style.color = "white";
+  section.style.width = "70%";
+  section.style.margin = "auto";
+  section.className = title + "CN";
+
+  titl.innerHTML = title;
+  txt.innerHTML = text;
+  txt.style.color = "rgb(10, 150, 40)";
+
+  section.appendChild(titl);
+  section.appendChild(txt);
+  if (sec !== null) {
+    txt2 = document.createElement("p");
+    txt2.innerHTML = sec;
+    txt.style.lineHeight = "2";
+    section.appendChild(txt2);
+  }
+  sections.push(section);
+  return section;
+}
+
+function getExpData(wrap) {
+  let sec1 = makeSection(
+    null,
+    null,
+    "Software Developer with five years of professional experience working on" +
+      "      a Cloud based S.a.a.S.." +
+      "      Familiar with Git, Kubernetes and Docker, as well as many development" +
+      "      languages with a personal interest" +
+      "      in cross platform web application development. Ability to demonstrate" +
+      "      knowledge in adeptly managing customer issues," +
+      "      implementing efficient and secure code, and improving operations through" +
+      "      the use of automation and thorough testing.<br><br><br><br>"
+  );
+
+  let sec2 = makeSection(
+    "Experience",
+    "Ultimate Kronos Group - Back-End Developer. November 2019 - Present",
+    "- Engineered and maintained Java code for a Cloud Based Software as a Service" +
+      "<br><br>- Collaborated with support teams to resolve customer and internally" +
+      "reported issues" +
+      "<br><br>- Actively engaged in agile development methodologies, including daily" +
+      "standups, sprint planning, and retrospective meetings" +
+      "<br><br>- Stayed up to date on code security and integrity taking internal" +
+      "training courses" +
+      "<br><br>- 14Employed automation and Java frameworks like Spring Boot to develop" +
+      "scalable software solutions, optimizing performance<br><br><br><br>"
+  );
+
+  let sec3 = makeSection(
+    "Skills",
+    "Programming Languages",
+    "Java, Javascript, Dart, React, Python, and more"
+  );
+  let sec4 = makeSection(null, "Web Development", "HTML, CSS, JS, Bootstrap");
+  let sec5 = makeSection(
+    null,
+    "Database Languages",
+    "PostgreSQL, MySQL, MongoDB, NoSQL"
+  );
+  let sec6 = makeSection(null, "Version Control", "Git");
+  let sec7 = makeSection(
+    null,
+    "IDEs",
+    "IntelliJ, Eclipse, Android Studio, Visual Studio Code, and more"
+  );
+  for (let x of sections) {
+    wrap.appendChild(x);
+  }
 }
 
 function aboutData() {
@@ -25,8 +104,9 @@ function aboutData() {
   title.innerHTML = "About Me";
   let wrap = document.getElementById("dataArea");
   wrap.style.display = "flex";
+  wrap.style.flexDirection = "column";
   Array.from(wrap.childNodes).forEach((x) => wrap.removeChild(x));
-  getAboutData();
+  getAboutData(wrap);
 }
 
 function makeCard(x, y, z) {
@@ -73,24 +153,4 @@ function genWorkData(wrap) {
   wrap.appendChild(card2);
   wrap.appendChild(card3);
   wrap.appendChild(card4);
-  // <a href="newindex.html">
-  //   <div class="workexamplecard">
-  //     <img src="images/index2.jpg" alt="index2" class="workcardimg">
-  //     <p>Iteration 2 of website</p>
-  //   </div>
-  // </a>
-
-  // <a href="javascript1.html">
-  //   <div class="workexamplecard">
-  //     <img src="images/memgame.jpg" alt="memgame" class="workcardimg">
-  //     <p>JS Memory Game</p>
-  //   </div>
-  // </a>
-
-  // <a href="https://evertonsmith-848dd.web.app/">
-  //   <div class="workexamplecard">
-  //     <img src="images/dart1.jpg" alt="dart1" class="workcardimg">
-  //     <p>Dart Homepage</p>
-  //   </div>
-  // </a>
 }

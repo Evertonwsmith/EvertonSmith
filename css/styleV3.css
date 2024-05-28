@@ -58,11 +58,16 @@ nav > a:hover {
   margin-top: 100px;
   text-align: center;
 }
+#dataArea{
+  display: flex;
+  flex-direction: row;
+}
 
 .workexamplecard img {
   width: 100%;
   height: auto;
 }
+
 
 @keyframes lineAni {
   0% {
@@ -88,6 +93,14 @@ nav > a:hover {
 }
 
 @media screen and (max-width: 900px) {
+  #dataArea{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card{
+    width: 50%;
+  }
   .heroOne {
     height: auto;
   }
