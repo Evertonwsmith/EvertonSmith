@@ -57,7 +57,7 @@ function makeCard(x, y, z) {
 
 function genWorkData(wrap) {
   let card1 = makeCard("newindex.html", "images/index2.jpg", "Website V1.2");
-  let card2 = makeCard("index.html", "images/index1.jpg", "Website V1.1");
+  let card2 = makeCard("index1.html", "images/index1.jpg", "Website V1.1");
   let card3 = makeCard(
     "https://evertonsmith-848dd.web.app/",
     "images/dart1.jpg",
