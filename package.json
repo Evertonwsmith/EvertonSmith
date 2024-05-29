@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "three": "^0.164.1"
+  },
+  "devDependencies": {
+    "vite": "^5.2.12"
   }
 }

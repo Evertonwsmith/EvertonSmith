@@ -273,7 +273,12 @@ footer {
   #about3 {
     text-align: left;
   }
-  .projects a{
-    display: block;
+  #projects{
+    display: flex;
+    flex-direction: column;
+  }
+  #projects a{
+    margin: 10px;
+ 
   }
 }

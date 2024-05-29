@@ -57,8 +57,17 @@ var gameArea = {
 }
 
 //Item Screen
+
 //Text Screen
+
 
 //Inventory
 
+
+
+function updateGameArea() {
+
+    gameArea.clear();
+    
+}
 gameArea.start();

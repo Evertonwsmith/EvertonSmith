@@ -5,7 +5,6 @@ function workData() {
   title.innerHTML = "Work and Past Projects";
   let wrap = document.getElementById("dataArea");
   wrap.style.display = "flex";
-  wrap.style.flexDirection = "row";
   wrap.style.justifyContent = "space-evenly";
   Array.from(wrap.childNodes).forEach((x) => wrap.removeChild(x));
   genWorkData(wrap);
@@ -17,7 +16,7 @@ function expData() {
   title.innerHTML = "Professional Experience";
   let wrap = document.getElementById("dataArea");
   wrap.style.display = "flex";
-  wrap.style.flexDirection = "column";
+  // wrap.style.flexDirection = "column";
   Array.from(wrap.childNodes).forEach((x) => wrap.removeChild(x));
   getExpData(wrap);
 }
@@ -41,7 +40,10 @@ function makeSection(title, text, sec) {
   if (sec !== null) {
     txt2 = document.createElement("p");
     txt2.innerHTML = sec;
-    txt.style.lineHeight = "2";
+    txt2.style.fontFamily = 'Arial';
+    txt2.style.lineHeight = "2";
+    txt2.style.fontWeight = '400';
+    txt2.style.fontSize = 'clamp(10px,4vw,20px)';
     section.appendChild(txt2);
   }
   sections.push(section);
@@ -72,7 +74,7 @@ function getExpData(wrap) {
       "standups, sprint planning, and retrospective meetings" +
       "<br><br>- Stayed up to date on code security and integrity taking internal" +
       "training courses" +
-      "<br><br>- 14Employed automation and Java frameworks like Spring Boot to develop" +
+      "<br><br>- Employed automation and Java frameworks like Spring Boot to develop" +
       "scalable software solutions, optimizing performance<br><br><br><br>"
   );
 
@@ -149,8 +151,12 @@ function genWorkData(wrap) {
     "JS Memory Game"
   );
 
+  // let card5 = makeCard(
+  //   'threejs/test1.html','images/PL1.jpg','Three.JS'
+  // );
   wrap.appendChild(card1);
   wrap.appendChild(card2);
   wrap.appendChild(card3);
   wrap.appendChild(card4);
+  // wrap.appendChild(card5);
 }
