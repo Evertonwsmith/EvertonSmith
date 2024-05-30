@@ -5,6 +5,12 @@ function workData() {
   title.innerHTML = "Work and Past Projects";
   let wrap = document.getElementById("dataArea");
   wrap.style.display = "flex";
+  const width = window.innerWidth;
+  wrap.style.flexDirection = 'column';
+  if(width > 900){
+    wrap.style.flexDirection = 'row';
+  }
+  wrap.style.display = 'row';
   wrap.style.justifyContent = "space-evenly";
   Array.from(wrap.childNodes).forEach((x) => wrap.removeChild(x));
   genWorkData(wrap);
@@ -16,8 +22,9 @@ function expData() {
   title.innerHTML = "Professional Experience";
   let wrap = document.getElementById("dataArea");
   wrap.style.display = "flex";
-  // wrap.style.flexDirection = "column";
+  wrap.style.flexDirection = "column";
   Array.from(wrap.childNodes).forEach((x) => wrap.removeChild(x));
+  sections = [];
   getExpData(wrap);
 }
 function makeSection(title, text, sec) {
@@ -34,13 +41,14 @@ function makeSection(title, text, sec) {
   titl.innerHTML = title;
   txt.innerHTML = text;
   txt.style.color = "rgb(10, 150, 40)";
+  txt.style.fontSize = 'clamp(10px,4vw,20px)';
 
   section.appendChild(titl);
   section.appendChild(txt);
   if (sec !== null) {
     txt2 = document.createElement("p");
     txt2.innerHTML = sec;
-    txt2.style.fontFamily = 'Arial';
+    // txt2.style.fontFamily = 'Arial';
     txt2.style.lineHeight = "2";
     txt2.style.fontWeight = '400';
     txt2.style.fontSize = 'clamp(10px,4vw,20px)';
@@ -114,7 +122,11 @@ function aboutData() {
 function makeCard(x, y, z) {
   let card = document.createElement("div");
   card.className = "card";
+  const width = window.innerWidth; 
   card.style.width = "20%";
+  if(width < 900){
+    card.style.width = "70%";
+  }
 
   let link = document.createElement("a");
   let image = document.createElement("img");

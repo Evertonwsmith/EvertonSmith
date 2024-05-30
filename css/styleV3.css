@@ -102,7 +102,7 @@ nav > a:hover {
     width: 50%;
   }
   .heroOne {
-    height: auto;
+    height: 150px;
   }
   nav {
     flex-direction: column;
