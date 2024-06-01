@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+.navigator{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: darkblue;
+    opacity: .9;
+    z-index: 1;
+    padding: 20px;
+    margin: 25px;
+    color: gold;
+    text-decoration: none; 
+}
+.navigator a {
+    color: gold;
+    text-decoration: none;
+    margin: 5px 0;
+    /* font-weight: bold;s */
+    text-transform: uppercase;
+}
+
+.logo{
+    color: gold;
+    font-size: clamp(50px,5vw,100px);
+    position: absolute;
+    background-color: darkblue;
+    opacity: .9;
+    z-index: 1;
+    padding: 50px;
+    transform: translate(-50%, -50%); /* Center the element */
+    left: 50%; /* Center horizontally */
+    top: 25%; /* Center vertically */
+}
+
+.one{
+    height: 500px;
+    background-image: url('../images/tech1.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: .5;
+}
+
+.infoBoxOne{
+    color: gold;
+    background-color: rgba(0, 0, 139, .8);
+    padding: 100px;
+    margin: 100px;
+    font-size: clamp(20px,3vw,35px);
+    position: relative;
+    top: 50%;
+    z-index: 1;
+    letter-spacing: 4px;
+}
+.infoBoxOne > p{
+    max-width: 75%;
+    text-align: center;
+    margin: auto;
+}
+
+.two{
+    height: 500px;
+    justify-content: center;
+}
+
+.three{
+    height: 500px;
+    background-image: url('../images/tech2.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: .9;
+}
+
+.four{
+    height: 500px;
+}
+
+.five{
+    height: 500px;
+    background-image: url('../images/tech3.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: .9;
+}
