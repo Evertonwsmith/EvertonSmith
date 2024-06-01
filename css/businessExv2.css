@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navigator {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    background-color: darkblue;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    padding-top: 50px;
+
+}
+.navigator > img{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    max-width: 250px;
+    box-shadow: 1px 1px 10px 1px;
+}
+.navigator > a{
+    text-decoration: none;
+    color: gold;
+    font-size: clamp(24px,3vw,40px);
+    line-height: 180%;
+}
+.navigator > a:hover{
+    border-radius: 10px;
+    background-color: blue;
+}
+.one, .two, .three, .four, .five{
+    width: 80%;
+    margin-left: 20%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+.one, .three, .five{
+    background-color: grey;
+}
+.one{
+    background-image: url('../images/tech1.jpg');
+    background-size: cover;
+}
+
+.two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow: hidden;
+    margin-left: 20%;
+}
+.two > img{
+    height: 50%;
+    margin: auto;
+    max-width: 500px;
+    object-fit: cover;
+    box-shadow: 1px 1px 10px 1px;
+}
+.two > p{
+    position: relative;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: clamp(24px,3vw,34px);
+    color: darkblue;
+    background-color: rgba(251, 255, 14, 0.555);
+    padding: 50px;
+}
+
+
+.logo{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(34px,3vw,46px);
+    font-weight: 700;
+    background-color: rgba(0,0,139,.8);
+    padding: 8%;
+    color: white;
+    letter-spacing: 5px;
+}
+
+.three{
+    background-image: url('../images/tech2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.opacLayer{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,139,.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.opacLayer > p{
+    margin: auto;
+    color: gold;
+    padding: 50px;
+    font-size: clamp(26px,3vw,46px);
+    font-weight: 100;
+}
+
+.four{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    text-indent: 10px;
+    font-family: italic;
+    font-variant: small-caps;
+    font-size: clamp(24px,2vw,40px);
+}
+.four > p{
+    width: 60%;
+    /* margin: auto; */
+}
+
+.five{
+    background-image: url('../images/tech3.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+.opacFive{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,139,.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.opacFive > p{
+    margin: 0;
+    color: gold;
+    padding: 20px;
+}
+.opacFive > p:hover{
+    margin: 0;
+    color: white;
+    padding: 20px;
+}
+@media screen and (max-width: 900px) {
+    .two{
+        flex-direction: column;
+    }
+}
