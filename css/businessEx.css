@@ -1,9 +1,18 @@
-body{
+body {
     margin: 0;
-    scroll-behavior: smooth; /* Enable smooth scrolling */
+    scroll-behavior: smooth;
+    /* Enable smooth scrolling */
 }
 
-.navigator{
+.one,
+.two,
+.three,
+.four,
+.five {
+    z-index: 3;
+}
+
+.navigator {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -13,10 +22,11 @@ body{
     padding: 20px;
     margin: 25px;
     color: gold;
-    text-decoration: none; 
+    text-decoration: none;
     border-radius: 2px;
 
 }
+
 .navigator a {
     color: gold;
     text-decoration: none;
@@ -25,90 +35,240 @@ body{
     text-transform: uppercase;
 }
 
-.logo{
+.logo {
     color: gold;
-    font-size: clamp(50px,5vw,100px);
+    font-size: clamp(50px, 5vw, 100px);
     position: absolute;
     background-color: darkblue;
     opacity: .9;
     z-index: 1;
     padding: 50px;
-    transform: translate(-50%, -50%); /* Center the element */
-    left: 50%; /* Center horizontally */
-    top: 25%; /* Center vertically */
+    transform: translate(-50%, -50%);
+    /* Center the element */
+    left: 50%;
+    /* Center horizontally */
+    top: 25%;
+    /* Center vertically */
 }
 
-.one{
+.one {
     height: 500px;
     background-image: url('../images/tech1.jpg');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
     opacity: .5;
 }
-.picsBoxOne{
+
+.picsBoxOne {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     position: relative;
-top: -25%;
+    top: -25%;
 }
-.picsBoxOne > img{
+
+.picsBoxOne>img {
     width: 20%;
     max-width: 250px;
 }
-.picsInfo{
+
+.picsInfo {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     position: relative;
     top: -35%;
-    background-color: rgba(150,150,150,.1);
+    background-color: rgba(150, 150, 150, .9);
+    color: white;
+    letter-spacing: 3px;
     padding: 100px;
     height: 100px;
     z-index: 2;
-    font-size: clamp(20px,3vw,42px);
+    font-size: clamp(20px, 3vw, 42px);
     text-align: center;
 }
-.infoBoxOne{
+
+.infoBoxOne {
     color: gold;
     background-color: rgba(0, 0, 139, .8);
     padding: 100px;
     margin: 100px;
-    font-size: clamp(20px,3vw,35px);
+    font-size: clamp(20px, 3vw, 35px);
     position: relative;
     z-index: 1;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
-.infoBoxOne > p{
+
+.infoBoxOne>p {
     max-width: 75%;
     text-align: center;
     margin: auto;
 }
 
-.two{
+.two {
     height: 500px;
     justify-content: center;
 }
 
-.three{
+.three {
     height: 500px;
     background-image: url('../images/tech2.jpg');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
     opacity: .9;
 }
 
-.four{
+.four {
     height: 500px;
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
 }
-
-.five{
+.cardThree{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    position: relative;
+    top: -50px;
+    height: 400px;
+    width: 80%;
+    color: black;
+    z-index: 2;
+}
+.left, .right{
+    width: 45%;
+    margin: auto;
+    font-size: clamp(20px,3vw,42px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.left > img{
+    width: 35%;
+    min-width: 100px;
+    margin: auto;
+}
+.right > img{
+    width: 100%;
+    z-index: 3;
+}
+.right > p{
+    top: 0;
+    padding: 20px;
+    background-color: rgba(150, 150, 150, .8);
+    color: darkblue;
+    height: 90%;
+    text-align: center;
+    align-content: center;
+    border-radius: 5%;
+    margin: 10px;
+    font-size: clamp(20px,3vw,42px);
+}
+.five {
     height: 500px;
     background-image: url('../images/tech3.jpg');
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
     opacity: .9;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    font-size: clamp(20px, 3vw, 35px);
+    color: gold;
+}
+
+.five>ul {
+    background-color: rgba(0, 0, 139, .8);
+    list-style-type: none;
+    width: 50%;
+    margin: auto;
+    padding: 25px;
+}
+
+
+
+/* MOBILE SCREEN */
+@media screen and (max-width: 900px) {
+    .navigator {
+        position: relative;
+        margin: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        top: 50%;
+    }
+
+    .picsBoxOne {
+        top: 0;
+        margin: 20px;
+    }
+
+    .picsBoxOne>img {
+        width: 30%;
+        max-width: 250px;
+    }
+
+    .picsInfo {
+        top: 0;
+        height: 60px;
+        padding: 30px;
+        margin: 20px;
+    }
+
+    .infoBoxOne {
+        color: gold;
+        background-color: rgba(0, 0, 139, .8);
+        padding: 20px;
+        margin: 0;
+        font-size: clamp(20px, 3vw, 35px);
+        position: relative;
+        top: 50%;
+        z-index: 1;
+        letter-spacing: 3px;
+    }
+
+    .infoBoxOne>p {
+        max-width: 75%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .two,
+    .four {
+        height: 250px;
+    }
+
+    .five {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        font-size: clamp(20px, 3vw, 35px);
+        color: gold;
+
+    }
+
+    .five>ul {
+        background-color: rgba(0, 0, 139, .8);
+        list-style-type: none;
+        width: 50%;
+        margin: auto;
+        padding: 25px;
+    }
 }
