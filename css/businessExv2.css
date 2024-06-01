@@ -156,4 +156,23 @@ body {
     .two{
         flex-direction: column;
     }
+    .two > p{
+        z-index: 3;
+    }
+    .one, .two,.three,.four,.five{
+        width: 100%;
+        margin: 0;
+    }
+    .navigator{
+        width: 100%;
+        height: auto;
+        background-color: darkblue;
+        opacity: 1;
+        z-index: 1;
+        position: relative;
+        padding-bottom: 50px;
+    }
+    .navigator > img{
+        display: none;
+    }
 }
