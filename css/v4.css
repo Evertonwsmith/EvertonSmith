@@ -14,7 +14,10 @@ body {
 p {
   font-weight: 500;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 .heroImage {
   display: flex;
   justify-content: center;
@@ -45,19 +48,23 @@ p {
   background: rgb(240, 240, 240);
   mix-blend-mode: lighten;
 }
-.heroTxt > h1,h2,h3,h4,h5{
+.heroTxt > h1,
+h2,
+h3,
+h4,
+h5 {
   margin-left: 25px;
 }
 
 .heroTxt > h1 {
   font-size: clamp(70px, 15vw, 100px);
 }
-.heroTxt > h4{
-  font-size: clamp(16px,2vw,20px);
+.heroTxt > h4 {
+  font-size: clamp(16px, 2vw, 20px);
   margin-top: 0;
   margin-bottom: 0;
 }
-.circleContact{
+.circleContact {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -71,10 +78,10 @@ p {
   border-radius: 100%;
   transition-duration: 1s;
 }
-.circleContact > i{
+.circleContact > i {
   size: 30px;
 }
-.circleContact:hover{
+.circleContact:hover {
   width: 120px;
   height: 120px;
   background-color: rgba(57, 57, 151, 0.678);
@@ -99,21 +106,20 @@ p {
   justify-content: center;
   flex-direction: row;
   background-color: rgba(255, 255, 255, 0.9);
-
 }
 .shadowBox2 {
-    width: 80%;
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 50px;
-    box-shadow: 5px 5px 20px 20px rgba(10, 10, 10, 0.3);
-    border-radius: 2%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    background-color: rgba(255, 255, 255, 0.9);
-    flex-wrap: wrap;
-  }
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 5px 5px 20px 20px rgba(10, 10, 10, 0.3);
+  border-radius: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.9);
+  flex-wrap: wrap;
+}
 
 .shadowBox:hover {
   width: 85%;
@@ -134,22 +140,23 @@ p {
 }
 
 .txtBox > p {
-  font-size: clamp(14px, 3vw, 28px);
+  text-align: left;
+  font-size: clamp(14px, 3vw, 24px);
 }
 
 #halfFace > img {
   width: 80%;
   margin: 20px;
   border-radius: 5%;
-  opacity: .9;
+  opacity: 0.9;
   padding-right: 0;
 }
-#halfFace{
-    margin-right: 0;
+#halfFace {
+  margin-right: 0;
 }
-.txtBox{
-    text-align: left;
-    width: 50%;
+.txtBox {
+  text-align: left;
+  width: 50%;
 }
 
 .spotlight {
@@ -253,18 +260,39 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-  .circleContact{
+  .circleContact {
     width: 70px;
     height: 70px;
     transition-duration: 2s;
     right: 5%;
   }
-  .circleContact:hover{
+  .circleContact:hover {
     width: 80px;
     height: 80px;
     background-color: rgba(57, 57, 151, 0.678);
   }
-  .shadowBox, .shadowBox2{
+  .shadowBox,
+  .shadowBox2 {
     margin-top: 10px;
+  }
+
+  .first >.shadowBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .first > .shadowBox > .txtBox{
+    margin: auto;
+  }
+  #halfFace {
+    display: flex;
+    justify-content: center;
+  }
+  #halfFace > img{
+    margin: auto;
+    margin-top: 40px;
+  }
+  .txtBox >p {
+    text-align: center;
   }
 }
