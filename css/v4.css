@@ -314,11 +314,13 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
+
   .circleContact {
     width: 70px;
     height: 70px;
     transition-duration: 2s;
     right: 5%;
+    top: 30%;
   }
   .circleContact:hover {
     width: 80px;
@@ -352,6 +354,19 @@ footer {
     max-width: 70%;
     object-fit: cover;
   }
+  .cardCont{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cardCont > a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    width: 40%;
+    margin: auto;
+  }
+
 }
 
 @keyframes slideIn {
