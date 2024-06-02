@@ -10,6 +10,7 @@ body {
   background-image: url("../images/font1.jpg");
   font-weight: 700;
   white-space: initial;
+  overflow-x: hidden;
 }
 p {
   font-weight: 500;
@@ -70,7 +71,7 @@ h5 {
 }
 
 .heroTxt > h1 {
-  font-size: clamp(70px, 15vw, 100px);
+  font-size: clamp(40px, 10vw, 100px);
 }
 .heroTxt > h4 {
   font-size: clamp(16px, 2vw, 20px);
@@ -229,7 +230,7 @@ h5 {
 .logo > img {
   width: 80%;
 }
-.txtBox2{
+.txtBox2 {
   text-align: center;
   justify-content: center;
   align-content: space-evenly;
@@ -237,8 +238,8 @@ h5 {
   width: 70%;
   margin: auto;
 }
-.txtBox2 > p{
-  font-size: clamp(18px,2vw,26px);
+.txtBox2 > p {
+  font-size: clamp(18px, 2vw, 26px);
 }
 
 .techstack {
@@ -306,7 +307,7 @@ h5 {
 
 .cardtxt {
   text-align: center;
-  font-size: clamp(18px,2vw,26px);
+  font-size: clamp(18px, 2vw, 26px);
 }
 
 footer {
@@ -314,13 +315,12 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-
   .circleContact {
     width: 70px;
     height: 70px;
     transition-duration: 2s;
     right: 5%;
-    top: 30%;
+    top: 15%;
   }
   .circleContact:hover {
     width: 80px;
@@ -354,7 +354,7 @@ footer {
     max-width: 70%;
     object-fit: cover;
   }
-  .cardCont{
+  .cardCont {
     flex-direction: column;
     justify-content: center;
   }
@@ -366,7 +366,6 @@ footer {
     width: 40%;
     margin: auto;
   }
-
 }
 
 @keyframes slideIn {
