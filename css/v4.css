@@ -306,6 +306,7 @@ h5 {
 
 .cardtxt {
   text-align: center;
+  font-size: clamp(18px,2vw,26px);
 }
 
 footer {
@@ -344,6 +345,12 @@ footer {
   #halfFace > img {
     margin: auto;
     margin-top: 40px;
+  }
+  .cardimg > img {
+    width: auto;
+    height: 100%;
+    max-width: 70%;
+    object-fit: cover;
   }
 }
 
