@@ -34,9 +34,10 @@ p {
 }
 
 .heroTxt {
-  text-align: center;
+  text-align: left;
   width: 100%;
-  height: 600px;
+  /* height: 600px; */
+  padding: 50px;
   color: #000;
   text-transform: uppercase;
   align-content: center;
@@ -44,9 +45,40 @@ p {
   background: rgb(240, 240, 240);
   mix-blend-mode: lighten;
 }
+.heroTxt > h1,h2,h3,h4,h5{
+  margin-left: 25px;
+}
 
 .heroTxt > h1 {
-  font-size: clamp(100px, 15vw, 200px);
+  font-size: clamp(70px, 15vw, 100px);
+}
+.heroTxt > h4{
+  font-size: clamp(16px,2vw,20px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.circleContact{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(187, 51, 187, 0.685);
+  top: 20%;
+  right: 15%;
+  border-radius: 100%;
+  transition-duration: 1s;
+}
+.circleContact > i{
+  size: 30px;
+}
+.circleContact:hover{
+  width: 120px;
+  height: 120px;
+  background-color: rgba(57, 57, 151, 0.678);
+  color: white;
 }
 /* .heroTxt > h1:hover{
     font-size: 9vw;
@@ -60,7 +92,7 @@ p {
   width: 80%;
   max-width: 1000px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   box-shadow: 5px 5px 20px 20px rgba(10, 10, 10, 0.3);
   border-radius: 2%;
   display: flex;
@@ -73,7 +105,7 @@ p {
     width: 80%;
     max-width: 1000px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     box-shadow: 5px 5px 20px 20px rgba(10, 10, 10, 0.3);
     border-radius: 2%;
     display: flex;
@@ -220,6 +252,19 @@ footer {
   height: 200px;
 }
 
-@media  screen and (max-width: 800) {
-  
+@media screen and (max-width: 900px) {
+  .circleContact{
+    width: 70px;
+    height: 70px;
+    transition-duration: 2s;
+    right: 5%;
+  }
+  .circleContact:hover{
+    width: 80px;
+    height: 80px;
+    background-color: rgba(57, 57, 151, 0.678);
+  }
+  .shadowBox, .shadowBox2{
+    margin-top: 10px;
+  }
 }
