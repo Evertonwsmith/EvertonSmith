@@ -28,7 +28,7 @@ img {
   display: flex;
   justify-content: center;
   align-content: center;
-  /* height: 600px; */
+  height: 400px;
   /* max-width: 1000px; */
   margin: auto;
 }
