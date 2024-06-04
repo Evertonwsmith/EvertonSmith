@@ -101,6 +101,7 @@ const body = document.body;
 const chartBody = document.getElementById('chart');
 const infoBody = document.getElementById('info');
 const infoTable = document.getElementById('infoTable');
+const chartTable = document.getElementById('chartTable');
 const optionsBody = document.getElementById('options');
 const profileBody = document.getElementById('profile');
 const addBody = document.getElementById('add');
@@ -203,6 +204,7 @@ function populateTasks() {
         const taskEnd = new Date(task.endDate);
 
         const infoRow = document.createElement('tr');
+        const infoRowChart = document.createElement('tr');
 
         // Only add the task once
         if (infoTable) {
@@ -213,6 +215,7 @@ function populateTasks() {
             //
             // editBump.onclick = edit(task,index);
             infoRow.appendChild(editBump);
+            infoRowChart.appendChild(editBump);
             let taskTitle = document.createElement('td');
             taskTitle.innerHTML = task.title;
             taskTitle.style.color = task.color;
@@ -239,6 +242,8 @@ function populateTasks() {
             infoRow.appendChild(emptyWorkDone);
             infoRow.appendChild(emptyCostTotal);
 
+            infoRowChart.appendChild(taskTitle);
+            chartTable.appendChild(infoRowChart);
             infoTable.appendChild(infoRow);
         }
     });
