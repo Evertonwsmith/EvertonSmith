@@ -5,9 +5,13 @@ const charactersButtons = document.getElementById('charactersBut');
 const episodes = document.getElementById('episodes');
 const sND = document.getElementById('storeNextDoor');
 const pageTitle = document.getElementById('pageTitle');
+const showP = document.getElementById('showPics');
 let CHARs = [];
 let EPIs = [];
 let SNDs = [];
+
+
+
 
 pages.push(characters, episodes, sND, charactersButtons);
 let showpic = true;
@@ -16,23 +20,24 @@ let ind = [{ 'characters': 1 }, { 'episodes': 2 }, { 'storeNextDoor': 3 }];
 characterPage();
 
 //Fetch character info
-// Fetching all characters
-fetch('https://bobsburgers-api.herokuapp.com/characters')
-    .then(response => response.json())
-    .then(data => genCharData(data))
-    .catch(error => console.error('Error:', error));
-
-// Fetching all characters
-fetch('https://bobsburgers-api.herokuapp.com/episodes')
-    .then(response => response.json())
-    .then(data => genEpisData(data))
-    .catch(error => console.error('Error:', error));
-
-//Fetch store next door 
-fetch('https://bobsburgers-api.herokuapp.com/storeNextDoor/')
-    .then(response => response.json())
-    .then(data => genSND(data))
-    .catch(error => console.error('Error:', error));
+Promise.all([
+    fetch('https://bobsburgers-api.herokuapp.com/characters')
+        .then(response => response.json())
+        .then(data => genCharData(data))
+        .catch(error => console.error('Error fetching characters:', error)),
+    
+    fetch('https://bobsburgers-api.herokuapp.com/episodes')
+        .then(response => response.json())
+        .then(data => genEpisData(data))
+        .catch(error => console.error('Error fetching episodes:', error)),
+    
+    fetch('https://bobsburgers-api.herokuapp.com/storeNextDoor/')
+        .then(response => response.json())
+        .then(data => genSND(data))
+        .catch(error => console.error('Error fetching store next door:', error))
+]).then(() => {
+    // Hide loading indicator and show content once all fetches are done
+});
 
 function setIndex(x) {
     switch (x) {
@@ -42,18 +47,21 @@ function setIndex(x) {
             characters.style = 'display: flex;';
             charactersButtons.style = 'display:flex;';
             pageTitle.innerHTML = '<h1>Characters</h1>';
+            showP.style = 'display: flex';
             break;
         case 2: pages.forEach(p => {
             p.style = 'display: none';
         });
             episodes.style = 'display: flex';
             pageTitle.innerHTML = '<h1>Seasons and Episodes</h1>';
+            showP.style = 'display: none';
             break;
         case 3: pages.forEach(p => {
             p.style = 'display: none';
         });
             sND.style = 'display: flex';
             pageTitle.innerHTML = '<h1>Store Next Door</h1>';
+            showP.style = 'display: none';
             break;
 
     }
@@ -215,7 +223,20 @@ function setChars() {
                 const image = document.createElement('img');
                 image.src = character.image;
                 image.style = 'width:50px;margin:auto;object-fit:cover;';
+
+                // hidden info div
+                let infoDiv = document.createElement('div');
+                infoDiv.style.display = 'flex';
+                infoDiv.style.flexDirection = 'column';
+                infoDiv.style.justifyContent = 'center';
+                let firstEpi = document.createElement('p');
+                firstEpi.innerHTML = 'First Appearance: '+character.firstEpisode;
+                infoDiv.appendChild(firstEpi);
+                let occupation = document.createElement('p');
+                occupation.innerHTML = 'Occupation: '+character.occupation;
+                infoDiv.appendChild(occupation);
                 charElement.appendChild(image);
+                charElement.appendChild(infoDiv);
                 letterDiv.appendChild(charElement);
 
             });

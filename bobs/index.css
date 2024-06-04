@@ -103,3 +103,11 @@ body {
 #charactersBut > button:hover{
     background-color: yellow;
 }
+#showPics{
+    margin: 5px;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 15px;
+    text-transform: uppercase;
+
+}
