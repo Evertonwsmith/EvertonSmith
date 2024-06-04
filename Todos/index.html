@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V2</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="header">
+        Todos
+    </div>
+    <br><br>
+    <div class="nav">
+        <button onclick="chart()">Chart</button>
+        <button onclick="info()">Info</button>
+        <button onclick="options()">Options</button>
+        <button onclick="profile()">Profile</button>
+        <button onclick="clearAll()">clear</button>
+    </div>
+
+    <br><br>
+
+    <div id="add">
+        <form onsubmit="newTask(event)">
+            <label for="taskName">Task Name:</label>
+            <input type="text" name="taskName" id="taskName">
+            <label for="startDt">Start Date</label>
+            <input type="date" name="startDt" id="startDt">
+            <label for="endDt">End Date</label>
+            <input type="date" name="endDt" id="endDt">
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color">
+            <label for="costEst">Cost Est.</label>
+            <input type="number" name="costEst" id="costEst">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <br><br>
+
+    <div id="info">
+        <button onclick="addInfo()">Add</button>
+
+        <table id="infoTable">
+            <tr>
+                <th>edit</th>
+                <th>Title</th>
+                <th>StartDate</th>
+                <th>EndDate</th>
+                <th>Cost Est.</th>
+                <th>Work Done</th>
+                <th>Cost</th>
+            </tr>
+            <!-- <tr>
+                <td><button>edit</button></td>
+                <th>Task One</th>
+                <td>03/06/24</td>
+                <td>03/07/24</td>
+                <td>$100</td>
+                <td>0d</td>
+                <td>$0</td>
+            </tr>
+            <tr>
+                <td><button>edit</button></td>
+                <th>Task Two</th>
+                <td>03/06/24</td>
+                <td>03/08/24</td>
+                <td>$200</td>
+                <td>0d</td>
+                <td>$0</td>
+            </tr> -->
+
+        </table>
+    </div>
+
+    <div id="chart">
+        <button onclick="addChart()">Add</button>
+        <button id="prevChart">Previous week</button>
+        <button id="nextChart">Next week</button>
+
+        <table class="chartTable">
+            <tr id="daysOfWeek">
+                <!-- REPLACE WITH JS -->
+
+            </tr>
+            <tr>
+                <td><button>edit</button></td>
+                <th>Task One</th>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: blue;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: blue;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: blue;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: blue;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: white;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: white;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: white;"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td><button>edit</button></td>
+                <th>Task Two</th>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: red;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: red;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: red;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: red;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: red;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: red;"></div>
+                </td>
+                <td>
+                    <div style="height: 10px;width: 40px;background-color: white;"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="options">OPTIONS</div>
+
+    <div id="profile">PROFILE</div>
+</body>
+
+</html>
+<script src="index.js"></script>

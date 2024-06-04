@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <button>New Task</button>
+            <button>View Chart</button>
+            <button>View List</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="newTask">
+            <form id="myForm" onsubmit="newTask(event)">
+                <label for="title">Task title:</label><br>
+                <input type="text" id="title" name="title"><br><br>
+                <label for="start">Start</label><br>
+                <input type="date" id="start" name="start"><br><br>
+                <label for="end">End</label><br>
+                <input type="date" id="end" name="end"><br><br>
+                <label for="color">Select Color:</label><br>
+                <input type="color" id="color" name="color"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div id="chartView" style="margin: 25px;background-color: rgba(100,200,142,.2);padding:40px;">
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+            <div id="taskChart" style="display: flex;flex-direction: row;">
+
+            </div>
+        </div>
+
+
+    </main>
+</body>
+
+</html>
+<script src="index.js"></script>

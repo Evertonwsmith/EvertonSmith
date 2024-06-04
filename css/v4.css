@@ -172,6 +172,10 @@ h5 {
   font-size: clamp(14px, 3vw, 24px);
 }
 /* FIRST */
+.first{
+  margin-top: 150px;
+}
+
 #halfFace > img {
   width: 80%;
   margin: 20px;
@@ -314,7 +318,7 @@ footer {
   height: 200px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .circleContact {
     width: 70px;
     height: 70px;
@@ -331,7 +335,9 @@ footer {
   .shadowBox2 {
     margin-top: 10px;
   }
-
+  .first{
+    margin-top: 50px;
+  }
   .first > .shadowBox {
     display: flex;
     flex-direction: column;

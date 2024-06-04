@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.chart{
+    overflow: scroll;
+    overflow-y: hidden;
+}
+#options{
+    height: 200px;
+    width: 80%;
+    margin: 50px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+}
+#profile{
+    height: 200px;
+    width: 80%;
+    margin: 50px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: teal;
+}

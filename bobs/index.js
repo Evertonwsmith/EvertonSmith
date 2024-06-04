@@ -1,13 +1,14 @@
 const body = document.body;
 const pages = [];
 const characters = document.getElementById('characters');
+const charactersButtons = document.getElementById('charactersBut');
 const episodes = document.getElementById('episodes');
 const sND = document.getElementById('storeNextDoor');
 let CHARs = [];
 let EPIs = [];
 let SNDs = [];
 
-pages.push(characters, episodes, sND);
+pages.push(characters, episodes, sND, charactersButtons);
 let showpic = true;
 let index = 1;
 let ind = [{ 'characters': 1 }, { 'episodes': 2 }, { 'storeNextDoor': 3 }];
@@ -26,28 +27,29 @@ fetch('https://bobsburgers-api.herokuapp.com/episodes')
     .then(data => genEpisData(data))
     .catch(error => console.error('Error:', error));
 
-// //Fetch store next door 
-// fetch('https://bobsburgers-api.herokuapp.com/storeNextDoor/')
-//     .then(response => response.json())
-//     .then(data => genSND(data))
-//     .catch(error => console.error('Error:', error));
+//Fetch store next door 
+fetch('https://bobsburgers-api.herokuapp.com/storeNextDoor/')
+    .then(response => response.json())
+    .then(data => genSND(data))
+    .catch(error => console.error('Error:', error));
 
 function setIndex(x) {
     switch (x) {
         case 1: pages.forEach(p => {
             p.style = 'display: none';
         });
-            characters.style = 'display: block';
+            characters.style = 'display: flex;';
+            charactersButtons.style = 'display:flex;';
             break;
         case 2: pages.forEach(p => {
             p.style = 'display: none';
         });
-            episodes.style = 'display: block';
+            episodes.style = 'display: flex';
             break;
         case 3: pages.forEach(p => {
             p.style = 'display: none';
         });
-            sND.style = 'display: block';
+            sND.style = 'display: flex';
             break;
 
     }
@@ -219,7 +221,7 @@ function setChars() {
 function open(letter) {
     closeAll();
     const change = document.getElementById(letter);
-    change.style = 'display:flex;flex-direction:row;flex-wrap:wrap;';
+    change.style = 'display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly;';
 }
 
 function closeAll() {
