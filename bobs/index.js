@@ -4,6 +4,7 @@ const characters = document.getElementById('characters');
 const charactersButtons = document.getElementById('charactersBut');
 const episodes = document.getElementById('episodes');
 const sND = document.getElementById('storeNextDoor');
+const pageTitle = document.getElementById('pageTitle');
 let CHARs = [];
 let EPIs = [];
 let SNDs = [];
@@ -40,16 +41,19 @@ function setIndex(x) {
         });
             characters.style = 'display: flex;';
             charactersButtons.style = 'display:flex;';
+            pageTitle.innerHTML = '<h1>Characters</h1>';
             break;
         case 2: pages.forEach(p => {
             p.style = 'display: none';
         });
             episodes.style = 'display: flex';
+            pageTitle.innerHTML = '<h1>Seasons and Episodes</h1>';
             break;
         case 3: pages.forEach(p => {
             p.style = 'display: none';
         });
             sND.style = 'display: flex';
+            pageTitle.innerHTML = '<h1>Store Next Door</h1>';
             break;
 
     }

@@ -2,61 +2,104 @@ body {
     font-family: "Bob's Burgers 2", sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
 }
-
-button {
-    width: 50px;
-    height: 50px;
-    background-color: green;
-    color: white;
+.buttons{
+    display: none;
+    flex-direction: column;
+    align-items: center;
 }
-
-button:hover {
-    background-color: lightgreen;
+.buttons button{
+    width: 100%;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 18px;
+    background-color: yellowgreen;
     color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 1px 1px 5px red;
+    overflow: hidden;
 }
-
-.charactersBut {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 90%;
-    margin: auto;
-}
-
-.buttons {
-    margin: 20px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.buttons>button {
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    color: black;
+.buttons button:hover{
     background-color: yellow;
-    transition: 2s;
 }
-.buttons>button:hover{
+
+#burg{
     width: 100px;
     height: 100px;
-    background-color: white;
+    cursor: pointer; /* Add cursor pointer for better UX */
 }
-.episodes, .storeNextDoor {
+#burgLabel{
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
+    width: auto;
 }
-.episodes > div, .storeNextDoor>div{
+#burgLabel img{
+    border-radius: 20px;
+}
+#burgLabel:hover{
+    animation: shake .5s linear 0s forwards;
+}
+@keyframes shake {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    75%{
+        transform: rotate(-5deg)
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+#burgCheck {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 90%;
-    margin: auto;
-}
-#tableDataEpi{
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#burgCheck *{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#menuTog {
+    display: none; 
+}
+#menuTog:checked + label + .buttons {
+    display: flex;
+}
+#charactersBut{
+    width: 100%;
+    flex-direction: row;
+    overflow: scroll;
+}
+#episodes, #storeNextDoor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#epiButs, #sndButs{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+}
+#charactersBut > button, #episodes > div button, #storeNextDoor > div button{
+    min-width: 80px;
+    height: 80px;
+    background-color: yellowgreen;
+    font-size: 24px;
+    font-family: cursive;
+}
+#charactersBut > button:hover{
+    background-color: yellow;
 }
