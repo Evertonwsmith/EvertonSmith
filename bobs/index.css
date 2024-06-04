@@ -1,113 +1,126 @@
 body {
-    font-family: "Bob's Burgers 2", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden;
+  font-family: "Bob's Burgers 2", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
-.buttons{
-    display: none;
-    flex-direction: column;
-    align-items: center;
+.buttons {
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
-.buttons button{
-    width: 100%;
-    padding: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 18px;
-    background-color: yellowgreen;
-    color: black;
-    text-transform: uppercase;
-    font-weight: 700;
-    box-shadow: 1px 1px 5px red;
-    overflow: hidden;
+.buttons button {
+  width: 100%;
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 18px;
+  background-color: yellowgreen;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 700;
+  box-shadow: 1px 1px 5px red;
+  overflow: hidden;
 }
-.buttons button:hover{
-    background-color: yellow;
+.buttons button:hover {
+  background-color: yellow;
 }
 
-#burg{
-    width: 100px;
-    height: 100px;
-    cursor: pointer; /* Add cursor pointer for better UX */
+#burg {
+  width: 100px;
+  height: 100px;
+  cursor: pointer; /* Add cursor pointer for better UX */
 }
-#burgLabel{
-    display: flex;
-    flex-direction: column;
-    width: auto;
+#burgLabel {
+  display: flex;
+  flex-direction: column;
+  width: auto;
 }
-#burgLabel img{
-    border-radius: 20px;
+#burgLabel img {
+  border-radius: 20px;
 }
-#burgLabel:hover{
-    animation: shake .5s linear 0s forwards;
+#burgLabel:hover {
+  animation: shake 0.5s linear 0s forwards;
 }
 @keyframes shake {
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(-20deg);
-    }
-    50%{
-        transform: rotate(20deg);
-    }
-    75%{
-        transform: rotate(-5deg)
-    }
-    100%{
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 #burgCheck {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-#burgCheck *{
-    margin-top: 10px;
-    margin-bottom: 10px;
+#burgCheck * {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 #menuTog {
-    display: none; 
+  display: none;
 }
 #menuTog:checked + label + .buttons {
-    display: flex;
+  display: flex;
 }
-#charactersBut{
-    width: 100%;
-    flex-direction: row;
-    overflow: scroll;
+#charactersBut {
+  width: 100%;
+  flex-direction: row;
+  overflow: scroll;
 }
-#episodes, #storeNextDoor{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+#episodes,
+#storeNextDoor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-#epiButs, #sndButs{
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    flex-wrap: nowrap;
+#epiButs,
+#sndButs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
 }
-#charactersBut > button, #episodes > div button, #storeNextDoor > div button{
-    min-width: 80px;
-    height: 80px;
-    background-color: yellowgreen;
-    font-size: 24px;
-    font-family: cursive;
+#charactersBut > button,
+#episodes > div button,
+#storeNextDoor > div button {
+  min-width: 80px;
+  height: 80px;
+  background-color: yellowgreen;
+  font-size: 24px;
+  font-family: cursive;
 }
-#charactersBut > button:hover{
-    background-color: yellow;
+#charactersBut > button:hover {
+  background-color: yellow;
 }
-#showPics{
-    margin: 5px;
-    background-color: yellow;
-    padding: 10px;
-    border-radius: 15px;
-    text-transform: uppercase;
-
+#showPics {
+  margin: 5px;
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+#tableDataEpi{
+    text-align: center;
+}
+@media screen and (max-width: 700px) {
+  #epiButs,
+  #sndButs {
+    justify-content: normal;
+  }
 }
