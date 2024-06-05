@@ -107,39 +107,46 @@ const profileBody = document.getElementById('profile');
 const addBody = document.getElementById('add');
 
 chartBody.style.display = 'block';
-infoBody.style.display = 'block';
-optionsBody.style.display = 'block';
-profileBody.style.display = 'block';
-addBody.style.display = 'block';
+infoBody.style.display = 'none';
+optionsBody.style.display = 'none';
+profileBody.style.display = 'none';
+addBody.style.display = 'none';
 
+function addInfo(){
+    if(addBody.style.display === 'none'){
+        addBody.style.display = 'block';
+    }else{
+        addBody.style.display = 'none';
+    }
+}
 
 function chart() {
     infoBody.style.display = 'none';
     chartBody.style.display = 'block';
     optionsBody.style.display = 'none';
     profileBody.style.display = 'none';
-    addBody.style.display = 'block';
+    addBody.style.display = 'none';
 }
 function info() {
     infoBody.style.display = 'block';
     chartBody.style.display = 'none';
     optionsBody.style.display = 'none';
     profileBody.style.display = 'none';
-    addBody.style.display = 'block';
+    addBody.style.display = 'none';
 }
 function options() {
     infoBody.style.display = 'none';
     chartBody.style.display = 'none';
     optionsBody.style.display = 'block';
     profileBody.style.display = 'none';
-    addBody.style.display = 'block';
+    addBody.style.display = 'none';
 }
 function profile() {
     infoBody.style.display = 'none';
     chartBody.style.display = 'none';
     optionsBody.style.display = 'none';
     profileBody.style.display = 'block';
-    addBody.style.display = 'block';
+    addBody.style.display = 'none';
 }
 
 /**
@@ -198,7 +205,6 @@ generateWeekDays(currentDate);
 function populateTasks() {
     // Clear the existing table content before populating
     infoTable.innerHTML = '<tr><th>edit</th><th>Title</th><th>StartDate</th><th>EndDate</th><th>Cost Est.</th><th>Work Done</th><th>Cost</th></tr>';
-
     tasks.forEach((task, index) => {
         const taskStart = new Date(task.startDate);
         const taskEnd = new Date(task.endDate);

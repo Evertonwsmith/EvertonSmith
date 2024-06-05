@@ -1,0 +1,37 @@
+.nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80%;
+    background-color: rgba(0, 167, 130, 0.541);
+    display: none;
+    z-index: 3;
+}
+#navButton{
+    position:absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 167, 130, 0.7);
+    z-index: 4;
+    border-radius: 100%;
+}
+#check{
+    display: none;
+}
+#check:checked, .nav{
+    display: flex;
+}
+@keyframes entryVert {
+    from{
+        margin-top: 300%;
+        display: none;
+    }
+    to{
+        margin-top: auto;
+        margin-bottom: auto;
+        display: block;
+    }
+}
