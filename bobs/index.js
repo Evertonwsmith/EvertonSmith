@@ -98,6 +98,7 @@ function genEpisData(data) {
   });
 
   for (const season in seasonData) {
+    seasonData[season].sort((a, b) => a.episode - b.episode);
     EPIs.push({ [season]: seasonData[season] });
   }
 }
@@ -144,6 +145,7 @@ function genSND(data) {
   });
 
   for (const season in seasonData) {
+    seasonData[season].sort((a, b) => a.episode - b.episode);
     SNDs.push({ [season]: seasonData[season] });
   }
 }
@@ -157,12 +159,25 @@ function snd(seasonIndex) {
 
     for (const seasonKey in season) {
       season[seasonKey].forEach(store => {
+        const tempdiv = document.createElement('div');
+        tempdiv.style = 'display:flex;flex-direction:column;justify-content:center;margin:10px;';
         const img = document.createElement("img");
         img.style.width = "50%";
         img.style.maxWidth = "400px";
-        img.style.margin = "50px";
+        img.style.margin = "auto";
         img.src = store.image;
-        box.appendChild(img);
+        tempdiv.appendChild(img);
+        let temptxt = document.createElement('div');
+        let temptxt1 = document.createElement("h2");
+        let temptxt2 = document.createElement("h2");
+        temptxt1.style.textAlign = 'center';
+        temptxt2.style.textAlign = 'center';
+        temptxt1.textContent = `Season: ${store.season} Episode: ${store.episode}`;
+        temptxt2.textContent = `${store.name}`;
+        temptxt.appendChild(temptxt1);
+        temptxt.appendChild(temptxt2);
+        tempdiv.appendChild(temptxt);
+        box.appendChild(tempdiv);
       });
     }
   }
@@ -229,7 +244,8 @@ function setChars() {
         infoDiv.style.margin = 'auto';
         infoDiv.innerHTML = `
           <p>First Appearance: ${character.firstEpisode}</p>
-          <p>Occupation: ${character.occupation}</p>`;
+          <p>Occupation: ${character.occupation}</p>
+          <p>Voiced By: ${character.voicedBy}</p>`;
         charElement.appendChild(infoDiv);
 
         letterDiv.appendChild(charElement);
