@@ -6,6 +6,7 @@ const episodesDiv = document.getElementById("episodes");
 const storeNextDoorDiv = document.getElementById("storeNextDoor");
 const pestControlTruckDiv = document.getElementById("pestControlTruck");
 const burgerOfTheDayDiv = document.getElementById("burgerOfTheDay");
+const focusDiv = document.getElementById("focus");
 const pageTitleDiv = document.getElementById("pageTitle");
 const showPictureButton = document.getElementById("showPics");
 
@@ -16,13 +17,15 @@ let storeNextDoors = [];
 let pestControlTrucks = [];
 let burgerOfTheDays = [];
 let showPicturesBool = true;
+let nameCorrections = [];
 
 pages.push(
   charactersDiv,
   episodesDiv,
   storeNextDoorDiv,
   pestControlTruckDiv,
-  burgerOfTheDayDiv
+  burgerOfTheDayDiv,
+  focusDiv
 );
 
 const fetchUrls = [
@@ -50,11 +53,6 @@ Promise.all(
     generatePestControlVanData(pcvData);
     generateBurgerOfTheDayData(botdData);
     loadingDiv.style.display = "none";
-    console.log(characters);
-    console.log(episodes);
-    console.log(storeNextDoors);
-    console.log(pestControlTrucks);
-    console.log(burgerOfTheDays);
 
     /**
      *
@@ -84,8 +82,8 @@ function pestControlTruck() {
 function burgerOfTheDay() {
   setIndex(5);
 }
-function clearScreen(){
-  document.body.innerHTML = '';
+function focus() {
+  setIndex(6);
 }
 
 function setIndex(index) {
@@ -96,6 +94,7 @@ function setIndex(index) {
       //SHOW CHARACTERS HIDE ELSE
       charactersDiv.style.display = "flex";
       charactersDiv.style.flexDirection = "row";
+      charactersDiv.innerHTML = "";
       break;
     case 2:
       //SHOW EPISODES HIDE ELSE
@@ -108,6 +107,11 @@ function setIndex(index) {
       break;
     case 5:
       //burgeroftheday
+      break;
+    case 6:
+      //focus
+      focusDiv.style.display = "flex";
+      focusDiv.style.flexDirection = "column";
       break;
   }
 }
@@ -122,77 +126,187 @@ function setIndex(index) {
  *
  *
  */
-function setBelchers(){
+function setBelchers() {
   setLouise();
   setLinda();
   setBob();
   setGene();
   setTina();
 }
+function setCharacter(characterCode, characterName, bgColor) {
+  let character = findCharacter(characterCode, characterName, characters);
+  let characterDiv = makeCharacterDiv();
+  characterDiv.className = "characterBox";
+  characterDiv.style.backgroundColor = bgColor;
+  let characterImage = document.createElement("img");
+  characterImage.src = character.image;
+  characterImage.style.width = "150px";
+  characterDiv.appendChild(characterImage);
+  let characterNameElement = document.createElement("h3");
+  characterNameElement.innerHTML = character.name;
+  let characterInfo = document.createElement("p");
+  characterInfo.innerHTML = `Occupation: ${character.occupation}</p>
+  <p>Voiced By: ${character.voicedBy}</p>`;
+  characterDiv.appendChild(characterNameElement);
+  characterDiv.appendChild(characterInfo);
+  characterDiv.onclick = function () {
+    focusThis(characterCode, character.name);
+  };
+  charactersDiv.appendChild(characterDiv);
+}
+
+function focusThis(characterCode, characterName) {
+  focusDiv.innerHTML = "";
+  console.log("FOCUS CHARACTER:" + characterCode + " // " + characterName);
+  let character = findCharacter(characterCode, characterName, characters);
+  let focusCharacterBox = document.createElement("div");
+  focusCharacterBox.className = "focusCharacterBox";
+  let backButton = document.createElement("div");
+  backButton.className = "backButton";
+  backButton.innerHTML = "Return";
+  backButton.onclick = function () {
+    characterPage();
+    setBelchers();
+  };
+  focusCharacterBox.appendChild(backButton);
+  let image = document.createElement("img");
+  image.className = "focusImg";
+  image.src = character.image;
+  let text = document.createElement("div");
+  text.className = "focusText";
+  let textName = document.createElement("h1");
+  textName.innerHTML = character.name;
+  text.appendChild(textName);
+  let relativesString = document.createElement("p");
+  let relativesStringTitle = document.createElement("h2");
+  relativesStringTitle.innerHTML = "Relatives";
+  relativesString.appendChild(relativesStringTitle);
+  let relativeLink;
+  character.relatives.forEach((relative) => {
+    if (findCharacter(relative.name.charAt(0), relative.name, characters)) {
+      relativeLink = document.createElement("a");
+      relativeLink.href = "#";
+      relativeLink.innerHTML = relative.name;
+      relativeLink.onclick = function () {
+        focusThis(relative.name.charAt(0), relative.name);
+        return false; // Prevent default link behavior
+      };
+    } else {
+      relativeLink = document.createElement("p");
+      relativeLink.innerHTML = relative.name;
+    }
+    relativesString.appendChild(relativeLink);
+    relativesString.appendChild(document.createTextNode(" ")); // Add a space between names
+  });
+
+  let firstEpisode = document.createElement("h2");
+  firstEpisode.className = "firstEpisodeLink";
+  firstEpisode.innerHTML = `First Episode: ${character.firstEpisode}`;
+  firstEpisode.onclick = function () {
+    focusEpisode(character.firstEpisode, character);
+  };
+
+  text.appendChild(relativesString);
+  focusCharacterBox.appendChild(image);
+  focusCharacterBox.appendChild(text);
+  focusCharacterBox.appendChild(firstEpisode);
+  focusDiv.appendChild(focusCharacterBox);
+  focus();
+}
+
+function focusEpisode(episodeName, character) {
+  console.log("FROM : " + character.name);
+  focusDiv.innerHTML = "";
+  console.log("FOCUS Episode:" + episodeName + " // from" + character.name);
+  let episode = findEpisode(episodeName);
+  let focusEpisodeBox = document.createElement("div");
+  focusEpisodeBox.className = "focusEpisodeBox";
+  let backButton = document.createElement("div");
+  backButton.className = "backButton";
+  backButton.innerHTML = "Return";
+  backButton.onclick = function () {
+    characterPage();
+    focusThis(character.name.charAt(0), character.name);
+  };
+  let episodeText = document.createElement("p");
+  episodeText.innerHTML = `<h1>${episode.name}</h1>
+  <p>Air Date: ${episode.airDate}</p>
+  <p>Total Viewers: ${episode.totalViewers}</p>
+  <p>Season ${episode.season} Episode ${episode.episode}`;
+
+  let pestControl = findBySeasonEpisode(
+    episode.season,
+    episode.episode,
+    pestControlTrucks
+  );
+  let pestControlTitle = document.createElement("h2");
+  pestControlTitle.innerHTML = `Pest Control Van:<br>${pestControl.name}`;
+  let pestControlImage = document.createElement("img");
+  pestControlImage.className = "focusPestControlImage";
+  console.log(episode);
+  pestControlImage.src = pestControl.image;
+
+  let storeNextDoor = findBySeasonEpisode(
+    episode.season,
+    episode.episode,
+    storeNextDoors
+  );
+  let storeNextDoorTitle = document.createElement("h2");
+  storeNextDoorTitle.innerHTML = `Store Next Door Name:<br>${storeNextDoor.name}`;
+  let storeNextDoorImage = document.createElement("img");
+  storeNextDoorImage.className = "focusstoreNextDoorImage";
+  console.log(episode);
+  storeNextDoorImage.src = storeNextDoor.image;
+
+  let burgerOfTheDay = findBySeasonEpisode(
+    episode.season,
+    episode.episode,
+    burgerOfTheDays
+  );
+  let burgerOfTheDayTitle = document.createElement("h2");
+  burgerOfTheDayTitle.innerHTML = `Burger Of The Day:<br>${burgerOfTheDay.name}`;
+  let burgerOfTheDayImage = document.createElement("img");
+  burgerOfTheDayImage.className = "focusburgerOfTheDayImage";
+  console.log(episode);
+  burgerOfTheDayImage.src = burgerOfTheDay.image;
+
+  let tempCharList = characterIntros(episode.name);
+  console.log("TEMPLST: "+tempCharList);
+  
+  focusEpisodeBox.appendChild(backButton);
+  focusEpisodeBox.appendChild(episodeText);
+  focusEpisodeBox.appendChild(pestControlTitle);
+  focusEpisodeBox.appendChild(pestControlImage);
+  focusEpisodeBox.appendChild(storeNextDoorTitle);
+  focusEpisodeBox.appendChild(storeNextDoorImage);
+  focusEpisodeBox.appendChild(burgerOfTheDayTitle);
+  focusEpisodeBox.appendChild(burgerOfTheDayImage);
+  
+  focusDiv.appendChild(focusEpisodeBox);
+
+  focus();
+}
+
+
+
 function setLouise() {
-  let louise = findCharacter("L", "Louise Belcher", characters);
-  let characterDiv = makeCharacterDiv();
-  let characterImage = document.createElement('img');
-  characterImage.src = louise.image;
-  characterImage.style = 'width:200px;';
-  characterDiv.appendChild(characterImage);
-  let characterName = document.createElement("h3");
-  console.log(louise);
-  characterName.innerHTML = louise.name;
-  characterDiv.appendChild(characterName);
-  charactersDiv.appendChild(characterDiv);
+  setCharacter("L", "Louise Belcher", "rgba(200,100,100,.9)");
 }
+
 function setLinda() {
-  let linda = findCharacter("L", "Linda Belcher", characters);
-  let characterDiv = makeCharacterDiv();
-  let characterImage = document.createElement('img');
-  characterImage.src = linda.image;
-  characterImage.style = 'width:200px;';
-  characterDiv.appendChild(characterImage);
-  let characterName = document.createElement("h3");
-  console.log(linda);
-  characterName.innerHTML = linda.name;
-  characterDiv.appendChild(characterName);
-  charactersDiv.appendChild(characterDiv);
+  setCharacter("L", "Linda Belcher", "rgba(200,200,100,.9)");
 }
+
 function setBob() {
-  let bob = findCharacter("R", 'Robert "Bob" Belcher, Jr.', characters);
-  let characterDiv = makeCharacterDiv();
-  let characterImage = document.createElement('img');
-  characterImage.src = bob.image;
-  characterImage.style = 'width:200px;';
-  characterDiv.appendChild(characterImage);
-  let characterName = document.createElement("h3");
-  console.log(bob);
-  characterName.innerHTML = bob.name;
-  characterDiv.appendChild(characterName);
-  charactersDiv.appendChild(characterDiv);
+  setCharacter("R", 'Robert "Bob" Belcher, Jr.', "rgba(100,200,100,.9)");
 }
+
 function setGene() {
-  let gene = findCharacter("G", "Gene Belcher", characters);
-  let characterDiv = makeCharacterDiv();
-  let characterImage = document.createElement('img');
-  characterImage.src = gene.image;
-  characterImage.style = 'width:200px;';
-  characterDiv.appendChild(characterImage);
-  let characterName = document.createElement("h3");
-  console.log(gene);
-  characterName.innerHTML = gene.name;
-  characterDiv.appendChild(characterName);
-  charactersDiv.appendChild(characterDiv);
+  setCharacter("G", "Gene Belcher", "rgba(100,100,200,.9)");
 }
+
 function setTina() {
-  let tina = findCharacter("T", "Tina Ruth Belcher", characters);
-  let characterDiv = makeCharacterDiv();
-  let characterImage = document.createElement('img');
-  characterImage.src = tina.image;
-  characterImage.style = 'width:200px;';
-  characterDiv.appendChild(characterImage);
-  let characterName = document.createElement("h3");
-  console.log(tina);
-  characterName.innerHTML = tina.name;
-  characterDiv.appendChild(characterName);
-  charactersDiv.appendChild(characterDiv);
+  setCharacter("T", "Tina Ruth Belcher", "rgba(200,100,200,.9)");
 }
 
 function makeCharacterDiv() {
@@ -203,20 +317,76 @@ function makeCharacterDiv() {
 }
 
 function findCharacter(firstLetter, name, array) {
-  console.log(array);
   const matchingGroup = array.find((obj) => obj[firstLetter]);
 
   if (matchingGroup) {
     // Extract the array of characters associated with the firstLetter
     const characters = matchingGroup[firstLetter];
-    
+
     // Search for the character within the characters array
-    return characters.find((character) => character.name === name) || null;
+    return (
+      characters.find((character) => character.name === name) || findName(name)
+    );
   }
 
   return null; // Return null if not found
 }
 
+function findEpisode(episodeName) {
+  for (const season of episodes) {
+    for (const seasonNumber in season) {
+      const seasonEpisodes = season[seasonNumber];
+      for (const episode of seasonEpisodes) {
+        console.log("EPISODE TRY: " + episode.name);
+        console.log("EPISODE SEARCH " + episodeName);
+        episode.name = episode.name.replace(/"/g, "");
+        episodeName = episodeName.replace(/"/g, "");
+        if (episode.name.includes(episodeName)) {
+          return episode;
+        }
+      }
+    }
+  }
+  return null; // Return null if no episode with the given name is found
+}
+
+function characterIntros(episodeName){
+  let characterList = [];
+  let episodeString = episodeName.replace(/"/g, "");
+  for(let letter of characters){
+    console.log(letter);
+    
+  }
+
+  return characterList; // Return null if no episode with the given name is found
+}
+
+function findBySeasonEpisode(seasonNumber, episodeNumber, array) {
+  for (const season of array) {
+    if (season.hasOwnProperty(seasonNumber)) {
+      const seasonEpisodes = season[seasonNumber];
+      for (const info of seasonEpisodes) {
+        if (info.episode === episodeNumber) {
+          return info;
+        }
+      }
+    }
+  }
+  return null; // Return null if no episode with the given season and episode number is found
+}
+
+function findName(name) {
+  console.log("FINDING NAME " + name);
+  switch (name) {
+    case "Bob Belcher":
+      console.log("returning Bob");
+      return findCharacter("R", `Robert "Bob" Belcher, Jr.`, characters);
+      break;
+    case "Tina Belcher":
+      return findCharacter("T", "Tina Ruth Belcher", characters);
+      break;
+  }
+}
 /**
  *
  *
