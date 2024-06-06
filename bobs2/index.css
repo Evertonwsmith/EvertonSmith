@@ -1,0 +1,14 @@
+body{
+  margin: 0;
+  height: 100vh;
+  background-image: url('../images/bobsbackground.jpg');
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+#characters{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
