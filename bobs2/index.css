@@ -3,17 +3,33 @@ body {
   height: 100vh;
   background-image: url("../images/bobsbackground.jpg");
   background-position: center;
-  background-size: fit;
-  background-repeat: repeat-y;
 }
 .backgroundOpacity {
-  height: 200vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .characterBox{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  text-align: center;
+  width: 25%;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 1em;
+}
+.characterBox h3{
+  color: white;
+  letter-spacing: .2rem;
+  display: normal;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: clamp(12px,1em,20px);
+  text-shadow: 2px 2px 5px black;
+}
+.characterBox p{
+  display: none;
+
 }
 #characters {
   display: flex;
@@ -24,7 +40,7 @@ body {
 .backButton{
   position: absolute;
   top: 10%;
-  left: 20%;
+  right: 10%;
   width: 50px;
   height: 50px;
   padding: 10px;
@@ -38,10 +54,44 @@ body {
   color: white;
 
 }
+.backButton:hover{
+  width: 55px;
+  height: 55px;
+  background-color: white;
+  color: teal;
+}
 .focusCharacterBox, .focusEpisodeBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   width: 70%;
   margin: auto;
   padding: 25px;
   text-align: center;
   background-color: rgba(200,200,200,.8);
+}
+.focusCharacterBox h1, .focusEpisodeBox h1{
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+.focusEpisodeBox h2{
+  font-size: clamp(18px,2vw,24px);
+}
+.focusCharacterBox h2{
+  text-transform: uppercase;
+  color: green;
+  text-shadow: 2px 2px 5px lightgreen;
+
+}
+.focusCharacterBox p, .focusEpisodeBox p{
+  font-size: 18px;
+}
+.characterLink:hover{
+  font-size: 18px;
+  color: white;
+}
+.firstEpisodeLink:hover{
+  color: white;
 }

@@ -140,7 +140,7 @@ function setCharacter(characterCode, characterName, bgColor) {
   characterDiv.style.backgroundColor = bgColor;
   let characterImage = document.createElement("img");
   characterImage.src = character.image;
-  characterImage.style.width = "150px";
+  characterImage.className = 'characterBoxImage';
   characterDiv.appendChild(characterImage);
   let characterNameElement = document.createElement("h3");
   characterNameElement.innerHTML = character.name;
@@ -184,8 +184,8 @@ function focusThis(characterCode, characterName) {
   let relativeLink;
   character.relatives.forEach((relative) => {
     if (findCharacter(relative.name.charAt(0), relative.name, characters)) {
-      relativeLink = document.createElement("a");
-      relativeLink.href = "#";
+      relativeLink = document.createElement("p");
+      relativeLink.className = "characterLink";
       relativeLink.innerHTML = relative.name;
       relativeLink.onclick = function () {
         focusThis(relative.name.charAt(0), relative.name);
@@ -216,9 +216,11 @@ function focusThis(characterCode, characterName) {
 
 function focusEpisode(episodeName, character) {
   console.log("FROM : " + character.name);
-  focusDiv.innerHTML = "";
   console.log("FOCUS Episode:" + episodeName + " // from" + character.name);
   let episode = findEpisode(episodeName);
+  if(episode){
+    focusDiv.innerHTML = "";
+  }
   let focusEpisodeBox = document.createElement("div");
   focusEpisodeBox.className = "focusEpisodeBox";
   let backButton = document.createElement("div");
@@ -311,9 +313,7 @@ function setTina() {
 
 function makeCharacterDiv() {
   let result = document.createElement("div");
-  result.style =
-    "margin:40px;background-color:rgba(255,255,255,.9);border-radius:25px;display:flex;flex-direction:column;justify-column:center;align-items:center;padding:50px;box-shadow:2px 2px 5px;";
-  return result;
+  result.className = 'makeCharacterDiv'; return result;
 }
 
 function findCharacter(firstLetter, name, array) {
