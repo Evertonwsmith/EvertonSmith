@@ -12,23 +12,71 @@
         <title>Placeholder</title>
     </head>
     <body>
-        <nav>
-            <a href="#pub"><div>Publications</div></a>
-            <a href="#"><div>Poems</div></a>
-            <a href="#"><div>Support</div></a>
-            <a href="#"><div>Links</div></a>
-        </nav>
+        <div class="navHolder">
+            <nav>
+                <h1>Haley Jaques</h1>
+                <div class="dropdownButton" id="dropdownButton">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </nav>
+            <div class="navItems" id="navItems">
+                <a href="#pub"><div>Publications</div></a>
+                <a href="#"><div>Poems</div></a>
+                <a href="#"><div>Support</div></a>
+                <a href="#"><div>Links</div></a>
+            </div>
+        </div>
+        <div class="profileCircle">
+
+        </div>
 
         <div class="hero">
-            <h1>Haley Jaques</h1>
-            <p><i>Hi, my name is .... ....Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                fugiat nulla pariatur. </i></p>
-            <img src="images/poem.jpg" alt="poem">
+
+            <!-- <img src="images/poem.jpg" alt="poem"> -->
         </div>
+
+        <div id="publications">
+            <h2>Publications</h2>
+            <br><br>
+            <h2>i wish you all the best</h2>
+            <div class="bookCard">
+                <img src="images/book1.jpeg" alt="book1">
+                <h4>About the Book</h4>
+                <p>Steady love. Uncomfortable realizations. Brutal heartbreak.
+                    Finally, peace. This collection of poetry offers a glimpse
+                    into a young woman's journey through a painful and necessary
+                    chapter in her life. It is deeply personal, albeit
+                    relatable. She leaves you lingering on her words for days
+                    after reading, and nostalgic for emotions you thought you'd
+                    never miss.</p>
+                <h6>Info</h6>
+                <p>ISBN
+                    Softcover: 9798210215666</p><p>
+                    Publish Date: Apr 11, 2022</p><p>
+                    Language English</p>
+            </div>
+        </div>
+
+        <div id="poems"></div>
+        <div id="support"></div>
+        <div id="links"></div>
     </body>
 </html>
+<script src="https://kit.fontawesome.com/f833440145.js"
+    crossorigin="anonymous"></script>
+
+<script>
+    let dropdownOpen = false;
+    const dropdownButton = document.getElementById('dropdownButton');
+    const dropdownItems = document.getElementById('navItems');
+    dropdownButton.onclick = function (){
+        if(!dropdownOpen){
+        dropdownButton.innerHTML = `<i class="fa-solid fa-chevron-up"></i>`;
+        dropdownItems.style.display = 'block';
+    }else{
+        dropdownButton.innerHTML = `<i class="fa-solid fa-chevron-down"></i>`;
+        dropdownItems.style.display = 'none';
+    }        dropdownOpen = !dropdownOpen;
+
+    }
+</script>
