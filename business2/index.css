@@ -120,14 +120,55 @@ body {
 }
 #threeOne img {
   width: 40%;
-  padding: 50px;
-  margin-right: 50px;
+  padding: 5px;
+  margin: 50px;
+  border-radius: 100px;
+  box-shadow: -1px 1px 5px;
 }
 #threeOneText {
   padding: 50px;
   font-size: 24px;
   text-align: right;
 }
+
+/* FOUR */
+#blockFour{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 4fr;
+}
+#blockFour button{
+  margin: 15px;
+  border-radius: 50%;
+  border-style: none;
+  padding: 20px;
+  background-color: teal;
+  color: white;
+}
+#prevMonth{
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+#nextMonth{
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.month{
+  grid-column: 1/6;
+  grid-row: 2/3;
+  margin: auto;
+}
+.June{
+
+}
+.July{
+  display: none;
+}
+.August{
+  display: none;
+}
+
 
 @keyframes entryVert {
   from {
@@ -259,7 +300,7 @@ body {
     flex-direction: column;
   }
   #threeOne img {
-    margin: auto;
+    margin: 25px auto;
     width: 200px;
     object-fit: cover;
   }

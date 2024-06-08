@@ -28,7 +28,7 @@ img {
   display: flex;
   justify-content: center;
   align-content: center;
-  height: 400px;
+  height: 300px;
   /* max-width: 1000px; */
   margin: auto;
 }
@@ -59,7 +59,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin-left: 25px;
+  margin: 10px 25px;
 }
 .heroTxt > h2 {
   color: rgba(0, 0, 0, 0);
@@ -173,7 +173,7 @@ h5 {
 }
 /* FIRST */
 .first{
-  margin-top: 150px;
+  margin-top: 10px;
 }
 
 #halfFace > img {
@@ -336,7 +336,7 @@ footer {
     margin-top: 10px;
   }
   .first{
-    margin-top: 0px;
+    margin-top: 10px;
   }
   .first > .shadowBox {
     display: flex;
