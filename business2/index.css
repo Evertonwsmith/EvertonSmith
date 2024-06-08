@@ -1,6 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }
 #check,
 #check + label {
@@ -56,6 +60,20 @@ body {
   margin: 0;
   max-height: 80%;
   border-radius: 100%;
+  animation: entry 1s ease-out 0s 1 forwards;
+}
+#blockOne > div {
+  transform: translate(+150%);
+  animation: entry 1s ease-out 2s 1 forwards;
+}
+
+@keyframes entry {
+  from {
+    transform: translate(+150%);
+  }
+  to {
+    transform: translate(0%);
+  }
 }
 
 #blockTwo {
@@ -91,6 +109,15 @@ body {
   font-size: 70px;
   color: white;
   transition-duration: 1s;
+  animation: breathe 3s linear 0s infinite alternate;
+}
+@keyframes breathe {
+  from {
+    font-size: 70px;
+  }
+  to {
+    font-size: 80px;
+  }
 }
 .raisedCirc i:hover {
   font-size: 90px;
@@ -123,7 +150,6 @@ body {
   padding: 5px;
   margin: 50px;
   border-radius: 100px;
-  box-shadow: -1px 1px 5px;
 }
 #threeOneText {
   padding: 50px;
@@ -132,43 +158,80 @@ body {
 }
 
 /* FOUR */
-#blockFour{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr 4fr;
+#blockFour {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
 }
-#blockFour button{
-  margin: 15px;
-  border-radius: 50%;
+.month {
+  margin: 25px;
+  padding: 1em;
+  white-space: nowrap;
+}
+.month h2 {
+  text-transform: uppercase;
+  color: teal;
+  letter-spacing: 1vw;
+}
+#marketTitle {
+  text-align: center;
+  font-size: clamp(5vw, 8vw, 36px);
+  letter-spacing: 2vw;
+}
+
+/* MARKET PICTURES BLOCK */
+#marketPicsBlock{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 500px;
+  width: 100%;
+  background-color: black;
+  overflow-x: hidden;
+}
+.marketImg{
+  height: 300px;
+  margin: 0 15px;
+}
+
+/* FIVE --- BOOKING VISITS */
+#blockFive{
+  background-color: rgba(0, 167, 130, 0.8);
+  padding: 1em;
+}
+.fiveText {
+  width: 80%;
+  margin: 50px auto;
+}
+#resForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin: 50px auto;
+  font-weight: 700;
+}
+#resForm * {
+  margin: 10px;
+}
+#submit{
   border-style: none;
-  padding: 20px;
+  border-radius: 25px;
+  padding: 10px;
   background-color: teal;
+  font-weight: 600;
   color: white;
 }
-#prevMonth{
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
 
-#nextMonth{
-  grid-column: 4/5;
-  grid-row: 1/2;
+/* BLOCK SIX */
+#blockSix{
+  margin: 3rem auto;
+  line-height: 4vh;
+  max-width: 800px;
 }
-.month{
-  grid-column: 1/6;
-  grid-row: 2/3;
-  margin: auto;
-}
-.June{
-
-}
-.July{
-  display: none;
-}
-.August{
-  display: none;
-}
-
 
 @keyframes entryVert {
   from {
@@ -284,6 +347,15 @@ body {
 
   .raisedCirc i {
     font-size: 30px;
+    animation: breathe2 5s linear 0s infinite alternate;
+  }
+  @keyframes breathe2 {
+    from {
+      font-size: 30px;
+    }
+    to {
+      font-size: 40px;
+    }
   }
   #blockTwoText {
     margin: 20px;
@@ -310,4 +382,22 @@ body {
     font-size: 24px;
     text-align: right;
   }
+
+  #blockSix{
+    margin: 3rem;
+    line-height: 4vh;
+    max-width: 800px;
+  }
+
+  .marketImg{
+    position: absolute;
+    opacity: 0;
+    transition-duration: 2s;
+   
+  }
+  .marketImg.active{
+    opacity: 1;
+  }
+
+  
 }

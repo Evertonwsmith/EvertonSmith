@@ -18,9 +18,9 @@
             <i style="font-size: 70px;" class="fa-solid fa-mountain-sun"></i>
             <a href="#blockTwo">Drinks</a>
             <a href="#blockThree">Food</a>
-            <a href="#">Market</a>
-            <a href="#">Book a visit</a>
-            <a href="#">About us</a>
+            <a href="#marketTitle">Market</a>
+            <a href="#blockFive">Book a visit</a>
+            <a href="#blockSix">About us</a>
             <i class="fa-solid fa-phone-flip" id="phone"></i>
 
         </div>
@@ -83,37 +83,138 @@
 
         </div>
 
+        <h2 id="marketTitle">Markets</h2>
+        <div class="line"></div>
+
         <div class="block" id="blockFour">
-            <button id="prevMonth">Prev</button><button id="nextMonth">Next</button>
             <div class="June month">
                 <h2>June</h2>
                 <h3>4th-5th 8:00AM - 3:00PM</h3>
-                <h3>4th-5th 8:00AM - 3:00PM</h3>
-                <h3>4th-5th 8:00AM - 3:00PM</h3>
-                <h3>4th-5th 8:00AM - 3:00PM</h3>
+                <h3>6th-7th 9:00AM - 2:45PM</h3>
+                <h3>14th-15th 8:00AM - 3:00PM</h3>
+                <h3>4th-5th 7:00AM - 1:30PM</h3>
             </div>
             <div class="July month">
                 <h2>July</h2>
-                <h3>4th-5th 8:00AM - 3:00PM</h3>
-                <h3>4th-5th 8:00AM - 3:00PM</h3>
-                <h3>4th-5th 8:00AM - 3:00PM</h3>
-                <h3>4th-5th 8:00AM - 3:00PM</h3>
+                <h3>7th 8:00AM - 3:00PM</h3>
+                <h3>6th-7th 9:00AM - 2:45PM</h3>
+                <h3>15th 8:00AM - 3:00PM</h3>
+                <h3>4th-5th 7:00AM - 1:30PM</h3>
             </div>
             <div class="August month">
                 <h2>
                     August
                 </h2>
                 <h3>4th-5th 8:00AM - 3:00PM</h3>
-                <h3>4th-5th 8:00AM - 3:00PM</h3>
-                <h3>4th-5th 8:00AM - 3:00PM</h3>
-                <h3>4th-5th 8:00AM - 3:00PM</h3>
+                <h3>6th-7th 9:00AM - 2:45PM</h3>
+                <h3>14th-15th 8:00AM - 3:00PM</h3>
+                <h3>4th-5th 7:00AM - 1:30PM</h3>
+            </div>
+            <div class="September month">
+                <h2>
+                    September
+                </h2>
+                <h3>TBD</h3>
+
+            </div>
+            <div class="October month">
+                <h2>
+                    October
+                </h2>
+                <h3>TBD</h3>
+
+            </div>
+
+        </div>
+
+        <div class="block" id="marketPicsBlock">
+            <img src="../images/mark5.jpg" alt="mark1" class="marketImg">
+            <img src="../images/mark6.jpg" alt="mark2" class="marketImg">
+            <img src="../images/mark3.jpg" alt="mark3" class="marketImg">
+            <img src="../images/mark1.jpg" alt="mark4" class="marketImg">
+            <img src="../images/mark2.jpg" alt="mark5" class="marketImg">
+        </div>
+
+        <div class="block" id="blockFive">
+            <div class="fiveText">
+                <h2>Come Visit Us!</h2>
+                <p>Book a coffee tasting, or a large table for your next
+                    gathering</p>
+            </div>
+            <div class="formContainer">
+                <form action="myFunction" id="resForm">
+                    <label for="guestName">Reservation Name:</label>
+                    <input type="text" required="true" name="guestName"
+                        id="guestName">
+                    <label for="guestCount">Number of guests:</label>
+                    <input type="number" required="true" name="guestCount"
+                        id="guestCount">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="text" required="true" name="phoneNumber"
+                        id="phoneNumber">
+                    <input type="submit" name="submit" id="submit">
+                </form>
             </div>
         </div>
 
-        <div class="block" id="blockFive"></div>
+        <div class="block" id="blockSix">
+            <h2>About Us</h2>
+            <h3>Culture Coffee and Games</h3>
+            <i><p>Welcome to <b>Culture Coffee and Games</b>, your cozy neighborhood coffee
+                haven where every cup is brewed with passion and every bite is
+                crafted with care. Nestled in the heart of downtown, we pride
+                ourselves on offering a warm and inviting atmosphere perfect for
+                relaxing with a book, catching up with friends, or simply
+                savoring a moment of tranquility. Our commitment to quality is
+                reflected in our selection of artisanal coffees, sourced from
+                the finest beans around the world and expertly roasted to bring
+                out their unique flavors.</p>
+            <p>At <b>Culture Coffee and Games</b>, inclusivity is at the heart of everything
+                we do. We understand the importance of catering to diverse
+                dietary needs, which is why we offer a delightful range of
+                gluten-free and dairy-free pastries. Whether you have specific
+                dietary restrictions or simply prefer a lighter treat, our
+                delicious pastries are made with the finest ingredients,
+                ensuring that everyone can indulge without compromise.</p>
+            <p>
+                In addition to our delicious offerings, we are passionate about
+                creating a community space where connections are made and fun is
+                shared. Our love for board games is woven into the fabric of our
+                cafe, with a wide selection available for you to enjoy. Gather
+                around with friends, old and new, and dive into a game while
+                savoring your favorite coffee and pastry. Come in and discover
+                your new favorite coffee and pastry combination at [Coffee Shop
+                Name], where we believe everyone deserves a little slice of
+                happiness and a lot of fun.</p>
+            
+            <p>- The Owners</p></i>
+        </div>
 
-        <div class="block" id="blockSix"></div>
-
-        <div class="block" id="blockSeven"></div>
     </body>
 </html>
+<script>
+        document.getElementById('resForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            var name = document.getElementById('guestName').value;
+            var guestCount = document.getElementById('guestCount').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+
+            alert('RESERVATION REQUESTED: Name: ' + name + ' \# of guests: ' + guestCount + ' Confirmation Phone #: '+phoneNumber);
+            document.getElementById('resForm').reset();
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.marketImg');
+    let currentIndex = 0;
+
+    function showNextSlide() {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }
+
+    slides[currentIndex].classList.add('active');
+    setInterval(showNextSlide, 5000);
+});
+    </script>
