@@ -66,6 +66,10 @@
     crossorigin="anonymous"></script>
 
 <script>
+    window.addEventListener('scroll', () => {
+  document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+}, false);
+
     let dropdownOpen = false;
     const dropdownButton = document.getElementById('dropdownButton');
     const dropdownItems = document.getElementById('navItems');

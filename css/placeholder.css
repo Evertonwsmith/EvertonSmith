@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Bitter", "Helvetica", sans-serif;
+  background-color: rgba(120,255,244, calc(var(--scroll)/5));
 }
 .profileCircle {
   width: 300px;
