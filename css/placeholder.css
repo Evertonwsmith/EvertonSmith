@@ -85,7 +85,7 @@ img {
   text-align: center;
 }
 
-@media screen and (min-width: 900px) {
+@media (min-width: 900px) {
   .profileCircle {
     width: 300px;
     height: 300px;
