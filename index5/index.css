@@ -48,12 +48,13 @@ h1 {
 h2 {
     font-size: 10vw;
     font-size: clamp(18px, 10vw, 40px);
-
+    margin: auto;
     font-weight: bold;
   }
   h3 {
     font-size: 8vw;
     font-size: clamp(16px, 10vw, 30px);
+    margin: auto;
 
     font-weight: bold;
   }
