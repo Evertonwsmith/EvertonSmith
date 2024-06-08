@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everton Smith</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Everton Smith</title>
+        <script src="https://kit.fontawesome.com/f833440145.js" crossorigin="anonymous"></script>
 
-<body>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    </head>
 
-    
+    <body>
 
-</body>
+        <div class="circleHead">
+            <h1>EVERTON SMITH</h1>
+            <h3 id="softwareDev">Software Developer</h3>
+            <h3 id="techs">
+                <i class="fa-solid fa-code"></i>
+                <i class="fa-brands fa-java"></i>
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-solid fa-code"></i>
+            </h3>
+            <h3 id="logo">
+                <i class="fa-solid fa-user-astronaut"></i>
+            </h3>
+            <!-- <p id="scroll">scroll: </p> -->
+        </div>
+
+        <div class="experience">
+            
+        </div>
+
+    </body>
 
 </html>
+<script>
+    window.addEventListener('scroll', () => {
+        let scrollValue = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
+  document.body.style.setProperty('--scroll', scrollValue);
+  document.getElementById('scroll').innerHTML = `scroll: ${scrollValue.toFixed(2)}`;
+
+}, false);
+
+</script>

@@ -1,0 +1,66 @@
+body {
+  --scroll: 0;
+  background-position: center;
+  background-size: cover;
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 400vh;
+}
+
+.circleHead {
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 5fr 1fr;
+}
+.circleHead h1{
+    grid-column: 1 / span 5;
+    grid-row: 2 / span 1;
+    text-align: center;
+    margin: auto;
+}
+#softwareDev{
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+    white-space: nowrap;
+    font-size: clamp(1em,3em,20px);
+    color: green;
+}
+#techs{
+    grid-column: 1/span 1;
+    grid-row: 3/span 1;
+    white-space: nowrap;
+}
+#logo{
+    grid-column: 5/span 1;
+    grid-row: 1/span 1;
+    white-space: nowrap;
+}
+h1 {
+  font-size: clamp(20px, 14vw, 70px);
+  font-weight: bold;
+  transform: rotate3d(.5, -1, 1, calc(360deg * var(--scroll)));
+  transition: transform 0.1s; /* Smooth transition effect */
+}
+h2 {
+    font-size: 10vw;
+    font-size: clamp(18px, 10vw, 40px);
+
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 8vw;
+    font-size: clamp(16px, 10vw, 30px);
+
+    font-weight: bold;
+  }
+  .experience{
+    transform: translateY(300px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
