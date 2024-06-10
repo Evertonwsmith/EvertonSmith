@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Everton Smith</title>
-        <script src="https://kit.fontawesome.com/f833440145.js" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everton Smith</title>
+    <script src="https://kit.fontawesome.com/f833440145.js" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
-    </head>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+</head>
 
-    <body>
+<body>
 
-        <div class="circleHead">
-            <h1>EVERTON SMITH</h1>
-            <h3 id="softwareDev">Software Developer</h3>
-            <h3 id="techs">
-                <i class="fa-solid fa-code"></i>
-                <i class="fa-brands fa-java"></i>
-                <i class="fa-brands fa-js"></i>
-                <i class="fa-brands fa-html5"></i>
-                <i class="fa-brands fa-css3-alt"></i>
-                <i class="fa-solid fa-code"></i>
-            </h3>
-            <h3 id="logo">
-                <i class="fa-solid fa-user-astronaut"></i>
-            </h3>
-            <!-- <p id="scroll">scroll: </p> -->
+    <div class="circleHead">
+        <h1>EVERTON SMITH</h1>
+    </div>
+    <div class="skills">
+        <i class="fa-brands fa-java"></i>
+        <i class="fa-brands fa-js"></i>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+    </div>
+    <div id="personalWorkTitle">
+        <h2>Personal Work</h2>
+        <div class="projects">
+            <a href="../index.html">Personal Website</a><br><br>
+            <a href="../business2/index.html">Cafe Example</a>
         </div>
+    </div>
 
-        <div class="experience">
-            
+    <div id="professionalWork">
+        <h2>Professional Experience</h2>
+        <div class="resume">
+            <h3>Software Developer - UKG</h3>
+            <h4>November 2019 - Present</h4>
+            <ul>
+                <li><b>Java Development:</b> Engineered and maintained backend and frontend code for a cloud-based Software as a Service (SaaS) solution.</li>
+<li><b>Data Management:</b> Managed and maintained live customer data using SQL patches, ensuring data integrity and accuracy.</li>
+<li><b>Project and Defect Tracking:</b> Utilized Jira to track and manage projects and defects, ensuring timely resolution and efficient workflow management.</li>
+<li><b>Version Control:</b> Managed code versions using Git, ensuring proper versioning and integration of new features.</li>
+
+            </ul>
         </div>
-
-    </body>
+    </div>
+</body>
 
 </html>
 <script>
     window.addEventListener('scroll', () => {
         let scrollValue = window.pageYOffset / (document.body.offsetHeight - window.innerHeight);
-  document.body.style.setProperty('--scroll', scrollValue);
-  document.getElementById('scroll').innerHTML = `scroll: ${scrollValue.toFixed(2)}`;
+        document.body.style.setProperty('--scroll', scrollValue);
+        document.getElementById('scroll').innerHTML = `scroll: ${scrollValue.toFixed(2)}`;
 
-}, false);
+    }, false);
 
 </script>
