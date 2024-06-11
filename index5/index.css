@@ -18,12 +18,23 @@ body {
 }
 
 .circleHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 50px;
+  opacity: 0;
+  animation: fadein 1s linear 0.5s 1 forwards;
+  text-align: center;
 }
 
 .circleHead h1 {
-  opacity: 0;
-  animation: fadein 1s linear 0.5s 1 forwards;
+}
+.circleHead i{
+  margin: auto;
+  font-size: 30px;
+}
+.circleHead i:hover{
+  color: white;
 }
 .content{
   display: flex;
@@ -71,6 +82,7 @@ li {
   animation: colorFlash .5s linear 3.3s 2 forwards;
 }
 
+
 #personalWorkTitle:hover .projects {
   display: block;
 }
@@ -103,6 +115,12 @@ li {
 }
 
 .resume {
+  display: none;
+}
+.skillsDiv:hover .skillsList{
+  display: block;
+}
+.skillsList{
   display: none;
 }
 
@@ -139,6 +157,18 @@ li {
 
   to {
     opacity: 1;
+  }
+
+}
+@keyframes fadein2 {
+  from {
+    opacity: 0;
+    display: none;
+  }
+
+  to {
+    opacity: 1;
+    display: block;
   }
 
 }
