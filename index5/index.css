@@ -10,7 +10,7 @@ body {
   margin: 0;
   width: 100%;
   background-color: pink;
-  /* animation: color 10s linear 0s infinite forwards; */
+  animation: idleColor 60s linear 0s 2 alternate;
 }
 
 ::-webkit-scrollbar {
@@ -21,25 +21,32 @@ body {
   margin: 50px;
 }
 
-.circleHead h1 {}
-
-#softwareDev {}
-
-h1 {
-  /* font-size: clamp(20px, 14vw, 70px); */
-  /* transform: rotate3d(.5, -1, 1, calc(360deg * var(--scroll)));
-  transition: transform 0.1s;  */
+.circleHead h1 {
+  opacity: 0;
+  animation: fadein 1s linear 0.5s 1 forwards;
 }
-li{
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  opacity: 0;
+  animation: fadein 1s linear 1.5s 1 forwards;
+}
+
+li {
   font-family: 'Courier New', Courier, monospace;
 }
+
 .experience {
   transform: translateY(400px);
   width: 90%;
   background-color: black;
   z-index: 1;
 }
-.skills{
+
+.skills {
   display: flex;
   flex-direction: row;
   width: 60%;
@@ -47,42 +54,117 @@ li{
   justify-content: space-around;
   font-size: 30px;
 }
-#personalWorkTitle:hover .projects{
+
+.skills i:nth-child(1) {
+  animation: colorFlash .5s linear 3s 2 forwards;
+}
+
+.skills i:nth-child(2) {
+  animation: colorFlash .5s linear 3.1s 2 forwards;
+}
+
+.skills i:nth-child(3) {
+  animation: colorFlash .5s linear 3.2s 2 forwards;
+}
+
+.skills i:nth-child(4) {
+  animation: colorFlash .5s linear 3.3s 2 forwards;
+}
+
+#personalWorkTitle:hover .projects {
   display: block;
 }
-#personalWorkTitle:hover h2{
+
+#personalWorkTitle:hover h2 {
   color: red;
 }
-.projects{
+
+#personalWorkTitle h2 {
+  animation: shake .5s linear 2s 1 forwards;
+}
+
+.projects {
   display: none;
 }
-#professionalWork:hover .resume{
+
+#professionalWork:hover .resume {
   display: block;
   width: 80%;
   margin: auto;
 }
-#professionalWork:hover h2{
+
+#professionalWork:hover h2 {
   text-align: center;
   color: red;
 }
-.resume{
+
+#professionalWork h2 {
+  animation: shake .5s linear 2.5s 1 forwards;
+}
+
+.resume {
   display: none;
 }
-@keyframes color {
-  from{
-    background-color: white;
+
+@keyframes shake {
+  0% {
+    transform: rotateZ(0deg);
   }
-  25%{
-    background-color: rgb(165, 41, 165);
+
+  20% {
+    transform: rotateZ(5deg);
+  }
+
+  40% {
+    transform: rotateZ(-5deg);
+  }
+
+  60% {
+    transform: rotateZ(5deg);
+  }
+
+  80% {
+    transform: rotateZ(-5deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+@keyframes colorFlash {
+  0% {
+    color: black;
+  }
+
+  50% {
+    color: white;
+  }
+
+  100% {
+    color: black;
+  }
+}
+@keyframes idleColor {
+  0%{
+    background-color: pink;
   }
   50%{
-    background-color: rgb(73, 158, 158);
-  }
-  75%{
-    background-color: rgb(165, 41, 165);
+    background-color: white;
   }
   100%{
-    background-color: white;
+    background-color: rgb(211, 83, 211);
   }
   
 }
