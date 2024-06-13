@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bob's Burgers</title>
-    <link href="https://fonts.cdnfonts.com/css/bobs-burgers-2" rel="stylesheet">
-    <link rel="stylesheet" href="../bobs2/index.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bob's Burgers</title>
+        <link href="https://fonts.cdnfonts.com/css/bobs-burgers-2"
+            rel="stylesheet">
+        <link rel="stylesheet" href="../bobs2/index.css">
+    </head>
+
+    <body>
+        
 
 
+            <div class="pageTitle" id="pageTitle"> </div>
+            <div class="navBar" id="navBar">
+                <img src="../images/bobs2.png" alt="">
+                <button onclick="characterPage()">Characters</button>
+                <button>Episodes</button>
+                <button>Pest Control Vans</button>
+                <button>Stores Next Door</button>
+                <button>Burgers of the Day</button>
+            </div>
+            <div class="characters" id="characters">
+                <button onclick="charactersByAppearance()">By Appearance</button>
+                <button onclick="charactersByName()">By Name</button>
+                <button onclick="characterPage()">The Belchers</button>
+                <h2 id="belcherstitle">The Belchers</h2>
+                <div id="belchers">
+                    
+                </div>
+                <button onclick="returnToMain()">Return to Main</button>
 
-<body>
-    <div
-    class="backgroundOpacity">
+                <div id="charactersList">
+                    
+                </div>
 
-    <div id="loading"></div>
 
-    <div class="pageTitle" id="pageTitle"> </div>
+            </div>
+            <div class="episodes" id="episodes"></div>
+            <div class="storeNextDoor" id="storeNextDoor"></div>
+            <div id='pestControlTruck'></div>
+            <div id="burgerOfTheDay"></div>
 
-    <div class="characters" id="characters"></div>
-    <div class="focus" id="focus"></div>
-    <div class="episodes" id="episodes"></div>
-    <div class="storeNextDoor" id="storeNextDoor"></div>
-    <div id='pestControlTruck'></div>
-    <div id="burgerOfTheDay"></div>
-
-</div>
-</body>
+        </div>
+    </body>
 </html>
-<script src="../bobs2/index.js"></script>
+<!-- <script src="../bobs2/index.js"></script> -->
+<script src="../bobs2/index2.js"></script>

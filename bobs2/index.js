@@ -145,6 +145,7 @@ function setCharacter(characterCode, characterName, bgColor) {
   let characterNameElement = document.createElement("h3");
   characterNameElement.innerHTML = character.name;
   let characterInfo = document.createElement("p");
+  characterInfo.style.display = 'none';
   characterInfo.innerHTML = `Occupation: ${character.occupation}</p>
   <p>Voiced By: ${character.voicedBy}</p>`;
   characterDiv.appendChild(characterNameElement);
@@ -300,7 +301,7 @@ function setLinda() {
 }
 
 function setBob() {
-  setCharacter("R", 'Robert "Bob" Belcher, Jr.', "rgba(100,200,100,.9)");
+  setCharacter("R", 'Robert "Bob" Belcher, Jr.', "rgba(255,255,255,.9)");
 }
 
 function setGene() {
