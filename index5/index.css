@@ -114,11 +114,18 @@ li {
   animation: shake .5s linear 2.5s 1 forwards;
 }
 
+.skillsDiv h2 {
+  animation: shake .5s linear 3s 1 forwards;
+}
+
 .resume {
   display: none;
 }
 .skillsDiv:hover .skillsList{
   display: block;
+}
+.skillsDiv:hover h2{
+  color: red;
 }
 .skillsList{
   display: none;
