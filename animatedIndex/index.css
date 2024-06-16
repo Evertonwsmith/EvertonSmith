@@ -1,0 +1,343 @@
+body {
+    margin: 0;
+    background: rgb(0, 0, 100);
+    font-family: "tourney";
+    height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* 
+
+
+*MAIN BODY*
+
+
+
+*/
+
+main {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 200px);
+    animation: borderEnter 5.5s linear 0s 1 forwards;
+    overflow-y: scroll;
+    color: white;
+    background-color: rgb(0, 0, 112);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+main p, main li{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(18px,3vw,28px);
+}
+#work,#exp,#about{
+    max-width: 800px;
+}
+/*
+
+
+*RESUME*
+
+
+*/
+#exp{
+    padding: 1rem;
+}
+#exp p, #exp li, #exp td{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(14px,2vw,20px);
+}
+#exp th{
+    font-size: clamp(12px,2vw,18px);
+    white-space: nowrap;
+}
+#exp td{
+    text-align: left;
+}
+#exp table{
+    border-spacing: 20px;
+}
+#exp h5{
+    font-size: 18px;
+}
+
+/*
+
+
+*ABOUT*
+
+
+*/
+#about{
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(14px,2vw,24px);
+}
+#about h2{
+    font-family: "tourney";
+
+}
+
+
+
+/*
+
+
+*WORK CARD*
+
+
+*/
+.work {
+    display: none;
+}
+
+.workCard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 3fr;
+    padding: 1rem;
+}
+.workCard:hover{
+    background-color: darkblue;
+}
+
+.workCard * {}
+
+.workCard h2 {
+    grid-column: 1/6;
+    grid-row: 1;
+}
+
+.workCard img {
+    grid-column: 1/3;
+    grid-row: 2;
+    width: 100%;
+    max-width: 300px;
+}
+
+.workCard p {
+    grid-column: 3/6;
+    grid-row: 2;
+    padding: 10px 10px 0 10px;
+    margin: 0;
+}
+
+
+
+/*
+
+
+*TOP AND BOTTOM BORDER*
+
+
+
+*/
+.topBorder {
+    top: 0;
+    height: 70px;
+    width: 85%;
+    max-width: 800px;
+    margin: auto;
+    animation: borderEnter 5.5s linear 0s 1 forwards;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.topBorder h1 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 40px;
+    color: white;
+}
+
+.topBorder h2 {
+    color: white;
+    font-size: clamp(16px, 2vw, 28px);
+    position: relative;
+}
+
+.topBorder h2:hover {
+    text-decoration: underline;
+}
+
+.bottomBorder {
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    animation: borderEnter 5.5s linear 0s 1 forwards;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+}
+
+.bottomBorder * {
+    padding: 1rem;
+}
+
+@keyframes borderEnter {
+
+    0%,
+    99% {
+        display: none;
+        opacity: 0;
+    }
+
+    100% {
+        display: absolute;
+        opacity: 1;
+    }
+
+}
+
+/*
+
+
+* HERO AND INTRO CARD 
+
+
+*/
+
+.introCard {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    animation: introEnd 1s linear 4s 1 forwards;
+}
+
+.welcome {
+    grid-column: 3;
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+}
+
+.welcome h1 {
+    font-family: "tourney";
+}
+
+.animatedLines {
+    grid-column: 2/5;
+    grid-row: 3;
+}
+
+.animatedLines * {
+    margin: auto;
+    width: 250px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+}
+
+#aniLine1 {
+
+    transform: translate3d(-90px, 0, 0) rotate3d(0, 0, 1, 120deg);
+    animation: aniLine1 2s ease-in-out 0s 2 alternate;
+}
+
+#aniLine2 {
+    transform: translate3d(90px, 0, 0) rotate3d(0, 0, 1, 60deg);
+    animation: aniLine2 2s ease-in-out 0s 2 alternate;
+
+}
+
+#aniLine3 {
+    transform: translate3d(0, 120px, 0) rotate3d(0, 0, 0, 0);
+    animation: aniLine3 2s ease-in-out 0s 2 alternate;
+
+}
+
+@keyframes aniLine1 {
+    0% {
+        transform: translate3d(-90px, 0, 0) rotate3d(0, 0, 1, 120deg);
+    }
+
+    33% {
+        transform: translate3d(90px, 0, 0) rotate3d(0, 0, 1, 60deg);
+    }
+
+    66% {
+        transform: translate3d(0, 120px, 0) rotate3d(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-90px, 0, 0) rotate3d(0, 0, 1, 120deg);
+    }
+}
+
+@keyframes aniLine2 {
+    0% {
+        transform: translate3d(90px, 0, 0) rotate3d(0, 0, 1, 60deg);
+    }
+
+    33% {
+        transform: translate3d(0, 120px, 0) rotate3d(0, 0, 0, 0);
+    }
+
+    66% {
+        transform: translate3d(-90px, 0, 0) rotate3d(0, 0, 1, 120deg);
+    }
+
+    100% {
+        transform: translate3d(90px, 0, 0) rotate3d(0, 0, 1, 60deg);
+    }
+}
+
+@keyframes aniLine3 {
+    0% {
+        transform: translate3d(0, 120px, 0) rotate3d(0, 0, 0, 0);
+
+    }
+
+    33% {
+        transform: translate3d(-90px, 0, 0) rotate3d(0, 0, 1, 120deg);
+    }
+
+    66% {
+        transform: translate3d(90px, 0, 0) rotate3d(0, 0, 1, 60deg);
+
+    }
+
+    100% {
+        transform: translate3d(0, 120px, 0) rotate3d(0, 0, 0, 0);
+
+    }
+}
+
+@keyframes introEnd {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        display: grid;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}

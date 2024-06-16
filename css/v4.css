@@ -2,9 +2,11 @@
 body {
   padding: 0;
   margin: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(14px, 3vw, 34px);
   background-image: url("../images/font1.jpg");
@@ -12,13 +14,16 @@ body {
   white-space: initial;
   overflow-x: hidden;
 }
+
 p {
   font-weight: 500;
 }
+
 a {
   text-decoration: none;
   color: black;
 }
+
 img {
   border-radius: 10px;
 }
@@ -37,7 +42,8 @@ img {
   width: 100%;
   height: 600px;
 }
-.overlay > img {
+
+.overlay>img {
   width: 100%;
   height: 600px;
 }
@@ -46,7 +52,7 @@ img {
   text-align: left;
   width: 100%;
   /* height: 600px; */
-  padding: 50px;
+  padding: 50px 0 50px 100px;
   color: #000;
   text-transform: uppercase;
   align-content: center;
@@ -54,30 +60,35 @@ img {
   background: rgb(240, 240, 240);
   mix-blend-mode: lighten;
 }
-.heroTxt > h1,
+
+.heroTxt>h1,
 h2,
 h3,
 h4,
 h5 {
   margin: 10px 25px;
 }
-.heroTxt > h2 {
+
+.heroTxt>h2 {
   color: rgba(0, 0, 0, 0);
   animation: slideIn 1s ease-out 1s forwards;
 }
-.heroTxt > h4 {
+
+.heroTxt>h4 {
   color: rgba(0, 0, 0, 0);
   animation: slideIn 1s ease-out 2s forwards;
 }
 
-.heroTxt > h1 {
+.heroTxt>h1 {
   font-size: clamp(40px, 10vw, 100px);
 }
-.heroTxt > h4 {
+
+.heroTxt>h4 {
   font-size: clamp(16px, 2vw, 20px);
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .circleContact {
   display: flex;
   justify-content: center;
@@ -92,15 +103,18 @@ h5 {
   border-radius: 100%;
   transition-duration: 1s;
 }
-.circleContact > i {
+
+.circleContact>i {
   size: 30px;
 }
+
 .circleContact:hover {
   width: 120px;
   height: 120px;
   background-color: rgba(57, 57, 151, 0.678);
   color: white;
 }
+
 /* .heroTxt > h1:hover{
     font-size: 9vw;
     transition-duration: 2s;
@@ -111,7 +125,7 @@ h5 {
 
 /* GENERAL SHADOWBOXES */
 .shadowBox {
-  width: 80%;
+  width: 100%;
   max-width: 1000px;
   margin: auto;
   margin-top: 50px;
@@ -122,12 +136,17 @@ h5 {
   flex-direction: row;
   background-color: rgba(255, 255, 255, 0.9);
 }
+.profesional{
+  margin: 8rem 0 0 0;
+}
+.work {
+  margin: 3rem 0 0 0;
+}
+
 /* SHADOWBOX WITH TITLE */
 .shadowBox2 {
-  width: 80%;
-  max-width: 1000px;
+  width: 100%;
   margin: auto;
-  margin-top: 50px;
   box-shadow: 5px 5px 20px 20px rgba(10, 10, 10, 0.3);
   border-radius: 2%;
   display: flex;
@@ -167,28 +186,32 @@ h5 {
   margin: auto;
 }
 
-.txtBox > p {
+.txtBox>p {
   text-align: left;
   font-size: clamp(14px, 3vw, 24px);
 }
+
 /* FIRST */
-.first{
+.first {
   margin-top: 75px;
 }
 
-#halfFace > img {
+#halfFace>img {
   width: 80%;
   margin: 20px;
   border-radius: 5%;
   opacity: 0.9;
   padding-right: 0;
 }
+
 #halfFace {
   margin-right: 0;
 }
+
 #pTitle {
   font-weight: bold;
 }
+
 /* SECOND UNUSED */
 .spotlight {
   margin: auto;
@@ -197,21 +220,23 @@ h5 {
   display: flex;
   justify-content: center;
 }
+
 .spotlight:hover {
   background-color: rgba(10, 10, 10, 0.3);
   transition-duration: 2s;
 }
+
 .spotlight:not(:hover) {
   transition-duration: 1s;
 }
 
-.spotlight > a {
+.spotlight>a {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.spotlight > a {
+.spotlight>a {
   text-align: center;
   text-decoration: none;
 }
@@ -223,6 +248,7 @@ h5 {
   max-width: 200px;
   margin: auto;
 }
+
 /* THIRD */
 .logo {
   margin: auto;
@@ -231,9 +257,10 @@ h5 {
   width: 80;
 }
 
-.logo > img {
+.logo>img {
   width: 80%;
 }
+
 .txtBox2 {
   text-align: center;
   justify-content: center;
@@ -242,7 +269,8 @@ h5 {
   width: 70%;
   margin: auto;
 }
-.txtBox2 > p {
+
+.txtBox2>p {
   font-size: clamp(18px, 2vw, 26px);
 }
 
@@ -251,7 +279,8 @@ h5 {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.techstack > img {
+
+.techstack>img {
   width: 100px;
   /* height: 100px; */
   margin: 25px;
@@ -264,32 +293,40 @@ h5 {
   justify-content: space-evenly;
   overflow: auto;
 }
+
 .secTitle {
-  flex-basis: 100%; /* Makes the element take full width */
-  flex-grow: 1; /* Ensures it grows to fill available space */
-  text-align: center; /* Optional: Center text if desired */
+  flex-basis: 100%;
+  /* Makes the element take full width */
+  flex-grow: 1;
+  /* Ensures it grows to fill available space */
+  text-align: center;
+  /* Optional: Center text if desired */
 
   text-transform: uppercase;
   font-size: clamp(18px, 3vw, 30px);
   color: darkblue;
 }
-.cardCont > a {
+
+.cardCont>a {
   display: flex;
   justify-content: center;
   text-decoration: none;
   color: black;
   width: 40%;
 }
+
 .card {
   border-radius: 5px;
   width: 40%;
   min-width: 200px;
   margin: 20px;
 }
+
 .card:hover {
   background-color: rgba(10, 10, 10, 0.3);
   transition-duration: 2s;
 }
+
 .card:not(:hover) {
   transition-duration: 1s;
 }
@@ -302,7 +339,7 @@ h5 {
   height: 150px;
 }
 
-.cardimg > img {
+.cardimg>img {
   width: auto;
   height: 100%;
   max-width: 100%;
@@ -319,6 +356,10 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+  .profesional,.work,.shadowBox,.shadowBox2{
+    width: 100%;
+  }
+
   .circleContact {
     width: 70px;
     height: 70px;
@@ -326,45 +367,51 @@ footer {
     right: 5%;
     top: 15%;
   }
+
   .circleContact:hover {
     width: 80px;
     height: 80px;
     background-color: rgba(57, 57, 151, 0.678);
   }
-  .shadowBox,
-  .shadowBox2 {
+
+
+  .first {
     margin-top: 10px;
   }
-  .first{
-    margin-top: 10px;
-  }
-  .first > .shadowBox {
+
+  .first>.shadowBox {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .first > .shadowBox > .txtBox {
+
+  .first>.shadowBox>.txtBox {
     margin: auto;
   }
+
   #halfFace {
     display: flex;
     justify-content: center;
   }
-  #halfFace > img {
+
+  #halfFace>img {
     margin: auto;
     margin-top: 40px;
   }
-  .cardimg > img {
+
+  .cardimg>img {
     width: auto;
     height: 100%;
     max-width: 70%;
     object-fit: cover;
   }
+
   .cardCont {
     flex-direction: column;
     justify-content: center;
   }
-  .cardCont > a {
+
+  .cardCont>a {
     display: flex;
     justify-content: center;
     text-decoration: none;
@@ -379,6 +426,7 @@ footer {
     margin-left: 0;
     color: rgba(0, 0, 0, 0);
   }
+
   to {
     margin-left: 25px;
     color: #000;
