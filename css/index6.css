@@ -26,6 +26,7 @@ a{
 }
 .hero h1{
     margin: 0;
+    text-shadow: 2px 2px 10px;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scroller::-webkit-scrollbar {
