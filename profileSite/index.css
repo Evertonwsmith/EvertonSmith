@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#loginBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 60vh;
+    max-height: 500px;
+    max-width: 450px;
+    background-color: rgba(10,10,10,.1);
+    color: white;
+    border-radius: 15px;
+}
+#loginBox form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    color: rgba(0,0,0,.5);
+}
+input[type=submit]{
+    color: white;
+    width: 90%;
+    background-color: rgba(255, 184, 184, 0.788);
+}
+input[type=submit]:hover{
+    color: white;
+    width: 90%;
+    background-color: rgba(255, 165, 165, 0.788);
+}
+i{
+    color: rgba(255, 184, 184, 0.788);
+    font-size: 70px;
+    padding: 25px;
+}
