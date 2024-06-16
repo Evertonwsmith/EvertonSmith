@@ -137,10 +137,10 @@ h5 {
   background-color: rgba(255, 255, 255, 0.9);
 }
 .profesional{
-  margin: 8rem 0 0 0;
+  margin: 8rem 0 0 1rem;
 }
 .work {
-  margin: 3rem 0 0 0;
+  margin: 3rem 0 0 1rem;
 }
 
 /* SHADOWBOX WITH TITLE */
@@ -356,6 +356,9 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+  body{
+    margin: 0;
+  }
   .profesional,.work,.shadowBox,.shadowBox2{
     width: 100%;
   }
