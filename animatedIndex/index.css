@@ -206,7 +206,7 @@ main p, main li{
 .bottomBorder {
     bottom: 0;
     height: 50px;
-    width: 100%;
+    width: 80%;
     animation: borderEnter 3.5s linear 0s 1 forwards;
     position: absolute;
     display: flex;
@@ -233,7 +233,7 @@ main p, main li{
     }
 
     100% {
-        display: absolute;
+        display: flex;
         opacity: 1;
     }
 
