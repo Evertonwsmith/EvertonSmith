@@ -174,8 +174,8 @@ main p, main li{
 .topBorder {
     top: 0;
     height: 70px;
-    width: 85%;
-    max-width: 800px;
+    width: 95%;
+    max-width: 1000px;
     margin: auto;
     animation: borderEnter 3.5s linear 0s 1 forwards;
     display: flex;
