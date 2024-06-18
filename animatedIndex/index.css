@@ -9,8 +9,11 @@ body {
 a {
     text-decoration: none;
     color: white;
+    font-size: clamp(12px,1vw,16px);
 }
-
+i{
+    font-size: 30px;
+}
 /*
 
 ES logo & animation
