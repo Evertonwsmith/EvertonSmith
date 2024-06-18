@@ -2,241 +2,222 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="animatedIndex/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/v4.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Everton Smith</title>
+    <title>Everton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f833440145.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="heroImage">
-        <div class="overlay">
+
+    <div class="introCard">
+        <div class="welcome">
+            <h1>W</h1>
+            <h1>e</h1>
+            <h1>l</h1>
+            <h1>c</h1>
+            <h1>o</h1>
+            <h1>m</h1>
+            <h1>e</h1>
         </div>
-        <div class="heroTxt">
-            <h1>Everton Smith</h1>
-            <h2>Software Developer</h2>
-            <h4>Java</h4>
-            <h4>HTML/CSS</h4>
-            <h4>Javascript</h4>
-            <h4>Dart/Flutter</h4>
-            <div class="shapeOne"></div>
-            <!-- <h2>Software Developer - Creator</h2> -->
+
+        <div class="animatedLines">
+            <div id="aniLine1"></div>
+            <div id="aniLine2"></div>
+            <div id="aniLine3"></div>
         </div>
-        <a href="mailto:evertonwsmith@gmail.com">
-            <div class="circleContact">
-                <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>
-            </div>
+    </div>
+
+
+
+
+    <div class="topBorder">
+        <h1>ES</h1>
+        <h2 onclick="work()" id="worknav">Work</h2>
+        <h2 onclick="exp()" id="expnav">Experience</h2>
+        <h2 onclick="about()" id="aboutnav">About</h2>
+
+    </div>
+    <div class="bottomBorder">
+        <a href="https://www.linkedin.com/in/evertonsmith">
+            <i class="fa-brands fa-linkedin"></i>
         </a>
     </div>
 
-    <!-- <div class="first">
-        <div class="shadowBox">
-            <div id="halfFace">
-                <img src="images/es1.jpg" alt="es2">
-            </div>
-            <div class="txtBox">
-                <p id="pTitle">Developer / Creator</p>
-                <p>Kelowna B.C.</p>
-                <p>UBCO Graduate<br><i>B.Sc. in Comp Sci. 2019</i></p>
-                <p>Over 4 years of Experience in Software Development</p>
-            </div>
-        </div>
-    </div> -->
 
-    <div class="profesional">
-
-        <div class="shadowBox2">
-            <span class="secTitle">
-                <h2>Professional</h2>
-            </span>
-            <div class="logo">
-                <img src="images/ukg.png" alt="logo">
-            </div>
-            <div class="txtBox2">
-                <p>Software Developer @ Ultimate Kronos Group</p>
-                <p>November 2019 until present</p>
-
-                <div class="techstack">
-                    <img src="images/java.png" alt="java">
-                    <img src="images/postgresql.png" alt="sql">
-                    <img src="images/jira.png" alt="jira">
-                    <img src="images/atla.png" alt="atla">
-                    <img src="images/kub.png" alt="kub">
-                    <img src="images/dyna.png" alt="dyna">
-                    <img src="images/datadog.png" alt="datadog">
-
+    <main>
+        <div class="work" id="work">
+            <a href="placeholder.html">
+                <div class="workCard">
+                    <h2>Haley Jaques Poetry</h2>
+                    <img src="images/poem.jpg" alt="poem">
+                    <p>Small project displaying the works of Haley Jaques</p>
                 </div>
-            </div>
+            </a>
+
+            <a href="business2/index.html">
+                <div class="workCard">
+                    <h2>Cafe Website Sample</h2>
+                    <img src="images/cafe.jpg" alt="cafe">
+                    <p>Example website for a simple cafe</p>
+                </div>
+            </a>
+
+            <a href="bobs/index.html">
+                <div class="workCard">
+                    <h2>Bob's Burgers Index</h2>
+                    <img src="images/bobs1.png" alt="bobs">
+                    <p>Bob's Burgers API Javascript Example</p>
+                </div>
+            </a>
+
+            <a href="index5/index.html">
+                <div class="workCard">
+                    <h2>Profile Page (Early Dev.)</h2>
+                    <img src="images/index5.jpg" alt="profile">
+                    <p>Alternative Personal Website Design</p>
+                </div>
+            </a>
+
+            <a href="javascript1.html">
+                <div class="workCard">
+                    <h2>Javascript Memory Game</h2>
+                    <img src="images/memgame.jpg" alt="memgame">
+                    <p>Small Javascript Memory Game</p>
+                </div>
+            </a>
+
+            <a href="index6/index.html">
+                <div class="workCard">
+                    <h2>Personal Website</h2>
+                    <img src="images/index6.png" alt="index6">
+                    <p>v6.0 Personal Website</p>
+                </div>
+            </a>
 
         </div>
-    </div>
-
-    <div class="work">
-        <div class="shadowBox2">
-
-            <div class="cardCont">
-
-                <span class="secTitle">
-                    <h2>Work</h2>
-                </span>
-                <a href="placeholder.html">
-                    <div class="card`">
-                        <div class="cardimg">
-                            <img src="images/poem.jpg" alt="poem">
-                        </div>
-                        <div class="cardtxt">
-                            <p>H.Jaques Poetry</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="business2/index.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/cafe.jpg" alt="new">
-                        </div>
-                        <div class="cardtxt">
-                            <p>Cafe Example</p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="businessEx.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/bus1.png" alt="new">
-                        </div>
-                        <div class="cardtxt">
-                            <p>Business Example</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="bobs/index.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/bobs1.png" alt="new">
-                        </div>
-                        <div class="cardtxt">
-                            <p>Bob's Burgers Index</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="animatedIndex/index.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/aniInd.png" alt="anim">
-                        </div>
-                        <div class="cardtxt">
-                            <p>Personal Website Example v7.0</p>
-                        </div>
-                    </div>
-                </a>
-
-<!-- 
-                <a href="index6/index.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/index6.png" alt="new">
-                        </div>
-                        <div class="cardtxt">
-                            <p>Personal Website v6.0</p>
-                        </div>
-                    </div>
-                </a> -->
-
-
-                <a href="index5/index.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/index5.jpg" alt="new5">
-                        </div>
-                        <div class="cardtxt">
-                            <p>(Early Development) Profile Page</p>
-                        </div>
-                    </div>
-                </a>
 
 
 
+        <div id="exp">
+            <h2>Summary</h2><br>
+            <p>Software Developer with five years of professional experience working on
+                a Cloud based S.a.a.S..
+                Familiar with Git, Kubernetes and Docker, as well as many development
+                languages with a personal interest
+                in cross platform web application development. Ability to demonstrate
+                knowledge in adeptly managing customer issues,
+                implementing efficient and secure code, and improving operations through
+                the use of automation and thorough testing.
+            </p>
 
+            <br>
 
+            <h2>Experience</h2>
+            <h3>Ultimate Kronos Group</h3>
+            <h5>November 2019 - Present</h5>
+            <ul>
+                <li>Engineered and maintained Backend and Frontend code for a Cloud Based
+                    Software as a Service</li><br>
+                <li>Collaborated with support teams to resolve customer and internally
+                    reported issues</li><br>
+                <li>Actively engaged in agile development methodologies, including daily
+                    standups, spring planning, and retrospective meetings</li>
+                <li>Stayed up to date on code security and integrity taking internal
+                    training courses</li><br>
+                <li>Employed automation and Java frameworks like Spring Boot to develop
+                    scalable software solutions, optimizing performance</li>
+            </ul>
 
-                <a href="newindex.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/index2.jpg" alt="V2">
-                        </div>
-                        <div class="cardtxt">
-                            <p>Website V1.2</p>
-                        </div>
-                    </div>
-                </a>
+            <br>
 
-                <a href="indexV3.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/logo.png" alt="V3">
-                        </div>
-                        <div class="cardtxt">
-                            <p>Website V2.1</p>
-                        </div>
-                    </div>
-                </a>
+            <h2>Skills</h2>
+            <table>
+                <tr>
+                    <th>Programming Languages</th>
+                    <td>Java, Dart, React Native, Python, Php, C</td>
+                </tr>
+                <tr>
+                    <th>Web Development</th>
+                    <td>HTML, CSS, Javascript</td>
+                </tr>
+                <tr>
+                    <th>Database Experience</th>
+                    <td>PostgreSQL, MySQL, MongoDB, NoSQL</td>
+                </tr>
+                <tr>
+                    <th>Version Control</th>
+                    <td>Git</td>
+                </tr>
+                <tr>
+                    <th>IDEs</th>
+                    <td>IntelliJ, Eclipse, Android Studio, Visual Studio Code, Atom</td>
+                </tr>
+            </table>
 
-                <a href="index1.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/index1.jpg" alt="V1">
-                        </div>
-                        <div class="cardtxt">
-                            <p>Website V1.1</p>
-                        </div>
-                    </div>
-                </a>
+            <br>
 
-                <a href="javascript1.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/memgame.jpg" alt="memgame">
-                        </div>
-                        <div class="cardtxt">
-                            <p>JS Memory Game</p>
-                        </div>
-                    </div>
-                </a>
-
-
-                <!-- <a href="Todos/index.html">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/todos.png" alt="new">
-                        </div>
-                        <div class="cardtxt">
-                            <p>(Early Development) Todos: Task Manager</p>
-                        </div>
-                    </div>
-                </a> -->
-
-
-                <a href="https://evertonsmith-848dd.web.app/">
-                    <div class="card">
-                        <div class="cardimg">
-                            <img src="images/dart1.jpg" alt="dart">
-                        </div>
-                        <div class="cardtxt">
-                            <p>Dart/Flutter Homepage</p>
-                        </div>
-                    </div>
-                </a>
-                <p style="font-size: 12px;padding:10px">This website and all included projects were created on or after
-                    May 12 2024</p>
-
-            </div>
-
+            <h2>Education</h2>
+            <h3>UBCO, Kelowna - Bachelor of Science in Computer Science</h3>
+            <h5>2014-2019</h5>
         </div>
-    </div>
-    <footer></footer>
+
+        <div id="about">
+            <h2>About Me</h2>
+           Growing up I was involved with various sports, with a main
+                concentration on golf and hockey<br><br>
+            
+            At age 13 I decided to learn guitar, teaching myself and
+                joining my schools band program.
+                I continued, and ended up having a successful jazz career in high school,
+                competing at nation levels, playing payed gigs, and winning various awards
+                in small group combos.
+                I still play as a way to express myself, and to keep my brain active in a
+                way I love.<br><br>
+            
+            I loved video games at a young age, being introduced to the
+                original playstation in my youth. I was then introduced
+                to computer gaming, and ultimately coding. This, combined with having
+                strong math skills, lead me to persue a degree in Computer Science.
+            
+        </div>
+
+    </main>
+
+
 </body>
 
 </html>
+<script>
+
+    function work() {
+        document.getElementById('work').style.display = 'block';
+        document.getElementById('exp').style.display = 'none';
+        document.getElementById('about').style.display = 'none';
+        document.getElementById('worknav').style.color = 'teal';
+        document.getElementById('expnav').style.color = 'white';
+        document.getElementById('aboutnav').style.color = 'white';
+    }
+    function exp() {
+        document.getElementById('work').style.display = 'none';
+        document.getElementById('exp').style.display = 'block';
+        document.getElementById('about').style.display = 'none';
+        document.getElementById('worknav').style.color = 'white';
+        document.getElementById('expnav').style.color = 'teal';
+        document.getElementById('aboutnav').style.color = 'white';
+    }
+    function about() {
+        document.getElementById('work').style.display = 'none';
+        document.getElementById('exp').style.display = 'none';
+        document.getElementById('about').style.display = 'block';
+        document.getElementById('worknav').style.color = 'white';
+        document.getElementById('expnav').style.color = 'white';
+        document.getElementById('aboutnav').style.color = 'teal';
+    }
+    exp();
+</script>
