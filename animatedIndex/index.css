@@ -37,7 +37,7 @@ main {
 
 main p, main li{
     font-family: 'Courier New', Courier, monospace;
-    font-size: clamp(16px,3vw,24px);
+    font-size: clamp(18px,3vw,24px);
 }
 #work,#exp,#about{
     max-width: 800px;
