@@ -186,7 +186,7 @@ main p, main li{
 .topBorder h1 {
     padding: 1rem;
     margin: 0;
-    font-size: 40px;
+    font-size: clamp(30px,3vw,40px);
     color: white;
 }
 
@@ -209,9 +209,9 @@ main p, main li{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: left;
     padding: 20px;
-    margin: 0;
+    margin: auto;
     align-items: center;
     color: white;
     font-size: 30px;
@@ -366,5 +366,11 @@ main p, main li{
     100% {
         display: none;
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    *{
+        width: 100%;
     }
 }
