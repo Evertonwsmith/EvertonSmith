@@ -47,6 +47,7 @@ ES logo & animation
 main {
     position: absolute;
     width: 100%;
+    margin: auto;
     height: calc(100vh - 200px);
     animation: borderEnter 3.5s linear 0s 1 forwards;
     overflow-y: scroll;
@@ -63,6 +64,7 @@ main p, main li{
     font-size: clamp(18px,3vw,24px);
 }
 #work,#exp,#about{
+    width: 90%;
     max-width: 800px;
 }
 /*
@@ -87,7 +89,7 @@ main p, main li{
     text-align: left;
 }
 #exp table{
-    border-spacing: 20px;
+    border-spacing: 10px;
 }
 #exp h5{
     font-size: 18px;
@@ -213,6 +215,7 @@ main p, main li{
     position: absolute;
     margin: auto;
     color: white;
+    align-items: center;
 }
 .bottomBorder a:nth-of-type(1){
     grid-column: 2/3;
@@ -384,7 +387,5 @@ main p, main li{
 }
 
 @media screen and (max-width: 400px) {
-    *{
-        width: 100%;
-    }
+    
 }
