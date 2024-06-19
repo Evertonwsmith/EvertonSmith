@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.topBorder {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 100px;
+}
+
+.logo {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.topBorder a:nth-of-type(1){
+    color: #C6D8AF;
+}
+.topBorder a:nth-of-type(2){
+    color: #FCC8B2;
+}
+.topBorder a:nth-of-type(3){
+    color:#685369;
+}
+
+.topBorder a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: black;
+}
+
+.topBorder a:nth-of-type(1) {
+    grid-column: 4/5;
+}
+
+.topBorder a:nth-of-type(2) {
+    grid-column: 5/6;
+}
+
+.topBorder a:nth-of-type(3) {
+    grid-column: 6/7;
+}
+
+main {
+    width: 100%;
+}
+
+section:nth-of-type(1) {
+    width: 100%;
+    background-color: #c6d8af52;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayBox {
+    width: 90%;
+    max-width: 700px;
+    height: 350px;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.floatTitle {
+    position: absolute;
+    top: 10%;
+    font-size: clamp(16px, 2vw, 26px);
+    font-weight: 100;
+    letter-spacing: .5rem;
+    opacity: .5;
+    background-color: #dbd8b32f;
+    padding: 5px;
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.753);
+}
+
+.gridClass {
+    margin: 1rem;
+    transform: rotateY(35deg);
+
+}
+
+.gridClass:hover {
+    transform: rotateY(0deg);
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+.gridClassOne {
+    height: 150px;
+    width: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gridClassTwo {
+    height: 150px;
+    width: 200px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+}
+
+.exampleBox {
+    display: flex;
+    flex: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridClassOne *,
+.gridClassTwo * {
+    margin: 5px;
+
+}
+
+.one {
+    width: 100%;
+    background-color: #C6D8AF;
+}
+
+.two {
+    width: calc(60% - 10px);
+    background-color: #DBD8B3;
+}
+
+.three {
+    width: calc(40% - 10px);
+    background-color: #FCC8B2;
+}
+
+.four {
+    width: 100%;
+    background-color: #EFA48B;
+}
+
+.five {
+    width: 100%;
+    background-color: #685369;
+}
+
+.six {
+    width: calc(50% - 10px);
+    background-color: #C6D8AF;
+}
+
+.seven {
+    width: calc(50% - 10px);
+    background-color: #DBD8B3;
+}
+
+.onegrid {
+    width: calc(100%-10px);
+    background-color: #C6D8AF;
+    grid-column: 1/7;
+    grid-row: 1;
+}
+
+.twogrid {
+    width: calc(100%-10px);
+    background-color: #DBD8B3;
+    grid-column: 1/3;
+    grid-row: 2;
+}
+
+.threegrid {
+    width: calc(100%-10px);
+    background-color: #FCC8B2;
+    grid-column: 3/5;
+    grid-row: 2;
+}
+
+.fourgrid {
+    width: calc(100%-10px);
+    background-color: #EFA48B;
+    grid-column: 5/7;
+    grid-row: 2;
+}
+
+.fivegrid {
+    width: calc(100%-10px);
+    background-color: #685369;
+    grid-column: 1/5;
+    grid-row: 3;
+}
+
+.sixgrid {
+    width: calc(100%-10px);
+    background-color: #C6D8AF;
+    grid-column: 5/7;
+    grid-row: 3;
+}
+
+.sevengrid {
+    width: calc(100%-10px);
+    background-color: #DBD8B3;
+    grid-column: 1/7;
+    grid-row: 4;
+}
+.lowertext{
+    position: absolute;
+    bottom: -50px;
+    text-align: center;
+    right:0;
+    left:0;
+}
+
+section:nth-of-type(2) {
+    width: 100%;
+    background-color: #EFA48B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.space{
+    height: 1000px;
+}
+/**
+
+DESKTOP VIEW
+
+**/
+@media screen and (min-width: 500px) {
+    section {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
