@@ -106,7 +106,7 @@ main {
 }
 
 
-section:nth-of-type(1) {
+section:nth-of-type(2) {
     width: 100%;
     background-color: #c6d8af52;
     display: flex;
@@ -277,7 +277,7 @@ section:nth-of-type(1) {
     left: 0;
 }
 
-section:nth-of-type(2) {
+section:nth-of-type(3) {
     width: 100%;
     background-color: #efa48b;
     display: flex;
@@ -475,7 +475,7 @@ section:nth-of-type(2) {
     display: block;
 }
 
-section:nth-of-type(3) {
+section:nth-of-type(4) {
     width: 100%;
     background-color: #c6d8af;
     display: flex;
@@ -671,14 +671,6 @@ section:nth-of-type(3) {
     justify-content: space-around;
 }
 
-section:nth-of-type(4) {
-    width: 100%;
-    background-color: #685369;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 .example {
     height: 800px;
@@ -1129,8 +1121,8 @@ DESKTOP VIEW
 **/
 @media screen and (min-width: 500px) {
 
-    section:nth-of-type(1),
-    section:nth-of-type(2) {
+    section:nth-of-type(2),
+    section:nth-of-type(3) {
         flex-direction: row;
         justify-content: space-evenly;
     }
