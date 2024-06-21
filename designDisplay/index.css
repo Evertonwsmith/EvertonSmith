@@ -482,38 +482,53 @@ section:nth-of-type(3) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* height: 200svh; */
 }
 
 .showcaseRow {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     width: 90%;
-    margin: 100px auto;
-    perspective: 1000px;
+    padding: 50px 0;
 }
-.showcaseRow:hover .showcaseText{
+@media screen and (min-width: 1000px) {
+    .showcaseRow{
+        flex-direction: row;
+    }
+    
+}
+.showcaseRow *{
+    padding: 0;
+}
+
+.showcaseRow:hover .showcaseText {
     opacity: 1;
 }
-.showcaseRow:hover .desktopShowcaseOne{
-    filter: blur(5px);
-}
-.showcaseText h2{
+
+
+/* .showcaseText h2 {
+    pointer-events: none;
     text-transform: uppercase;
     font-family: monospace;
-    font-size: clamp(1rem,2vw,2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
     color: #685369;
 }
-.showcaseText{
+
+.showcaseText {
+    pointer-events: none;
+
     opacity: 0;
     position: absolute;
     z-index: 13;
-}
+} */
 
 .desktopShowcaseOne {
-    height: 300px;
-    width: 400px;
+    height: 60svw;
+    max-height: 300px;
+    width: 90%;
+    max-width: 400px;
     background-image: linear-gradient(rgba(0, 247, 255, 0.418), rgba(255, 187, 0, 0.534));
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -524,8 +539,20 @@ section:nth-of-type(3) {
     font-size: clamp(.4rem, 1vw, .7rem);
     border-radius: 15px;
     transition-duration: 2s;
+    filter: blur(2px);
 }
+
 .desktopShowcaseOne:hover {
+    transform: rotateY(30deg);
+}
+
+.exOneBody:hover {
+    transform: rotateY(30deg);
+}
+.exTwoBody:hover {
+    transform: rotateY(30deg);
+}
+.exThreeBody:hover {
     transform: rotateY(30deg);
 }
 
@@ -567,7 +594,7 @@ section:nth-of-type(3) {
 
 }
 
-.sidenav h5:hover{
+.sidenav h5:hover {
     color: white;
 }
 
@@ -582,27 +609,32 @@ section:nth-of-type(3) {
     flex-direction: row;
     justify-content: center;
 }
-.dsk-main *{
+
+.dsk-main * {
     border-radius: 25px;
 }
-.shadowSquare{
+
+.shadowSquare {
     width: 100px;
     margin: 1rem;
     aspect-ratio: 1 / 1;
     background-color: rgba(255, 255, 255, 0.308);
 }
-.shadowSquare2{
+
+.shadowSquare2 {
     width: 250px;
     margin: 20px;
     aspect-ratio: 1 / 1;
     background-color: rgba(255, 255, 255, 0.308);
 }
-.shadowSquare3{
+
+.shadowSquare3 {
     margin: 15px;
     border-radius: 25px;
     aspect-ratio: 1 / 1;
     background-color: rgba(255, 255, 255, 0.308);
 }
+
 .dsk-section {
     grid-column: 4/10;
     grid-row: 7/10;
@@ -614,6 +646,7 @@ section:nth-of-type(3) {
     flex-direction: column;
     justify-content: space-around;
 }
+
 .dsk-section2 {
     grid-column: 10/13;
     grid-row: 7/10;
@@ -625,6 +658,7 @@ section:nth-of-type(3) {
     flex-direction: column;
     justify-content: space-around;
 }
+
 .dsk-section3 {
     grid-column: 4/13;
     grid-row: 10/13;
@@ -637,7 +671,217 @@ section:nth-of-type(3) {
     justify-content: space-around;
 }
 
+section:nth-of-type(4) {
+    width: 100%;
+    background-color: #685369;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.example {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.exOneBody {
+    width: 90%;
+    max-width: 400px;
+    height: 60svw;
+    max-height: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    align-items: center;
+    filter: blur(2px);
+    transition-duration: 2s;
+
+    padding: 5px;
+}
+
+.exOneLogo {
+    font-size: clamp(10px, 10vw, 35px);
+    padding: 15px;
+    grid-column: 1/4;
+    grid-row: 1/4;
+    margin: auto;
+}
+
+.exOneHeader {
+    grid-column: 3/13;
+    grid-row: 1/4;
+    margin: auto;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    font-size: clamp(.8rem, 3vw, 2rem);
+}
+
+.exOneNav {
+    grid-column: 3/13;
+    grid-row: 2/6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.exOneNav p {
+    padding: 5px;
+    border-radius: 25px;
+    color: white;
+}
+
+.exOneSideBar {
+    grid-column: 1/4;
+    grid-row: 4/13;
+    height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 12px;
+}
+
+.exOneSideBar p {
+    padding: 1px;
+    background-color: rgba(255, 255, 255, 0.445);
+    border-radius: 25px;
+    width: 80%;
+}
+
+.exOneMain {
+    grid-column: 4/13;
+    grid-row: 4/13;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.exOneItem {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.219);
+    border-radius: 25px;
+}
+
+.exOneItemHeader {
+    font-family: monospace;
+    white-space: nowrap;
+}
+
+.exOneItemImage {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.exOneItemImage img {
+    width: 100%;
+    height: auto;
+    filter: blur(3px);
+    box-shadow: 2px 2px 10px black;
+}
+
+.exOneItemText {
+    font-size: clamp(.5rem, 1vw, .8rem);
+    width: 80%;
+    text-align: center;
+}
+
+.exTwoBody {
+    width: 90%;
+    max-width: 400px;
+    height: 60svw;
+    max-height: 300px;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-image: url('../images/bg2.jpg');
+    background-size: cover;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: blur(2px);
+    padding: 5px;
+    transition-duration: 2s;
+
+}
+
+.exThreeBody {
+    width: 90%;
+    max-width: 400px;
+    height: 60svw;
+    max-height: 300px;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-image: url('../images/coffee4.jpg');
+    background-size: cover;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: blur(2px);
+    padding: 5px;
+    transition-duration: 2s;
+}
+
+.exTwoBody h3,
+.exTwoBody h4 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px black;
+    letter-spacing: 1.5rem;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+.exThreeBody h1,
+.exThreeBody h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px black;
+    padding: 0;
+    margin: 0;
+    animation: rotate 5s linear 0s infinite alternate;
+}
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(30deg);
+    }
+
+    50% {
+        transform: rotateY(0deg);
+    }
+
+    75% {
+        transform: rotateY(-30deg);
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
 
 
 
