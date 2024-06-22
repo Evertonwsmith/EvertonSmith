@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: black;
+    height: 400vh;
+}
+header{
+    width: 100%;
+    padding: 50px 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero{
+    position: relative;
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:brightness(.3) grayscale();
+    z-index: -1;
+}
+.hero, header{
+    text-transform: uppercase;
+    color: white;
+    font-size: calc(2rem + 1vw);
+    font-family: "kanit";
+}
+p{
+    font-size: calc(14px + 0.5vw);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+.floatOne{
+    transform: translateY(-200px);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.055);
+}
+.floatOne table{
+    width: 100%;
+    height: 80svh;
+}
+tr{
+    width: 100%;
+}
+td{
+    text-align: center;
+    color: white;
+}
