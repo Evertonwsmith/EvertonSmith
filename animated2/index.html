@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Screen</title>
+</head>
+
+<body>
+
+    <div class="one">
+        <div class="box onebox">
+            <h1>box one</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus consequatur vitae exercitationem sed natus modi eligendi itaque quasi ducimus fuga consectetur doloribus dignissimos id at et, facilis inventore commodi qui.</p>
+        </div>
+    </div>
+
+    <div class="two">
+        <div class="box twobox">
+            <h1>box one</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus consequatur vitae exercitationem sed natus modi eligendi itaque quasi ducimus fuga consectetur doloribus dignissimos id at et, facilis inventore commodi qui.</p>
+        </div>
+    </div>
+
+    <div class="three">
+        <div class="box threebox">
+            <h1>box one</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus consequatur vitae exercitationem sed natus modi eligendi itaque quasi ducimus fuga consectetur doloribus dignissimos id at et, facilis inventore commodi qui.</p>
+        </div>
+    </div>
+
+    <div class="four">
+        <div class="box fourbox">
+            <h1>box one</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus consequatur vitae exercitationem sed natus modi eligendi itaque quasi ducimus fuga consectetur doloribus dignissimos id at et, facilis inventore commodi qui.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+  const boxes = document.querySelectorAll('.box');
+
+  // Define options for the IntersectionObserver
+  const options = {
+    root: null, // Use the document's viewport
+    rootMargin: '100px 0px 100px 0px', // Adjust the margin to trigger earlier or later
+    threshold: 0.75 // Trigger when % of the element is visible
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, options);
+
+  boxes.forEach(box => {
+    observer.observe(box);
+  });
+});
+
+</script>
