@@ -1,74 +1,65 @@
-body {
+body, html {
     margin: 0;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-.one, .two, .three, .four {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-}
-
-.box {
-    width: 100%;
-    height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.2;
-    transition: opacity 2s ease-out;
-    background-size: cover;
-    background-position: center;
-}
-
-p {
-    width: 80%;
-    max-width: 600px;
-    padding: 25px;
-    border-radius: 25px;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0) 100%);
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 2s ease-out, transform 2s ease-out;
-    font-size: calc(15px + 1vw);
-    white-space: normal;
+header {
     text-align: center;
+    width: 100%;
+    h1{
+        font-size: calc(1rem + 5vw);
+    }
+    h3{
+        width: 70%;
+        margin: auto;
+    }
 }
 
-h1 {
-    font-size: calc(1rem + 3vw);
-    text-transform: uppercase;
-    /* letter-spacing: 1rem; */
+img {
+    max-width: 400px;
+    width: 50%;
+    height: auto;
+    border-radius: 100px;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 2s ease-out, transform 2s ease-out;
+    transition: opacity 1s ease-out;
+    p{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 
-.box.visible {
+.fade-in-on-load {
+    transform: translateX(-20px);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+}
+
+.fade-in-on-scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.visible {
     opacity: 1;
-}
-
-.box.visible h1, .box.visible p {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.onebox {
-    background-image: url('../images/background6.jpg');
-}
-
-.twobox {
-    background-image: url('../images/background2.jpg');
-}
-
-.threebox {
-    background-image: url('../images/tech3.jpg');
-}
-
-.fourbox {
-    background-image: url('../images/font1.jpg');
 }

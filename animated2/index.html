@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Default Screen</title>
+    <title>Fade In Page</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-
-    <div class="one">
-        <div class="box onebox">
-            <h1>box one</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus consequatur vitae exercitationem sed natus modi eligendi itaque quasi ducimus fuga consectetur doloribus dignissimos id at et, facilis inventore commodi qui.</p>
-        </div>
-    </div>
-
-    <div class="two">
-        <div class="box twobox">
-            <h1>box one</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus consequatur vitae exercitationem sed natus modi eligendi itaque quasi ducimus fuga consectetur doloribus dignissimos id at et, facilis inventore commodi qui.</p>
-        </div>
-    </div>
-
-    <div class="three">
-        <div class="box threebox">
-            <h1>box one</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus consequatur vitae exercitationem sed natus modi eligendi itaque quasi ducimus fuga consectetur doloribus dignissimos id at et, facilis inventore commodi qui.</p>
-        </div>
-    </div>
-
-    <div class="four">
-        <div class="box fourbox">
-            <h1>box one</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus consequatur vitae exercitationem sed natus modi eligendi itaque quasi ducimus fuga consectetur doloribus dignissimos id at et, facilis inventore commodi qui.</p>
-        </div>
-    </div>
+    <header class="fade-in-on-load">
+        <h1 id="name">everton smith</h1>
+        <img id="image" src="../images/esmith.jpg" alt="Your Image">
+        <h2>Software Developer</h2>
+        <h3>Experienced Java Backend Developer with a passion to create</h3>
+    </header>
+    <main>
+        <section class="fade-in-on-scroll">
+            <h2>Experience</h2>
+            <p>UKG - Kelowna BC</p><br>
+            <p>Nov 19 - Present</p><br>
+            <p>Backend Developer</p><br>
+            <p>Working with: Java, PostgreSQL, Git, Jira, Docker, Kubernetes, Splunk, Datadog</p>
+          </section>
+        <section class="fade-in-on-scroll">
+            <h2>Section 2</h2>
+            <p>This is the second section.</p>
+        </section>
+        <section class="fade-in-on-scroll">
+            <h2>Section 3</h2>
+            <p>This is the third section.</p>
+        </section>
+        <section class="fade-in-on-scroll">
+            <h2>Section 4</h2>
+            <p>This is the fourth section.</p>
+        </section>
+        <section class="fade-in-on-scroll">
+            <h2>Section 5</h2>
+            <p>This is the fifth section.</p>
+        </section>
+    </main>
 
 </body>
-
 </html>
 <script>
-   document.addEventListener('DOMContentLoaded', function() {
-  const boxes = document.querySelectorAll('.box');
+  document.addEventListener("DOMContentLoaded", function () {
+    // Fade in header on load
+    // document.querySelector(".fade-in-on-load").classList.add("visible");
 
-  // Define options for the IntersectionObserver
-  const options = {
-    root: null, // Use the document's viewport
-    rootMargin: '100px 0px 100px 0px', // Adjust the margin to trigger earlier or later
-    threshold: 0.75 // Trigger when % of the element is visible
-  };
+    // Fade in sections on scroll
+        // Fade in sections on scroll
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.intersectionRatio >= 0.5) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible");
+            }
+        });
+    }, { threshold: 0.5 });
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
-      }
+    document.querySelectorAll(".fade-in-on-scroll").forEach((section) => {
+        observer.observe(section);
     });
-  }, options);
-
-  boxes.forEach(box => {
-    observer.observe(box);
-  });
 });
 
 </script>
