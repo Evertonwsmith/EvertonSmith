@@ -9,7 +9,7 @@ a {
 @keyframes fadein1 {
   from {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateY(50%);
   }
   to {
     opacity: 1;
@@ -113,14 +113,16 @@ header {
   position: static;
   top: 0;
   width: 100%;
-  height: 10rem;
+  height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   .name {
+    white-space: nowrap;
+    text-align: center;
     text-transform: uppercase;
-    font-size: calc(1rem + 3vw);
+    font-size: calc(1rem + 5vw);
     font-weight: 300;
   }
   animation: fadein2 2s ease-in-out 0s 1 forwards;
@@ -128,6 +130,7 @@ header {
 .name {
   padding: 1rem;
   letter-spacing: 0.4rem;
+  font-size: calc(1.5rem + 15vw);
 }
 .fade-container {
   position: relative;
@@ -167,7 +170,7 @@ header {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-126ch);
+    transform: translateX(-123ch);
   }
 }
 
@@ -183,17 +186,23 @@ main {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  animation: fadein1 3s ease-in-out 2s 1 forwards;
+  animation: fadein1 3s ease-in-out 1s 1 forwards;
 }
 .pro {
   width: 80%;
   max-width: 800px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-rows: repeat(7,1fr);
   img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
+    scale: .6;
+  }
+  h2 {
+    font-size: calc(1rem + 2vw);
+    font-weight: 400;
+    margin: 1rem 0;
   }
   h3 {
     font-weight: 400;
@@ -223,21 +232,25 @@ main {
 }
 .skillsTitle {
   text-align: center;
+  align-self: center;
   grid-column: 1/13;
-  grid-row: 5/6;
+  grid-row: 4/5;
   font-size: calc(1rem + 2vw);
 }
 .skillTitles {
   grid-column: 1/6;
-  grid-row: 6/10;
+  grid-row: 5/8;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  h4{
+    margin: 0;
+  }
 }
 .skillRatings {
   grid-column: 7/13;
-  grid-row: 6/10;
+  grid-row: 5/8;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -285,7 +298,25 @@ main {
   }
   h3 {
     font-weight: 400;
-    font-size: calc(0.5rem + 1vw);
+    font-size: calc(15px + .3vw);
     margin: 1rem 0;
   }
 }
+.about {
+    margin: 1rem 0 1rem 0;
+    h2 {
+      font-size: calc(1rem + 2vw);
+      font-weight: 400;
+      margin: 1rem 0;
+      text-align: center;
+
+    }
+    p{
+        margin: auto;
+        width: 80%;
+        max-width: 600px;
+        font-size: calc(15px + .3vw);
+        text-align: left;
+
+    }
+  }
