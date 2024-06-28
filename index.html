@@ -1,252 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="stylesheet" href="animatedIndex/index.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everton</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f833440145.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-    <div class="introCard">
-        <div class="welcome">
-            <h1>W</h1>
-            <h1>e</h1>
-            <h1>l</h1>
-            <h1>c</h1>
-            <h1>o</h1>
-            <h1>m</h1>
-            <h1>e</h1>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Everton Smith</title>
+        <script src="https://kit.fontawesome.com/f833440145.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="floatingButton" id="menuButton">
+            <div id="butIcon" onclick="menuswitch()"></div>
+            <div class="floatBut-hide" id="floatBut1"><a href="#pro"><i
+                        class="fa-regular fa-pen-to-square"></i>
+                    <div class="hovertitle">Professional</div>
+                    </a></div>
+            <div class="floatBut-hide" id="floatBut2"><a href="#about"><i
+                        class="fa-regular fa-address-card"></i>
+                        <div class="hovertitle">About</div>
+                    </a></div>
+            <div class="floatBut-hide" id="floatBut3"><a
+                    href="mailto:evertonwsmith@gmail.com"><i
+                        class="fa-regular fa-envelope-open"></i>
+                        <div class="hovertitle">Contact</div>
+                    </a></div>
         </div>
-
-        <div class="animatedLines">
-            <div id="aniLine1"></div>
-            <div id="aniLine2"></div>
-            <div id="aniLine3"></div>
-        </div>
-    </div>
-
-
-
-
-    <div class="topBorder">
-        <div class="logo">
-            <h1>ES</h1>
-        </div>
-        <h2 onclick="work()" id="worknav">Work</h2>
-        <h2 onclick="exp()" id="expnav">Experience</h2>
-        <h2 onclick="about()" id="aboutnav">About</h2>
-
-    </div>
-    <div class="bottomBorder">
-        <a href="https://www.linkedin.com/in/evertonwsmith">
-            <i class="fa-brands fa-linkedin"></i>
-            linkedin
-        </a>
-        <a href="mailto:evertonwsmith@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
-            contact me
-        </a>
-    </div>
-
-
-    <main>
-        <div class="work" id="work">
-
-            <a href="designDisplay/index.html">
-                <div class="workCard">
-                    <h2>Design Website</h2>
-                    <img src="images/dDisp.png" alt="design">
-                    <p>A display of different design ideas</p>
+        <header>
+            <div class="name">Everton Smith</div>
+            <div class="fade-container">
+                <div class="scroll-container">
+                    <div class="rowScroll">Java Spring HTML CSS Javascript Dart
+                        Flutter
+                        PostgreSQL Kubernetes Docker Git Datadog Dynatrace Java
+                        Spring
+                        HTML CSS Javascript Dart Flutter PostgreSQL Kubernetes
+                        Docker Git Datadog Dynatrace Java Spring HTML CSS
+                        Javascript
+                        Dart Flutter PostgreSQL Kubernetes Docker Git Datadog
+                        Dynatrace</div>
                 </div>
-            </a>
-
-            <a href="business2/index.html">
-                <div class="workCard">
-                    <h2>Cafe Website Sample</h2>
-                    <img src="images/cafe.jpg" alt="cafe">
-                    <p>Example website for a simple cafe</p>
+            </div>
+        </header>
+        <main>
+            <div class="pro" id="pro">
+                <h3>Professional Software Developer at Ultimate Kronos
+                    Group</h3>
+                <h4>Nov 2019 - Present</h4>
+                <img src="images/ukg.png" alt="ukg">
+                <div class="skillsTitle">Skills</div>
+                <div class="skillTitles">
+                    <h4>Java</h4>
+                    <h4>Spring</h4>
+                    <h4>PostgreSQL</h4>
+                    <h4>Git</h4>
+                    <h4>Docker</h4>
+                    <h4>Kubernetes</h4>
+                    <h4>Frontend (HTML,CSS,Javascript)</h4>
                 </div>
-            </a>
-
-            <a href="businessEx.html">
-                <div class="workCard">
-                    <h2>Simple Business Website Sample</h2>
-                    <img src="images/bus1.png" alt="bus">
-                    <p>Example website for generic business</p>
+                <div class="skillRatings">
+                    <div class="rating">
+                        <div class="ratingbar eight"></div>
+                        <div class="ratingNum">8</div>
+                    </div>
+                    <div class="rating">
+                        <div class="ratingbar six"></div>
+                        <div class="ratingNum">6</div>
+                    </div>
+                    <div class="rating">
+                        <div class="ratingbar seven"></div>
+                        <div class="ratingNum">7</div>
+                    </div>
+                    <div class="rating">
+                        <div class="ratingbar eight"></div>
+                        <div class="ratingNum">8</div>
+                    </div>
+                    <div class="rating">
+                        <div class="ratingbar six"></div>
+                        <div class="ratingNum">6</div>
+                    </div>
+                    <div class="rating">
+                        <div class="ratingbar six"></div>
+                        <div class="ratingNum">6</div>
+                    </div>
+                    <div class="rating">
+                        <div class="ratingbar eight"></div>
+                        <div class="ratingNum">8</div>
+                    </div>
                 </div>
-            </a>
+            </div>
 
-            <a href="bobs/index.html">
-                <div class="workCard">
-                    <h2>Bob's Burgers Index</h2>
-                    <img src="images/bobs1.png" alt="bobs">
-                    <p>Bob's Burgers API Javascript Example</p>
-                </div>
-            </a>
-            <a href="placeholder.html">
-                <div class="workCard">
-                    <h2>Haley Jaques Poetry</h2>
-                    <img src="images/poem.jpg" alt="poem">
-                    <p>Small project displaying the works of Haley Jaques</p>
-                </div>
-            </a>
+            <div class="education">
+                <h2>Education</h2>
+                <h3>B.Sc. in Computer Science</h3>
+                <h3>University of British Columbia Okanagan</h3>
 
-
-
-            <a href="index5/index.html">
-                <div class="workCard">
-                    <h2>Profile Page (Early Dev.)</h2>
-                    <img src="images/index5.jpg" alt="profile">
-                    <p>Alternative Personal Website Design</p>
-                </div>
-            </a>
-
-            <a href="javascript1.html">
-                <div class="workCard">
-                    <h2>Javascript Memory Game</h2>
-                    <img src="images/memgame.jpg" alt="memgame">
-                    <p>Small Javascript Memory Game</p>
-                </div>
-            </a>
-
-            <a href="index6/index.html">
-                <div class="workCard">
-                    <h2>Personal Website</h2>
-                    <img src="images/index6.png" alt="index6">
-                    <p>v6.0 Personal Website</p>
-                </div>
-            </a>
-
-        </div>
-
-
-
-        <div id="exp">
-            <h2 style="text-align: center;">Everton Smith</h2><br>
-            <h2>Summary</h2><br>
-            <p>Software Developer with five years of professional experience working on
-                a Cloud based S.a.a.S..
-                Familiar with Git, Kubernetes and Docker, as well as many development
-                languages with a personal interest
-                in cross platform web application development. Ability to demonstrate
-                knowledge in adeptly managing customer issues,
-                implementing efficient and secure code, and improving operations through
-                the use of automation and thorough testing.
-            </p>
-
-            <br>
-
-            <h2>Experience</h2>
-            <h3>Ultimate Kronos Group</h3>
-            <h5>November 2019 - Present</h5>
-            <ul>
-                <li>Engineered and maintained Backend and Frontend code for a Cloud Based
-                    Software as a Service</li><br>
-                <li>Collaborated with support teams to resolve customer and internally
-                    reported issues</li><br>
-                <li>Actively engaged in agile development methodologies, including daily
-                    standups, spring planning, and retrospective meetings</li>
-                <li>Stayed up to date on code security and integrity taking internal
-                    training courses</li><br>
-                <li>Employed automation and Java frameworks like Spring Boot to develop
-                    scalable software solutions, optimizing performance</li>
-            </ul>
-
-            <br>
-
-            <h2>Skills</h2>
-            <table>
-                <tr>
-                    <th>Programming Languages</th>
-                    <td>Java, Dart, Javascript, Python, C</td>
-                </tr>
-                <tr>
-                    <th>Web Development</th>
-                    <td>HTML, CSS</td>
-                </tr>
-                <tr>
-                    <th>Database Experience</th>
-                    <td>PostgreSQL, MySQL, MongoDB, NoSQL</td>
-                </tr>
-                <tr>
-                    <th>Version Control</th>
-                    <td>Git</td>
-                </tr>
-                <tr>
-                    <th>IDEs</th>
-                    <td>IntelliJ, Eclipse, Android Studio, Visual Studio Code, Atom</td>
-                </tr>
-            </table>
-
-            <br>
-
-            <h2>Education</h2>
-            <h3>UBCO, Kelowna - Bachelor of Science in Computer Science</h3>
-            <h5>2014-2019</h5>
-        </div>
-
-        <div id="about">
-            <h2>About Me</h2>
-            After graduating in 2019 from UBCO, I started at Kronos (now UKG) as a Backend Java Developer.
-            The skills I have learned there have helped me become a valuable asset and a skilled programmer.
-            <br>
-            I loved video games at a young age, being introduced to the
-            original playstation in my youth. I was then introduced
-            to computer gaming, and ultimately coding. This, combined with having
-            strong math skills, lead me to persue a degree in Computer Science.
-            <br><br>
-            Growing up I was involved with various sports, with a main
-            concentration on golf and hockey<br><br>
-
-            At age 13 I decided to learn guitar, teaching myself and
-            joining my schools band program.
-            I continued, and ended up having a successful jazz career in high school,
-            competing at the National level, playing payed gigs, and winning various awards
-            in small group combos.
-            I still play as a way to express myself, and to keep my brain active in a
-            way I love.<br><br>
-
-        </div>
-
-    </main>
-
-
-</body>
-
+            </div>
+        </main>
+        <nav></nav>
+    </body>
 </html>
-<script>
-
-    function work() {
-        document.getElementById('work').style.display = 'block';
-        document.getElementById('exp').style.display = 'none';
-        document.getElementById('about').style.display = 'none';
-        document.getElementById('worknav').style.color = '#C3B299';
-        document.getElementById('expnav').style.color = 'white';
-        document.getElementById('aboutnav').style.color = 'white';
-    }
-    function exp() {
-        document.getElementById('work').style.display = 'none';
-        document.getElementById('exp').style.display = 'block';
-        document.getElementById('about').style.display = 'none';
-        document.getElementById('worknav').style.color = 'white';
-        document.getElementById('expnav').style.color = '#C3B299';
-        document.getElementById('aboutnav').style.color = 'white';
-    }
-    function about() {
-        document.getElementById('work').style.display = 'none';
-        document.getElementById('exp').style.display = 'none';
-        document.getElementById('about').style.display = 'block';
-        document.getElementById('worknav').style.color = 'white';
-        document.getElementById('expnav').style.color = 'white';
-        document.getElementById('aboutnav').style.color = '#C3B299';
-    }
-    exp();
-</script>
+<script src="javascript/index.js"></script>
