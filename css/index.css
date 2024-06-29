@@ -320,3 +320,30 @@ main {
 
     }
   }
+
+.galery{
+
+}
+.imagebox{
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img{
+    border-radius: 25px;
+    width: 80%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 900px) {
+  .galery{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Hide the default scrollbars */
+    font-family: "Anybody", sans-serif;
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #4e4e4e, #292929);
+    background-size: 400%;
+    background-position: 0% 0%;
+    animation: bgMove 10s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+.pageRow {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    width: 100vw;
+    height: 100vh;
+}
+
+.page {
+    position: relative;
+    flex: 0 0 100vw; /* Each page takes up 100% of the viewport width */
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.page h1 {
+    font-size: calc(1.5rem + 5vw);
+}
+
+.page h1::before {
+    content: attr(data-first-word);
+    color: #00b800; /* Change the color or apply any other style */
+}
+
+.page h3 {
+    margin: 0;
+    font-size: calc(0.7rem + 2vw);
+}
+
+.page p {
+    width: 75%;
+    max-width: 600px;
+    white-space: normal;
+}
+
+.page img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 50px;
+    filter: brightness(80%);
+}
+
+.pageNav {
+    width: 60vw;
+    height: 3rem;
+    margin: auto;
+    position: absolute;
+    background-color: #ffffff2d;
+    border-radius: 25px;
+    z-index: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 3rem;
+    left: calc(50vw - 30vw);
+}
+
+.ball {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
+.inactive {
+    background-color: white;
+}
+
+.active {
+    background-color: #00b800;
+}
+
+.image,
+.image2 {
+    position: absolute;
+}
+
+.image:nth-of-type(1) {
+    z-index: 3;
+    animation: zone 9s linear infinite;
+}
+
+.image:nth-of-type(2) {
+    z-index: 2;
+    animation: zone 9s linear 3s infinite;
+}
+
+.image:nth-of-type(3) {
+    z-index: 1;
+    animation: zone 9s linear 6s infinite;
+}
+
+@keyframes zone {
+    0%, 100% {
+        z-index: 3;
+    }
+    33.33% {
+        z-index: 2;
+    }
+    66.66% {
+        z-index: 1;
+    }
+}
+
+.image2:nth-of-type(1) {
+    animation: ztwo 10s linear infinite;
+}
+
+.image2:nth-of-type(2) {
+    animation: ztwo 10s linear 5s infinite;
+}
+
+@keyframes ztwo {
+    0%, 100% {
+        z-index: 2;
+    }
+    50% {
+        z-index: 1;
+    }
+}
