@@ -1,0 +1,61 @@
+/* Default styles */
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 1.8rem;
+}
+h5{
+    font-size: 1.4rem;
+}
+p{
+    font-size: 1.2rem;
+}
+#logo{
+    width: 100px;height: 100px;border-radius: 100%;
+}
+#divOne{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+#divTwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    p{
+        max-width: 70rem;
+        text-indent: 10rem;
+    }
+}
+.divClass{
+    padding: 1rem;
+}
+/* Styles for portrait orientation */
+@media screen and (orientation: portrait) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+/* Styles for landscape orientation */
+@media screen and (orientation: landscape) {
+    body {
+        background-color: rgba(53,83,71,255);
+        color: rgba(214,217,208,255)
+    }
+}
