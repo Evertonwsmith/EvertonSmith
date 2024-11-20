@@ -1,0 +1,63 @@
+body{
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+#divOne{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    padding: 2rem;
+}
+#divOneA{
+    font-size: 50px;
+    text-align: center;
+}
+#divOneB{
+    font-size: 50px;
+    text-align: center;
+}
+#divTwo{
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: blue;
+}
+#divTwoA,
+#divTwoB,
+#divTwoC,
+#divTwoD,
+#divTwoE{
+    padding: 1rem 2rem;
+}
+#divThree {
+    display: flex;
+    overflow-x: auto;
+    width: 100vw;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: scroll;
+    text-align: center;
+}
+
+#divThreeA,
+#divThreeB,
+#divThreeC {
+    flex: 0 0 100vw;
+    scroll-snap-align: start;
+    font-size: 50px;
+}
+#divFour{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-align: center;
+}

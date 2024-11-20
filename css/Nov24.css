@@ -1,33 +1,19 @@
 /* Default styles */
 body {
-    background-color: lightblue;
-    font-family: Arial, sans-serif;
+    background-color: rgba(53,83,71,255);
+    color: rgba(214,217,208,255);
+        font-family: Arial, sans-serif;
 }
-h1{
-    font-size: 4rem;
-}
-h2{
-    font-size: 3rem;
-}
-h3{
-    font-size: 2rem;
-}
-h4{
-    font-size: 1.8rem;
-}
-h5{
-    font-size: 1.4rem;
-}
-p{
-    font-size: 1.2rem;
-}
+
 #logo{
     width: 100px;height: 100px;border-radius: 100%;
+    grid-column: 0/1;
+    grid-row: 0/2;
 }
 #divOne{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
 }
@@ -47,9 +33,7 @@ p{
 }
 /* Styles for portrait orientation */
 @media screen and (orientation: portrait) {
-    body {
-        background-color: lightgreen;
-    }
+    
 }
 
 /* Styles for landscape orientation */
