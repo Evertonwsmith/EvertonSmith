@@ -1,7 +1,10 @@
 body{
     width: 100%;
+    padding: 0;
+    margin: 0;
     overflow: hidden;
     font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(230, 235, 235);
 }
 #divOne{
     display: grid;
@@ -10,10 +13,20 @@ body{
     padding: 2rem;
 }
 #divOneA{
+    border: 3px solid black;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 50px;
     text-align: center;
 }
 #divOneB{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 50px;
     text-align: center;
 }
@@ -23,6 +36,10 @@ body{
     flex-direction: row;
     justify-content: center;
     color: blue;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 100vw;
+    
 }
 #divTwoA,
 #divTwoB,
@@ -31,7 +48,17 @@ body{
 #divTwoE{
     padding: 1rem 2rem;
 }
+#divTwoA:hover,
+#divTwoB:hover,
+#divTwoC:hover,
+#divTwoD:hover,
+#divTwoE:hover{
+    color: lightblue;
+    font-weight: bold;
+}
 #divThree {
+
+    padding-top: 5rem;
     display: flex;
     overflow-x: auto;
     width: 100vw;
@@ -42,13 +69,16 @@ body{
     overflow-x: scroll;
     text-align: center;
 }
+#divThree img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
 
 #divThreeA,
 #divThreeB,
 #divThreeC {
     flex: 0 0 100vw;
     scroll-snap-align: start;
-    font-size: 50px;
+    font-size: 26px;
 }
 #divFour{
     position: absolute;
@@ -58,6 +88,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 1rem;
     text-align: center;
 }
+
