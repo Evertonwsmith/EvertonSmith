@@ -4,18 +4,36 @@ body {
     color: rgba(214,217,208,255);
         font-family: Arial, sans-serif;
 }
-
+a{
+    style:none;
+    text-decoration: none;
+}
 #logo{
     width: 100px;height: 100px;border-radius: 100%;
     grid-column: 0/1;
     grid-row: 0/2;
 }
+#headerDiv{
+    width: 100%;
+    height: 7rem;
+    background-color: rgba(214,217,208,255);
+    position:absolute;
+    top: 0;
+    z-index: -1;
+}
 #divOne{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
+    
+    a:hover{
+        color:red;
+    }
+    h1,h2,h3,a{
+        color: rgba(53,83,71,255)
+    }
 }
 #divTwo{
     display: flex;
@@ -24,9 +42,58 @@ body {
     align-items: center;
     padding: 1rem;
     p{
-        max-width: 70rem;
-        text-indent: 10rem;
+        font-size: 1.3rem;
+        max-width: 40rem;
+        text-align: center;
+        line-height: 2rem;
     }
+}
+#divThree{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    table{
+        border-collapse: collapse;
+        border: 2px solid rgba(53,83,71,255);
+        
+        letter-spacing: 0.1rem;
+        align-items: center;
+        /* text-align: center; */
+        th,td{
+            text-align: start;
+            padding: 0.5rem 5rem;
+        }
+    }
+}
+#divFour{
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+#demoBoxHolder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    a{color: rgba(214,217,208,255);}
+    a:active, a:visited{color: rgba(214,217,208,255);}
+    
+    a:hover{color:red;}
+}
+.demoBox{
+    padding: 3rem;
+    background-color: rgba(53,83,71,230);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 10rem;
+    height: 9rem;
+    text-align: center;
 }
 .divClass{
     padding: 1rem;

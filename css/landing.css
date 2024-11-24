@@ -1,0 +1,88 @@
+@media only screen and (max-width: 800px) {
+    :root{
+        --color1: #3A606E;
+        --color2: #607B7D;
+        --color3: #828E82;
+        --color4: #AAAE8E;
+        --color5: #E0E0E0;
+    }
+    body{
+        font-family: "Anybody", serif;
+        letter-spacing: 2px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+    #main{
+        width: 100%;
+    }
+    #nameDiv {
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color1);
+        span{
+            padding: 0 20px;
+        }
+    }
+
+    #nameDiv h1 {
+        font-size: 3rem;
+        text-align: center;
+        color: var(--color5);
+    }
+    .boxDiv{
+        padding: 10px;
+        height: calc((100vh - 25vh - 20px) / 4); /* 20px is the combined padding of the boxDivs */
+        width: 100%;
+    }
+    #boxOne{
+        background-color: var(--color5);
+        color: var(--color1);
+    }
+    #boxTwo{
+        background-color: var(--color3);
+        color: var(--color5);
+    }
+    #boxThree{
+        background-color: var(--color4);
+        color: var(--color1);
+    }
+    #boxFour{
+        background-color: var(--color2);
+        color: var(--color5);
+    }
+    #nameHidden{
+        display: block;
+        color: var(--color5);
+    }
+    .boxDiv:hover .boxMini {
+        display: block;
+    }
+
+    .boxDiv .boxMini {
+        display: none;
+    }
+    .boxMini{
+        display: none;
+    }
+    .boxMain{
+        display: none;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;    
+    }
+    .projectBox h5{
+        padding: 0%;
+        margin: 0%;
+    }
+}
+
