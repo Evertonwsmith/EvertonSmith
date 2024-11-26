@@ -1,48 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Everton Smith</title>
-        <link rel="stylesheet" href="css/simple.css">
-    </head>
-    <body>
-        <header>
-            <!-- <h1>Everton Smith</h1>
-        <p>Software Developer</p>
-        <p>Experienced Java Backend Developer with a passion to create</p>
-        <a href="mailto:evertonwsmith@gmail">evertonwsmith@gmail</a>
-        <a href="https://github.com/Evertonwsmith">Github</a>
-        <a href="https://www.linkedin.com/in/evertonwsmith">LinkedIn</a> -->
-            <div id="headerOne">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everton Smith</title>
+    <link rel="stylesheet" href="css/simple.css">
+</head>
+
+<body>
+    <header>
+        <h1>Everton Smith</h1>
+        <div id="navBar">
+            <a href="#" onclick="show(1)">Resume</a>
+            <a href="#" onclick="show(2)">Projects</a>
+            <a href="#" onclick="show(3)">About Me</a>
+            <a href="mailto:evertonwsmith@gmail.com">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <div id="resume">
+            <h2>Professional Experience</h2>
+            <p>5+ Years as a Software Developer at UKG</p>
+            <p>Onboarding new employees, assisting associate/junior developers, and conducting code reviews.</p>
+            <p>Agile Methodology: Experienced in iterative development and collaboration within cross-functional
+                teams.</p>
+
+            <h2>Technical Skills</h2>
+            <h3>Backend</h3>
+            <p>Proficient in Java and SQL (PostgreSQL)</p>
+            <p>Data Modeling, API Integration, and Spring Framework Experience</p>
+            <p>Skilled in scripting languages (Powershell, Bash)</p>
+
+            <h3>Frontend</h3>
+            <p>Proficient in HTML, CSS, and JavaScript</p>
+
+            <h3>DevOps</h3>
+            <p>Version Control with Git</p>
+            <p>Experience with Docker and Kubernetes</p>
+
+            <h3>Testing and Automation</h3>
+            <p>JUnit, Mockito</p>
+            <p>API Testing with Postman</p>
+            <p>Jenkins, CI/CL</p>
+
+            <h2>Tools</h2>
+            <p>Visual Studio Code, IntelliJ, Android Studio</p>
+            <p>Dynatrace, Datadog, Splunk</p>
+            <p>and others</p>
+        </div>
+
+        <div id="projects">
+            <div id="projectDisplay">
+                <a href="https://www.linkedin.com/in/evertonwsmith">
+                    <div class="projectBox">
+                        <p>LinkedIn Profile</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Evertonwsmith">
+                    <div class="projectBox">
+                        <p>Github Profile</p>
+                    </div>
+                </a>
+
+                <a href="https://evertonsmithdartprojects.web.app/">
+                    <div class="projectBox">
+                        <p>Dart Projects</p>
+                    </div>
+                </a>
+
+                <a href="https://evertonsmithdartprojects.web.app/">
+                    <div class="projectBox">
+                        <p>Web Projects</p>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="projectBox">
+                        <p>(Coming soon)<br>Ruby Projects</p>
+                    </div>
+                </a>
             </div>
-            <div id="headerTwo">
-            </div>
-            <div id="headerThree">
-            </div>
-            <div id="headerFour"></div>
-        </header>
-        <main>
-            <div id="mainOne">
-                <div id="mainOneOne">
-                    <span><img src="https://picsum.photos/200?random=1" alt="img1"></img></span>
-                    <span><img src="https://picsum.photos/200?random=2" alt="img1"></img></span>
-                    <span><img src="https://picsum.photos/200?random=3" alt="img1"></img></span>
-                </div>
-                <div id="mainOneTwo">
-                    Rdoa nfea Adslaj ef Eekowanf
-                </div>
-            </div>
-            <div id="mainTwo">
-                <div id="mainTwoOne"></div>
-                <div id="mainTwoTwo"></div>
-                <div id="mainTwoThree"></div>
-            </div>
-            <div id="mainThree">
-                <div id="mainThreeOne"></div>
-                <div id="mainThreeTwo"></div>
-                <div id="mainThreeThree"></div>
-            </div>
-        </main>
-    </body>
+        </div>
+
+        <div id="aboutMe">
+            <p>
+                As a passionate and dedicated software developer, I have been honing my skills since November 2019 at
+                UKG. My journey in the tech industry has been both challenging and rewarding, allowing me to grow
+                professionally and personally. My work focuses on creating robust and user-friendly applications that
+                solve real-world problems, and I take great pride in contributing to innovative projects that enhance
+                user experiences.
+
+
+            <p>Outside of my professional life, I have a diverse range of interests that keep me balanced and inspired.
+                I'm an avid video gamer, finding joy in exploring new virtual worlds and staying updated with the latest
+                gaming trends. Additionally, I have a deep love for sports, particularly hockey and golf, which provide
+                a perfect blend of physical activity and strategic thinking. Playing guitar is another passion of mine,
+                offering a creative outlet and a way to unwind.</p>
+
+
+            <p>In my spare time, I channel my enthusiasm for technology into personal projects. I enjoy coding websites
+                and applications, utilizing a variety of languages and frameworks such as HTML, CSS, JavaScript, Dart,
+                and Flutter. This continuous learning and experimentation allow me to stay ahead in the ever-evolving
+                tech landscape and refine my craft. Whether it's through work or hobbies, my goal is always to create,
+                innovate, and make a positive impact.</p>
+            </p>
+        </div>
+    </main>
+</body>
+
 </html>
+
+<script>
+    window.onload = function () {
+        show(1);
+    };
+
+    function show(i) {
+        const sections = ['resume', 'projects', 'aboutMe'];
+        sections.forEach((section, index) => {
+            const element = document.getElementById(section);
+            if (element) {
+                element.style.display = index + 1 === i ? 'block' : 'none';
+            }
+        });
+    }
+</script>
