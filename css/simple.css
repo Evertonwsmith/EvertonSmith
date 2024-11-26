@@ -57,7 +57,7 @@ header {
     max-width: 800px;
 
     h2 {
-        padding: 40px 0 10px 0;
+        padding: 40px 10px 10px 10px;
         color: var(--color4);
     }
 
@@ -97,7 +97,56 @@ header {
 .projectBox:hover {
     background-color: var(--color4);
 }
+#oldsite:hover{
+    color: var(--color2);
+    background-image: url('../images/oldPersonal.png');
+    background-size: cover;
+    background-position: center;
 
+    /* Add an overlay for opacity */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust alpha value for transparency */
+    background-blend-mode: overlay;
+}
+#gitlink:hover{
+    color: var(--color2);
+    background-image: url('../images/git.jpeg');
+    background-size: cover;
+    background-position: center;
+
+    /* Add an overlay for opacity */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust alpha value for transparency */
+    background-blend-mode: overlay;
+}
+#linkedin:hover{
+    color: var(--color2);
+    background-image: url('../images/in.jpeg');
+    background-size: cover;
+    background-position: center;
+
+    /* Add an overlay for opacity */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust alpha value for transparency */
+    background-blend-mode: overlay;
+}
+#flutter:hover{
+    color: var(--color2);
+    background-image: url('../images/flutter.png');
+    background-size: cover;
+    background-position: center;
+
+    /* Add an overlay for opacity */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust alpha value for transparency */
+    background-blend-mode: overlay;
+}
+#ruby:hover{
+    color: var(--color2);
+    background-image: url('../images/ruby.png');
+    background-size: cover;
+    background-position: center;
+
+    /* Add an overlay for opacity */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust alpha value for transparency */
+    background-blend-mode: overlay;
+}
 #aboutMe {
     max-width: 800px;
     padding-top: 30px;
