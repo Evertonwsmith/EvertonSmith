@@ -53,8 +53,40 @@ header {
     max-width: 1000px;
 
     a {
-        /* padding: 0 30px 0 30px; */
+        padding: 0 30px 0 30px;
         letter-spacing: .3rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #navBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navBar a {
+        padding: 10px 0;
+    }
+
+    #aboutMe img {
+        width: 100%;
+    }
+
+    #projectDisplay {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projectBox {
+        width: 80%;
+        height: auto;
+        margin: 10px 0;
     }
 }
 
