@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Luckiest+Guy&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <script src="https://kit.fontawesome.com/f833440145.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="demo1.css">
+</head>
+
+<body>
+    <div id="intro">
+        <h1>Rock, Paper, Scissors</h1>
+        <p>Make your selection and see how you do best out of 3</p>
+        <button id="introBtn">Exit</button>
+    </div>
+    <header>
+
+    </header>
+    <main id="main" hidden="true">
+        <div id="scoreboard"></div>
+        <div id="playerSelection"></div>
+        <div id="result"></div>
+        <div id="opponentSelection"></div>
+        <div id="selections">
+            <button id="rock">
+                <i class="fa-regular fa-hand-back-fist"></i>
+            </button>
+            <button id="paper">
+                <i class="fa-regular fa-hand"></i>
+            </button>
+            <button id="scissors">
+                <i class="fa-regular fa-hand-scissors"></i>
+            </button>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script>
+    window.addEventListener('load', () => {
+        let winner = false;
+        let tries = 0;
+        let score = 0;
+        let resultIcon = "?";
+        let playerIcon = "?";
+        let opponentIcon = "?";
+        const introBtn = document.getElementById('introBtn');
+        const intro = document.getElementById('intro');
+        introBtn.addEventListener('click', () => {
+            intro.hidden = true;
+            intro.style.display = "none";
+            document.getElementById('scoreboard').style.display = "flex";
+            document.getElementById('main').hidden = false;
+        });
+
+        const rock = document.getElementById('rock');
+        const paper = document.getElementById('paper');
+        const scissors = document.getElementById('scissors');
+        const playerSelection = document.getElementById('playerSelection');
+        const opponentSelection = document.getElementById('opponentSelection');
+        const result = document.getElementById('result');
+        const scoreboard = document.getElementById('scoreboard');
+        scoreboard.innerHTML = `<h1>Current Attempt: ${score} / 3 `;
+        result.innerHTML = `<h2> ${resultIcon}</h2>`;
+        playerSelection.innerHTML = `<h2> ${playerIcon}</h2>`;
+        opponentSelection.innerHTML = `<h2> ${opponentIcon}</h2>`;
+
+        rock.addEventListener('click', () => {
+            playerIcon = '<i class="fa-regular fa-hand-back-fist"></i>';
+            playerSelection.innerHTML = `<h2> ${playerIcon}</h2>`;
+            playRound('rock');
+        });
+        paper.addEventListener('click', () => {
+            playerIcon = '<i class="fa-regular fa-hand"></i>';
+            playerSelection.innerHTML = `<h2> ${playerIcon}</h2>`;
+            playRound('paper');
+        });
+        scissors.addEventListener('click', () => {
+            playerIcon = '<i class="fa-regular fa-hand-scissors"></i>';
+            playerSelection.innerHTML = `<h2> ${playerIcon}</h2>`;
+            playRound('scissors');
+        });
+
+        function getRandomChoice() {
+            const choices = ['rock', 'paper', 'scissors'];
+            return choices[Math.floor(Math.random() * choices.length)];
+        }
+
+        function playRound(playerChoice) {
+            result.classList.add('spinningClass');
+            setTimeout(() => {
+
+                // Code to run after the delay
+            }, 2000);
+            result.classList.remove('spinningClass');
+
+            tries++;
+            scoreboard.innerHTML = `<h1>Current Attempt: ${tries} / 3 `;
+            let computerChoice = getRandomChoice();
+            switch (computerChoice) {
+                case "rock":
+                    opponentIcon = '<i class="fa-regular fa-hand-back-fist"></i>';
+                    break;
+                case "paper":
+                    opponentIcon = '<i class="fa-regular fa-hand"></i>';
+                    break;
+                case "scissors":
+                    opponentIcon = '<i class="fa-regular fa-hand-scissors"></i>';
+                    break;
+                default:
+                    break;
+            }
+            opponentSelection.innerHTML = `<h2> ${opponentIcon}</h2>`;
+
+            if (playerChoice === computerChoice) {
+                resultIcon = "It's a tie!";
+            } else if ((playerChoice === 'rock' && computerChoice === 'scissors') || (playerChoice === 'paper' && computerChoice === 'rock') || (playerChoice === 'scissors' && computerChoice === 'paper')) {
+                score++;
+                resultIcon = "You win!";
+            } else {
+                resultIcon = "You lose!";
+            }
+            result.innerHTML = `<h2> ${resultIcon}</h2>`;
+            console.log(playerChoice, computerChoice);
+
+            if (tries == 3) {
+                console.log("END OF GAME");
+
+                document.getElementById('main').hidden = true;
+                scoreboard.style.display = 'none';
+                intro.style.display = "flex";
+                intro.hidden = false;
+                intro.innerHTML = `<h2>Final Score: ${score} / 3</h2><button id="bttn">Play Again</button>`;
+                const bttn = document.getElementById('bttn');
+                bttn.addEventListener('click', () => {
+                    intro.hidden = true;
+                    intro.style.display = "none";
+                    document.getElementById('scoreboard').style.display = "flex";
+                    document.getElementById('main').hidden = false;
+                    scoreboard.innerHTML = `<h1>Current Attempt: 0 / 3 `;
+                    result.innerHTML = `<h2> ${resultIcon}</h2>`;
+                    playerSelection.innerHTML = `<h2> ${playerIcon}</h2>`;
+                    opponentSelection.innerHTML = `<h2> ${opponentIcon}</h2>`;
+                    tries = 0;
+                    score = 0;
+
+                });
+                if (score == 3) {
+                    scoreboard.style.color = "gold";
+                }
+            }
+        }
+
+    });
+</script>

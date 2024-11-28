@@ -1,0 +1,47 @@
+body{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 158),black);
+    background-attachment: fixed; /*edit*/
+}
+
+a{
+    text-decoration: none;
+}
+
+.demoDiv{
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    letter-spacing: .7rem;
+    font-family: "Luckiest Guy", cursive;
+    color: rgba(255, 255, 255, 0.692);
+    border: 2px solid rgba(255, 255, 255, 0.747);
+}
+.demoDiv:hover{
+    color: white;
+    animation: wiggle .3s 0s 1 forwards;
+}
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(10deg);
+    }
+    66%{
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
