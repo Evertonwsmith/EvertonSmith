@@ -40,7 +40,7 @@ a{
 }
 .demoDiv:hover{
     color: white;
-    animation: wiggle .3s 0s 1 forwards;
+    animation: wiggle .2s 0s 1 forwards;
 }
 @keyframes wiggle {
     0% {
