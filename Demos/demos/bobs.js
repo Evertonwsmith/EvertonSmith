@@ -2,6 +2,7 @@ window.onload = async function () {
     const alert = document.getElementById('alert');
     const score = document.getElementById('score');
     const prompt = document.getElementById('prompt');
+    const topBox = document.getElementById('topBox');
     const one = document.getElementById('one');
     const two = document.getElementById('two');
     const three = document.getElementById('three');
@@ -33,6 +34,10 @@ window.onload = async function () {
     }
 
     function startNewGame() {
+        if(currentScore > 9){
+            topBox.style.backgroundColor = 'gold';
+
+        }
         if (nameImageMap.length === 0) {
             console.error("Name-Image map is empty. Cannot start the game.");
             return;

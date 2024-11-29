@@ -4,6 +4,7 @@ body{
     background-image: url('../../images/bobsbackground.png');
     height: 100vh;
     background-size: cover;
+    font-family: "Dekko", cursive;
 }
 
 #topBox {
@@ -49,6 +50,18 @@ body{
     height: 130px;
     background-color: rgb(119, 0, 0);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(152, 152, 255);
+    text-align: center;
+    padding: 10px;
+}
+.selection:hover{
+    background-color: rgb(138, 0, 0);
+    color: white;
 }
 #alert{
     position: absolute;
@@ -74,7 +87,6 @@ body{
     border-radius: 50%;
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 96, 96, 0.842);
     max-width: 250px;
     min-width: 175px;
     max-height: 250px;
