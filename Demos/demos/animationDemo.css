@@ -1,0 +1,82 @@
+body{
+    width: 100vw;
+    margin: 0;
+    background-color: black;
+}
+#mouseFollow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+@keyframes clickAnimation {
+    from{ 
+        width: 10px;
+        height: 10px;
+    }
+    to{
+        width: 100px;
+        height: 100px;
+    }
+    
+}
+@keyframes move1 {
+    0%{
+        transform: translateX(0%) translateY(0%);
+
+    }
+    25%{
+        transform: translateX(25%) translateY(25%);
+    }
+    50%{
+        transform: translateX(50%) translateY(0%);
+    }
+    75%{
+        transform: translateX(75%) translateY(-25%);
+    }
+    100%{
+        transform: translateX(100%) translateY(0%);
+    }
+    
+}
+@keyframes move2 {
+    0%{
+        transform: translateX(0%) translateY(0%);
+
+    }
+    25%{
+        transform: translateX(25%) translateY(25%);
+    }
+    50%{
+        transform: translateX(0%) translateY(50%);
+    }
+    75%{
+        transform: translateX(-25%) translateY(75%);
+    }
+    100%{
+        transform: translateX(0%) translateY(100%);
+    }
+    
+}
+@keyframes move3{
+    0%{
+        transform: translateX(0%) translateY(0%);
+
+    }
+    25%{
+        transform: translateX(25%) translateY(25%);
+    }
+    50%{
+        transform: translateX(0%) translateY(50%);
+    }
+    75%{
+        transform: translateX(-25%) translateY(25%);
+    }
+    100%{
+        transform: translateX(0%) translateY(0%);
+    }
+    
+}

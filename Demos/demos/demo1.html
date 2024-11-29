@@ -24,6 +24,10 @@
 
     </header>
     <main id="main" hidden="true">
+        <div id="playerPointer">
+            <i class="fa-regular fa-hand-point-up"></i>
+            <h2>You</h2>
+        </div>
         <div id="scoreboard"></div>
         <div id="playerSelection"></div>
         <div id="result"></div>
@@ -58,6 +62,7 @@
             intro.hidden = true;
             intro.style.display = "none";
             document.getElementById('scoreboard').style.display = "flex";
+            document.getElementById('playerPointer').style.display = "flex";
             document.getElementById('main').hidden = false;
         });
 
@@ -68,7 +73,7 @@
         const opponentSelection = document.getElementById('opponentSelection');
         const result = document.getElementById('result');
         const scoreboard = document.getElementById('scoreboard');
-        scoreboard.innerHTML = `<h1>Current Attempt: ${score} / 3 `;
+        scoreboard.innerHTML = `<h1>Current Attempt: ${tries} / 3</h1><h1> Score: ${score}</h1>`;
         result.innerHTML = `<h2> ${resultIcon}</h2>`;
         playerSelection.innerHTML = `<h2> ${playerIcon}</h2>`;
         opponentSelection.innerHTML = `<h2> ${opponentIcon}</h2>`;
@@ -103,7 +108,7 @@
             result.classList.remove('spinningClass');
 
             tries++;
-            scoreboard.innerHTML = `<h1>Current Attempt: ${tries} / 3 `;
+            scoreboard.innerHTML = `<h1>Current Attempt: ${tries} / 3</h1><h1> Score: ${score}</h1>`;
             let computerChoice = getRandomChoice();
             switch (computerChoice) {
                 case "rock":
@@ -124,6 +129,7 @@
                 resultIcon = "It's a tie!";
             } else if ((playerChoice === 'rock' && computerChoice === 'scissors') || (playerChoice === 'paper' && computerChoice === 'rock') || (playerChoice === 'scissors' && computerChoice === 'paper')) {
                 score++;
+                scoreboard.innerHTML = `<h1>Current Attempt: ${tries} / 3</h1><h1> Score: ${score}</h1>`;
                 resultIcon = "You win!";
             } else {
                 resultIcon = "You lose!";
@@ -136,6 +142,7 @@
 
                 document.getElementById('main').hidden = true;
                 scoreboard.style.display = 'none';
+                document.getElementById('playerPointer').style.display = "none";
                 intro.style.display = "flex";
                 intro.hidden = false;
                 intro.innerHTML = `<h2>Final Score: ${score} / 3</h2><button id="bttn">Play Again</button>`;
@@ -144,6 +151,7 @@
                     intro.hidden = true;
                     intro.style.display = "none";
                     document.getElementById('scoreboard').style.display = "flex";
+                    document.getElementById('playerPointer').style.display = "flex";
                     document.getElementById('main').hidden = false;
                     scoreboard.innerHTML = `<h1>Current Attempt: 0 / 3 `;
                     result.innerHTML = `<h2> ${resultIcon}</h2>`;

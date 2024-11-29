@@ -27,12 +27,39 @@
         </div>
     </a>
 
-    <a href="demos/demo1.html">
+    <a href="demos/animationDemo.html">
         <div class="demoDiv">
-            TBD
+            Animation Demo #1
         </div>
     </a>
 
+    <a href="#">
+        <div class="demoDiv">
+            Coming soon
+        </div>
+    </a>
+
+    <a href="#">
+        <div class="demoDiv">
+            Coming soon
+        </div>
+    </a>
+
+    <a href="#">
+        <div class="demoDiv">
+            Coming soon
+        </div>
+    </a>
+   
 </body>
 
 </html>
+
+<script>
+    window.onload = function () {
+        const divs = document.getElementsByClassName('demoDiv');
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.color = `rgba(${200 - i * 10},${200 - i * 10},${200 - i * 10})`;
+        }
+    };
+</script>

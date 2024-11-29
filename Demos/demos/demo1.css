@@ -10,7 +10,6 @@
 }
 body{
     background-color: aliceblue;
-
     margin: 0;
     font-family: "Luckiest Guy", cursive;
     letter-spacing: .4rem;
@@ -35,7 +34,8 @@ main {
     position: absolute;
     top: 50%;
     display: none;
-    flex-direction: row;
+    flex-direction: column;
+    line-height: 1rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -81,4 +81,20 @@ main {
         opacity: 1;
         color: black;
     }
+}
+#playerPointer{
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 13%;
+    flex-direction: column;
+    line-height: 1rem;
+    text-align: center;
+    animation: bob 3s linear 0s infinite forwards;
+}
+@keyframes bob {
+    0% { top: 30%; }
+    50% { top: 27%; }
+    100% { top: 30%; }
+    
 }

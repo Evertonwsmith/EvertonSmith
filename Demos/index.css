@@ -4,16 +4,21 @@
     --color3: #ce796b;
     --color4: #c18c5d;
     --color5: #495867;
+    --color6: #525f6b;
+
 }
 body{
     width: 100%;
-    margin: 0;
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: center;
     background-attachment: fixed; /*edit*/
-    background-image: linear-gradient(to bottom, var(--color2), var(--color3));
+    /* background-image: linear-gradient(to bottom, var(--color2), var(--color3)); */
+    /* background-image: linear-gradient(to right, black 0%,rgb(20, 20, 20) 20%,black 100%); */
+    background-image: linear-gradient(to right, var(--color5) 0%, var(--color6) 20%, var(--color5) 100%) ;
+    max-width: 800px;
+    margin: auto;
 }
 
 a{
@@ -21,9 +26,10 @@ a{
 }
 
 .demoDiv{
-    color: var(--color5);
+    color: var(--color2);
     width: 200px;
-    background-image: radial-gradient(circle, var(--color3) 0%, rgba(255,255,255,0));
+    /* background-image: radial-gradient(circle, var(--color3) 0%, rgba(255,255,255,0)); */
+    background-color: rgba(51, 51, 51, 0.5);
     height: 150px;
     border-radius: 20px;
     padding: 15px;
@@ -39,7 +45,7 @@ a{
     /* border: 2px solid black; */
 }
 .demoDiv:hover{
-    color: white;
+    background-color: rgba(83, 83, 83, 0.5);
     animation: wiggle .2s 0s 1 forwards;
 }
 @keyframes wiggle {
