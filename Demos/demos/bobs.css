@@ -1,0 +1,86 @@
+body{
+    width: 100%;
+    margin: 0;
+    background-image: url('../../images/bobsbackground.png');
+    height: 100vh;
+    background-size: cover;
+}
+
+#topBox {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.842);
+    max-width: 300px;
+    min-width: 200px;
+    max-height: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+#bottomBox {
+    bottom: 10%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    margin: 0;
+    padding: 0;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0.842);
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50px;
+}
+.selection{
+    width: 130px;
+    height: 130px;
+    background-color: rgb(119, 0, 0);
+    border-radius: 10px;
+}
+#alert{
+    position: absolute;
+    bottom: 10%;
+    z-index: 1;
+    text-align: center;
+    width: 100vw;
+}
+#score{
+    position: absolute;
+    bottom: 40%;
+    width: 100vw;
+    text-align: center;
+    z-index: 1;
+}
+#prompt{
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 96, 96, 0.842);
+    max-width: 250px;
+    min-width: 175px;
+    max-height: 250px;
+    min-height: 175px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

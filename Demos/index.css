@@ -1,3 +1,10 @@
+:root {
+    --color1: #ecc8af;
+    --color2: #e7ad99;
+    --color3: #ce796b;
+    --color4: #c18c5d;
+    --color5: #495867;
+}
 body{
     width: 100%;
     margin: 0;
@@ -5,8 +12,8 @@ body{
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: center;
-    background-image: linear-gradient(to bottom, rgb(0, 0, 158),black);
     background-attachment: fixed; /*edit*/
+    background-image: linear-gradient(to bottom, var(--color2), var(--color3));
 }
 
 a{
@@ -14,18 +21,22 @@ a{
 }
 
 .demoDiv{
-    width: 400px;
-    height: 200px;
+    color: var(--color5);
+    width: 200px;
+    background-image: radial-gradient(circle, var(--color3) 0%, rgba(255,255,255,0));
+    height: 150px;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    letter-spacing: .7rem;
+    font-size: 1.6rem;
+    letter-spacing: .5rem;
     font-family: "Luckiest Guy", cursive;
-    color: rgba(255, 255, 255, 0.692);
-    border: 2px solid rgba(255, 255, 255, 0.747);
+    /* border: 2px solid black; */
 }
 .demoDiv:hover{
     color: white;
