@@ -230,6 +230,12 @@ header {
         }
         p{
             line-height: 2rem;
+            text-align: center;
+        }
+        .point{
+            text-indent: 0;
+            line-height: 2rem;
+            text-align: left;
         }
         a > h2{
             margin-top: 50px;
