@@ -46,18 +46,20 @@ body{
     border-radius: 50px;
 }
 .selection{
-    width: 130px;
-    height: 130px;
-    background-color: rgb(119, 0, 0);
+    width: 16vw;
+    max-width: 160px;
+    height: 16vw;
+    max-height: 160px;
+    background-color: rgba(119, 0, 0, 0.247);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    color: rgb(152, 152, 255);
+    font-size: clamp(1rem, 2.5vw, 2.2rem);
+    color: black;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 .selection:hover{
     background-color: rgb(138, 0, 0);
@@ -69,6 +71,7 @@ body{
     z-index: 1;
     text-align: center;
     width: 100vw;
+    font-size: clamp(.5rem,12px,2rem);
 }
 #score{
     position: absolute;

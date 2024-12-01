@@ -59,48 +59,15 @@ header {
         letter-spacing: .3rem;
     }
 }
-@media screen and (max-width: 700px) {
-    header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    #navBar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #navBar a {
-        padding: 10px 0;
-    }
-
-    #aboutMe img {
-        width: 100%;
-    }
-
-    #projectDisplay {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .projectBox {
-        width: 80%;
-        height: auto;
-        margin: 10px 0;
-        background-color: var(--color5);
-        transition: background-color 0.3s ease;
-    }
-}
 
 #resume {
+    padding-top: 10px;
     display: none;
     max-width: 800px;
 
     h2 {
         font-size: 2rem;
-        padding: 10px 10px 10px 10px;
+        padding: 0px;
         color: var(--color4);
     }
 
@@ -112,7 +79,20 @@ header {
     p {
         padding: 0 70px;
         font-size: 1.2rem;
+        line-height: 2.9rem;
     }
+    .point{
+        text-indent: 50px;
+        line-height: .7rem;
+    }
+    a{
+        width: 100%;
+        text-align: center;
+    }
+    a:hover h2{
+        color: white;
+    }
+    
 }
 
 #projects {
@@ -220,4 +200,68 @@ header {
     img{
         width: 500px;
     }
+}
+
+/**Mobile View**/
+@media screen and (max-width: 850px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #navBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navBar a {
+        padding: 20px 0;
+    }
+    #resume {
+        width: 100%;
+        padding: 50px 50px;
+        h2, h3{
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            margin: 0;
+        }
+        p{
+            line-height: 2rem;
+        }
+        a > h2{
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+    }
+
+    #aboutMe img {
+        width: 100%;
+    }
+
+    #projects{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #projectDisplay {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .projectBox {
+        width: calc(100vw/3);
+        height: calc(100vw/3);
+        background-color: var(--color5);
+        transition: background-color 0.3s ease;
+    }
+    
+
+
 }

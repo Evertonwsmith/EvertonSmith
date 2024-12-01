@@ -17,8 +17,20 @@ body{
     /* background-image: linear-gradient(to bottom, var(--color2), var(--color3)); */
     /* background-image: linear-gradient(to right, black 0%,rgb(20, 20, 20) 20%,black 100%); */
     background-image: linear-gradient(to right, var(--color5) 0%, var(--color6) 20%, var(--color5) 100%) ;
-    max-width: 800px;
     margin: auto;
+    font-family: "Anybody", sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1.2rem;
+    font-size: 2rem;
+    color: var(--color3);
 }
 
 a{
@@ -41,8 +53,6 @@ a{
     justify-content: center;
     font-size: 1.6rem;
     letter-spacing: .5rem;
-    font-family: "Luckiest Guy", cursive;
-    /* border: 2px solid black; */
 }
 .demoDiv:hover{
     background-color: rgba(83, 83, 83, 0.5);

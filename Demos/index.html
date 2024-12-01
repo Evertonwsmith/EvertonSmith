@@ -14,7 +14,9 @@
 </head>
 
 <body>
-
+    <header>
+        <h1>Web Demos</h1>
+    </header>
     <a href="demos/UIdemo/html/UIdemo.html">
         <div class="demoDiv">
             Small UI Demo (html/css)
@@ -65,7 +67,7 @@
     window.onload = function () {
         const divs = document.getElementsByClassName('demoDiv');
         for (let i = 0; i < divs.length; i++) {
-            divs[i].style.color = `rgba(${200 - i * 10},${200 - i * 10},${200 - i * 10})`;
+            divs[i].style.color = `rgba(${200 - i * 10},${100 + i * 10},${200 + i * 5})`;
         }
     };
 </script>
