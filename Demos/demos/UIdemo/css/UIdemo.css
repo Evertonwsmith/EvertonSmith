@@ -275,8 +275,40 @@ main {
     }
 
 }
-
+#bottomBar{
+    display: none;
+}
 @media screen and (max-width: 1000px) {
+    body{
+        height: auto;
+    }
+    #bottomBar{
+        z-index: 1;
+        position: fixed;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        border-top: 2px solid var(--color1);
+        background-image: linear-gradient(to bottom, white, var(--color2));
+        bottom: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        button{
+            width: 25vw;
+            font-size: clamp(.5rem, 3vw, 1rem);
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: var(--color1);
+            color: white;
+            transition: 1s;
+        }
+        button:hover{
+            background-color: var(--color2);
+            color: var(--color1);
+            transition: .5s;
+        }
+    }
     header{
         height: 50vh;
         display: flex;
@@ -286,15 +318,11 @@ main {
         img{
             width: 200px;
             height: 200px;
+            padding: 0;
+            margin: 0;
         }
         img, h1{
             margin: 20px;
-        }
-        .fa-bars{
-            color: rgba(0, 0, 0, 0.692);
-            margin-top: 40px;
-            font-size: 2rem;
-            display: flex;
         }
         i:hover{
             transform: scale(1.2);
@@ -302,6 +330,7 @@ main {
         }
     }
     main{
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -311,15 +340,10 @@ main {
         }
         #floating{
             width: 100vw;
-            height: auto;
             display: flex;
-            overflow: scroll;
         }
         #right-section{
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            width: 100vw;
+            display: none;
         }
     }
     
