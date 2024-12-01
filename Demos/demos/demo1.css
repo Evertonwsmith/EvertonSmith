@@ -10,7 +10,7 @@
 }
 body{
     background-color: aliceblue;
-    margin: 0;
+    margin: 0 ;
     font-family: "Luckiest Guy", cursive;
     letter-spacing: .4rem;
 }
@@ -31,6 +31,7 @@ main {
 
 
 #scoreboard{
+    font-size: clamp(.5rem, 2vw, 2rem);
     position: absolute;
     top: 50%;
     display: none;
@@ -86,7 +87,7 @@ main {
     display: none;
     position: absolute;
     top: 30%;
-    left: 13%;
+    left: calc(100vw/9);
     flex-direction: column;
     line-height: 1rem;
     text-align: center;
@@ -97,4 +98,10 @@ main {
     50% { top: 27%; }
     100% { top: 30%; }
     
+}
+
+@media screen and (max-width:300px){
+    body{
+        display: none;
+    }
 }
