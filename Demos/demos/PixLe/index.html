@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Art Maker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .controls {
+      margin-bottom: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    .controls input, .controls button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    .grid {
+      display: grid;
+      gap: 1px;
+      background-color: #ddd;
+    }
+    .grid div {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      cursor: pointer;
+    }
+    .grid div:hover {
+      outline: 1px solid #999;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pixel Art Maker</h1>
+  <div class="controls">
+    <input type="color" id="color-picker" value="#000000">
+    <input type="number" id="grid-size" min="5" max="50" value="16">
+    <button id="generate-grid">Generate Grid</button>
+    <button id="reset-grid">Reset</button>
+    <button id="save-grid">Save</button>
+  </div>
+  <div class="grid" id="grid"></div>
+
+  <script>
+    const grid = document.getElementById('grid');
+    const colorPicker = document.getElementById('color-picker');
+    const gridSizeInput = document.getElementById('grid-size');
+    const generateGridButton = document.getElementById('generate-grid');
+    const resetButton = document.getElementById('reset-grid');
+    const saveButton = document.getElementById('save-grid');
+
+    let currentColor = colorPicker.value;
+
+    // Event listener for color picker
+    colorPicker.addEventListener('input', (e) => {
+      currentColor = e.target.value;
+    });
+
+    // Generate grid
+    const generateGrid = (size) => {
+      grid.innerHTML = '';
+      grid.style.gridTemplateColumns = `repeat(${size}, 20px)`;
+      grid.style.gridTemplateRows = `repeat(${size}, 20px)`;
+
+      for (let i = 0; i < size * size; i++) {
+        const cell = document.createElement('div');
+        cell.addEventListener('click', () => {
+          cell.style.backgroundColor = currentColor;
+        });
+        grid.appendChild(cell);
+      }
+    };
+
+    // Reset grid
+    resetButton.addEventListener('click', () => {
+      document.querySelectorAll('.grid div').forEach((cell) => {
+        cell.style.backgroundColor = 'white';
+      });
+    });
+
+    // Save grid as JSON
+    saveButton.addEventListener('click', () => {
+      const pixels = [];
+      document.querySelectorAll('.grid div').forEach((cell) => {
+        pixels.push(cell.style.backgroundColor || 'white');
+      });
+
+      const gridData = {
+        size: parseInt(gridSizeInput.value),
+        pixels,
+      };
+
+      const blob = new Blob([JSON.stringify(gridData, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'pixel-art.json';
+      a.click();
+    });
+
+    // Dynamic grid generation
+    generateGridButton.addEventListener('click', () => {
+      const size = parseInt(gridSizeInput.value);
+      if (size < 5 || size > 50) {
+        alert('Grid size must be between 5 and 50.');
+        return;
+      }
+      generateGrid(size);
+    });
+
+    // Initial grid generation
+    generateGrid(parseInt(gridSizeInput.value));
+  </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+h1 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    width: 100%;
+    text-align: center;
+    margin: 10vh 0;
+    color: #76c7c0;
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+#headerSub {
+    margin: 10px 0 50px 0;
+    text-align: center;
+    line-height: 1rem;
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    color: #76c7c0;
+    animation: fadeIn 2s ease-in 0.5s forwards;
+    opacity: 0;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Headings */
+h2 {
+    color: #76c7c0;
+    margin-bottom: 10px;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+ul li::before {
+    content: '•';
+    color: #76c7c0;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Links */
+a {
+    color: #76c7c0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
