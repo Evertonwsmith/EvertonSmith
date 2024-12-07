@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-image: url('../images/rest.png');
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+
+}
+
+#name {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: clamp(3rem, 15vw, 5rem);
+    background-color: rgba(0, 0, 0, 0.178);
+}
+
+nav {
+    transform: translateY(-10vh);
+    width: 100%;
+    height: 10vh;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        width: calc(100vw/3);
+    }
+
+    a:hover {
+        color: rgb(128, 173, 156);
+    }
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    width: 90%;
+    margin: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hours {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background-color: rgb(66, 90, 83);
+    color: white;
+}
+
+#specials {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+        width: 40vw;
+
+        margin: auto;
+    }
+
+    #list {
+        font-size: clamp(1.5rem, 2vw, 3rem);
+
+        h2{
+            padding: 0;
+            margin: 10px;
+        }
+        p {
+            text-align: start;
+
+            width: 40vw;
+            margin: auto;
+        }
+    }
+
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+#location {
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    background-image: url('../images/map.jpeg');
+    background-size: cover;
+}
+
+#contact {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(66, 90, 83);
+    color: white;
+    display: flex;
+    padding-left: 20vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    line-height: 2.5rem;
+    text-align: start;
+    font-size: 1.5rem;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(128, 173, 156);
+    }
+}
