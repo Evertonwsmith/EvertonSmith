@@ -2,144 +2,94 @@
 <html lang="en">
 
 <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Dekko&family=Exo:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Luckiest+Guy&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everton Smith</title>
-    <link rel="stylesheet" href="css/simple.css">
+    <link rel="stylesheet" href="cssMain/index.css">
 </head>
 
 <body>
+    <div id="mouse"></div>
     <header>
-        <h1>Everton Smith</h1>
-        <div id="navBar">
-            <a href="#" onclick="show(1)">Professional</a>
-            <a href="#" onclick="show(2)">Links</a>
-            <a href="#" onclick="show(3)">About Me</a>
-            <a href="mailto:evertonwsmith@gmail.com">Contact</a>
-        </div>
+        <a href="#resume">
+            <div class="headerDiv">
+                Resume
+            </div>
+        </a>
+
+        <a href="#projects">
+            <div class="headerDiv">
+                Projects
+            </div>
+        </a>
+
+        <a href="html/resume.html">
+            <div class="headerDiv">
+                About
+            </div>
+        </a>
     </header>
 
     <main>
-        <div id="resume">
-            <h2>Professional Experience</h2>
-            <h3>Overview</h3>
-            <p>
-                5+ years of experience as a Software Developer at UKG
-            </p>
-            <p>
-                Proficient in a range of programming languages and technologies, including:</p>
-                <p class="point">Backend: Java, C, Dart, Python, Ruby</p>
-                <p class="point">Frontend: HTML, CSS, JavaScript, PHP</p>
-                <p class="point">Frameworks: Spring, Flutter, Android SDK, React</p>
-                <p class="point">Data Formats: XML, JSON</p>
-                <p class="point">Databases: PostgreSQL, SQL</p>
-                <br>
-            
-            <p>
-                Skilled in Version Control via Git, Automation and CI/CD processes
-            </p>
-            <p>
-                Experience creating REST APIs, onboarding new employees, and working on a variety of customer entered defects
-            </p>
-
-            
-            <!--Enter Resume-->
-            <a href="files/Resume.pdf"><h2>Full Resume Link</h2></a>
+        <div id="floatingCirc"></div>
+        <div id="floatingCirc2"></div>
+        <div id="name">everton smith</div>
+        <div id="desc">software developer<br>musician</div>
+        <div id="image">
+            <img src="images/E3.JPG" alt="Everton">
         </div>
 
-        <div id="projects">
-            <div id="projectDisplay">
-                <a href="https://www.linkedin.com/in/evertonwsmith">
-                    <div class="projectBox" id="linkedin">
-                        <p>LinkedIn Profile</p>
-                    </div>
-                </a>
+        <div id="resume">
+            <h1>Resume</h1>
+            <p>Software Developer with over 5 years of experience</p>
+            <p>Proficiency in Java, Springboot and PostgreSQL</p>
+            <p>Advanced knowledge of Web Technologies, Automation, CI/CL and Docker</p>
+            <p>Currently learning React with Node.js, Dart with Flutter, and other languages</p>
 
-                <a href="https://github.com/Evertonwsmith">
-                    <div class="projectBox" id="gitlink">
-                        <p>Github Profile</p>
-                    </div>
-                </a>
-
-                <a href="Profile_V1_0/index.html">
-                    <div class="projectBox" id="oldsite">
-                        <p>(Old) Personal Site</p>
-                    </div>
-                </a>
-
-                <a href="Demos/demos/resume/resume.html">
-                    <div class="projectBox">
-                        <p>Resume</p>
-                    </div>
-                </a>
-
-                <a href="Demos/index.html">
-                    <div class="projectBox">
-                        <p>Web Projects</p>
-                    </div>
-                </a>
-
-                <a href="https://evertonsmithdartprojects.web.app/">
-                    <div class="projectBox" id="flutter">
-                        <p>Dart Projects (in progress)</p>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <div class="projectBox">
-                        <p>(Coming soon)<br>React Projects</p>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <div class="projectBox" id="ruby">
-                        <p>(Coming soon)<br>Ruby Projects</p>
-                    </div>
-                </a>
+            <h2>Experience</h2>
+            <h3>Software Developer</h3>
+            <h3>UKG, Kelowna B.C.</h3>
+            <h3 id="date">November 2019 – Present</h3>
+            <div id="jobDesc">
+                <p>REST API creation</p>
+                <p>Automated testing using JUnit and Mockito</p>
+                <p>Customer Defect tracking with Jira</p>
+                <p>Onboarding and assisting junior developers</p>
             </div>
         </div>
 
-        <div id="aboutMe">
-            <p>
-                As a passionate and dedicated software developer, I have been honing my skills since November 2019 at
-                UKG. My journey in the tech industry has been both challenging and rewarding, allowing me to grow
-                professionally and personally. My work focuses on creating robust and user-friendly applications that
-                solve real-world problems, and I take great pride in contributing to innovative projects that enhance
-                user experiences.
-            </p>
 
-            <p>Outside of my professional life, I have a diverse range of interests that keep me balanced and inspired.
-                I'm an avid video gamer, finding joy in exploring new virtual worlds and staying updated with the latest
-                gaming trends. Additionally, I have a deep love for sports, particularly hockey and golf, which provide
-                a perfect blend of physical activity and strategic thinking. Playing guitar is another passion of mine,
-                offering a creative outlet and a way to unwind.</p>
+        <div id="projects">
+            <h1>Projects</h1>
+            <a href="Profile_V1_0/index.html">
+                <div class="projBox">
+                    Personal Site Version 1
+                </div>
+            </a>
 
+            <a href="Profile_V2_0/index.html">
+                <div class="projBox">
+                    Personal Site Version 2
+                </div>
+            </a>
 
-            <p>In my spare time, I channel my enthusiasm for technology into personal projects. I enjoy coding websites
-                and applications, utilizing a variety of languages and frameworks such as HTML, CSS, JavaScript, Dart,
-                and Flutter. This continuous learning and experimentation allow me to stay ahead in the ever-evolving
-                tech landscape and refine my craft. Whether it's through work or hobbies, my goal is always to create,
-                innovate, and make a positive impact.</p>
-
-            <img src="images/es1.jpg" alt="me">
+            <a href="Demos/index.html">
+                <div class="projBox">
+                    Basic Web Demos
+                </div>
+            </a>
         </div>
     </main>
 </body>
 
 </html>
 
-<script>
-    window.onload = function () {
-        show(1);
-    };
-
-    function show(i) {
-        const sections = ['resume', 'projects', 'aboutMe'];
-        sections.forEach((section, index) => {
-            const element = document.getElementById(section);
-            if (element) {
-                element.style.display = index + 1 === i ? 'block' : 'none';
-            }
-        });
-    }
-</script>
+<script src="jsMain/index.js"></script>

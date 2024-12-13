@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everton Smith</title>
+    <link rel="stylesheet" href="../css/simple.css">
+</head>
+
+<body>
+    <header>
+        <h1>Everton Smith</h1>
+        <div id="navBar">
+            <a href="#" onclick="show(1)">Professional</a>
+            <a href="#" onclick="show(2)">Links</a>
+            <a href="#" onclick="show(3)">About Me</a>
+            <a href="mailto:evertonwsmith@gmail.com">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <div id="resume">
+            <h2>Professional Experience</h2>
+            <h3>Overview</h3>
+            <p>
+                5+ years of experience as a Software Developer at UKG
+            </p>
+            <p>
+                Proficient in a range of programming languages and technologies, including:</p>
+                <p class="point">Backend: Java, C, Dart, Python, Ruby</p>
+                <p class="point">Frontend: HTML, CSS, JavaScript, PHP</p>
+                <p class="point">Frameworks: Spring, Flutter, Android SDK, React</p>
+                <p class="point">Data Formats: XML, JSON</p>
+                <p class="point">Databases: PostgreSQL, SQL</p>
+                <br>
+            
+            <p>
+                Skilled in Version Control via Git, Automation and CI/CD processes
+            </p>
+            <p>
+                Experience creating REST APIs, onboarding new employees, and working on a variety of customer entered defects
+            </p>
+
+            
+            <!--Enter Resume-->
+            <a href="files/Resume.pdf"><h2>Full Resume Link</h2></a>
+        </div>
+
+        <div id="projects">
+            <div id="projectDisplay">
+                <a href="https://www.linkedin.com/in/evertonwsmith">
+                    <div class="projectBox" id="linkedin">
+                        <p>LinkedIn Profile</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Evertonwsmith">
+                    <div class="projectBox" id="gitlink">
+                        <p>Github Profile</p>
+                    </div>
+                </a>
+
+                <a href="../Profile_V1_0/index.html">
+                    <div class="projectBox" id="oldsite">
+                        <p>(Old) Personal Site</p>
+                    </div>
+                </a>
+
+                <a href="../Demos/demos/resume/resume.html">
+                    <div class="projectBox">
+                        <p>Resume</p>
+                    </div>
+                </a>
+
+                <a href="../Demos/index.html">
+                    <div class="projectBox">
+                        <p>Web Projects</p>
+                    </div>
+                </a>
+
+                <a href="https://evertonsmithdartprojects.web.app/">
+                    <div class="projectBox" id="flutter">
+                        <p>Dart Projects (in progress)</p>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="projectBox">
+                        <p>(Coming soon)<br>React Projects</p>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="projectBox" id="ruby">
+                        <p>(Coming soon)<br>Ruby Projects</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div id="aboutMe">
+            <p>
+                As a passionate and dedicated software developer, I have been honing my skills since November 2019 at
+                UKG. My journey in the tech industry has been both challenging and rewarding, allowing me to grow
+                professionally and personally. My work focuses on creating robust and user-friendly applications that
+                solve real-world problems, and I take great pride in contributing to innovative projects that enhance
+                user experiences.
+            </p>
+
+            <p>Outside of my professional life, I have a diverse range of interests that keep me balanced and inspired.
+                I'm an avid video gamer, finding joy in exploring new virtual worlds and staying updated with the latest
+                gaming trends. Additionally, I have a deep love for sports, particularly hockey and golf, which provide
+                a perfect blend of physical activity and strategic thinking. Playing guitar is another passion of mine,
+                offering a creative outlet and a way to unwind.</p>
+
+
+            <p>In my spare time, I channel my enthusiasm for technology into personal projects. I enjoy coding websites
+                and applications, utilizing a variety of languages and frameworks such as HTML, CSS, JavaScript, Dart,
+                and Flutter. This continuous learning and experimentation allow me to stay ahead in the ever-evolving
+                tech landscape and refine my craft. Whether it's through work or hobbies, my goal is always to create,
+                innovate, and make a positive impact.</p>
+
+            <img src="images/es1.jpg" alt="me">
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script>
+    window.onload = function () {
+        show(1);
+    };
+
+    function show(i) {
+        const sections = ['resume', 'projects', 'aboutMe'];
+        sections.forEach((section, index) => {
+            const element = document.getElementById(section);
+            if (element) {
+                element.style.display = index + 1 === i ? 'block' : 'none';
+            }
+        });
+    }
+</script>
