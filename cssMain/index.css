@@ -65,8 +65,8 @@ main{
     left: 20%;
     /* transform: translate(-50%, -50%); */
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    width: 50vw;
+    height: 50vw;
     background-color: rgba(255, 255, 255, 0.2);
     animation: scale 18s linear 0s infinite alternate;
 }
@@ -76,8 +76,8 @@ main{
     left: 20%;
     /* transform: translate(-50%, -50%); */
     border-radius: 50%;
-    width: 600px;
-    height: 600px;
+    width: 70vw;
+    height: 70vw;
     background-color: rgba(255, 255, 255, 0.1);
     animation: scale 33s linear 0s infinite alternate;
 
@@ -154,6 +154,6 @@ main{
         transform: scale(1);
     }
     to{
-        transform: scale(1.5);
+        transform: scale(1.4);
     }
 }
